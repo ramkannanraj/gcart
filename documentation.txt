@@ -1,0 +1,13 @@
+product_option_image_zoom - window
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+These OCMOD Zoom extensions are a few examples of what can be achieved by the jQuery zoom script written by Andy Eaves.  More examples can be found at:
+
+http://www.elevateweb.co.uk/image-zoom
+
+They will only work in conjunction with 
+
+product_option_image_swap.ocmod.zip
+product_option_alt_image_swap.ocmod.zip
+
+documentation can be found in these zip files in the "upload" directory including how to install OCMOD extensions.

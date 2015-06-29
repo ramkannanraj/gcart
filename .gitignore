@@ -7,4 +7,5 @@ admin/config.php
 download/
 image/cache/
 system/cache/
+system/cache_mfp/
 system/logs/

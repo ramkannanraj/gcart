@@ -157,10 +157,10 @@
         <?php $class = 'col-sm-4'; ?>
         <?php } ?>
         <div class="<?php echo $class; ?>">
-          <div class="btn-group">
+          <!-- div class="btn-group">
             <button type="button" data-toggle="tooltip" class="btn btn-default" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product_id; ?>');"><i class="fa fa-heart"></i></button>
             <button type="button" data-toggle="tooltip" class="btn btn-default" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product_id; ?>');"><i class="fa fa-exchange"></i></button>
-          </div>
+          </div -->
           <h3><?php echo $heading_title; ?></h3>
 		  <div>
 			<p>Set in 18 kt yellow gold ( 2gms ) with Diamonds (0.13 Ct, I,J- SI ) Certified by SGL</p>
@@ -208,7 +208,8 @@
           <?php } ?>
 		  </div>
 		  <div class="col-sm-6 col-md-6 col-xs-12 details">
-			<h3>Click for Offers</h3>
+              <h3><a href="#">Click for Offers</a></h3>
+              
 			<p><strong>Shipping within 15 days</strong></p>
 		  </div>
 		  </div>		  
@@ -226,7 +227,7 @@
 		  
           <div id="product">
             <?php if ($options) { ?>
-            <hr>
+            
             <h3><?php echo $text_option; ?></h3>
             <?php foreach ($options as $option) { ?>
             <?php if ($option['type'] == 'select') { ?>
@@ -240,7 +241,7 @@
  <?php if ($option_value['imagexl'] == '') $option_value['imagexl'] = 'no_image'; ?>
                 <option value="<?php echo $option_value['product_option_value_id']; ?>"class="thumb" src="<?php echo $option_value['imagel']; ?>" val="<?php echo $option_value['imagexl']; ?>"><?php echo $option_value['name']; ?>
                 <?php if ($option_value['price']) { ?>
-                (<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
+                <!--(<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)-->
                 <?php } ?>
                 </option>
                 <?php } ?>
@@ -250,16 +251,16 @@
             <?php if ($option['type'] == 'radio') { ?>
             <div class="form-group<?php echo ($option['required'] ? ' required' : ''); ?>">
               <label class="control-label"><?php echo $option['name']; ?></label>
-              <div id="input-option<?php echo $option['product_option_id']; ?>">
+              <div class="hrz-dsiplay" id="input-option<?php echo $option['product_option_id']; ?>">
                 <?php foreach ($option['product_option_value'] as $option_value) { ?>
  <?php  if (!$option_value['imagel'] || strpos($option_value['imagel'], 'no_image')) $option_value['imagel'] = $thumb; ?>
  <?php if ($option_value['imagexl'] == '') $option_value['imagexl'] = 'no_image'; ?>
                 <div class="radio">
                   <label>
-                                       <input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" class="thumb" src="<?php echo $option_value['imagel']; ?>" val="<?php echo $option_value['imagexl']; ?>" value="<?php echo $option_value['product_option_value_id']; ?>" />
-                    <?php echo $option_value['name']; ?>
+                                       <input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" class="thumb" src="<?php echo $option_value['imagel']; ?>" val="<?php echo $option_value['imagexl']; ?>" value="<?php echo $option_value['product_option_value_id']; ?>" /><br />
+                      <span><?php echo $option_value['name']; ?></span>
                     <?php if ($option_value['price']) { ?>
-                    (<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
+                    <!--(<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)-->
                     <?php } ?>
                   </label>
                 </div>
@@ -288,6 +289,7 @@
               </div>
             </div>
             <?php } ?>
+              <!-- ----------------------------------------------------------- -->
             <?php if ($option['type'] == 'image') { ?>
             <div class="form-group<?php echo ($option['required'] ? ' required' : ''); ?>">
               <label class="control-label"><?php echo $option['name']; ?></label>
@@ -308,6 +310,7 @@
               </div>
             </div>
             <?php } ?>
+              <!-- ------------------------------------------------------------ -->
             <?php if ($option['type'] == 'text') { ?>
             <div class="form-group<?php echo ($option['required'] ? ' required' : ''); ?>">
               <label class="control-label" for="input-option<?php echo $option['product_option_id']; ?>"><?php echo $option['name']; ?></label>
@@ -422,19 +425,56 @@
               <a href="" onclick="$('a[href=\'#tab-review\']').trigger('click'); return false;"><?php echo $reviews; ?></a> / <a href="" onclick="$('a[href=\'#tab-review\']').trigger('click'); return false;"><?php echo $text_write; ?></a></p>
             <hr>
             <!-- AddThis Button BEGIN -->
-            <div class="addthis_toolbox addthis_default_style"><a class="addthis_button_facebook_like" fb:like:layout="button_count"></a> <a class="addthis_button_tweet"></a> <a class="addthis_button_pinterest_pinit"></a> <a class="addthis_counter addthis_pill_style"></a></div>
+            <div class="addthis_toolbox addthis_default_style"><a class="addthis_button_facebook_like" fb:like:layout="button_count"></a> <a class="addthis_button_tweet"></a> <a class="addthis_button_pinterest_pinit"></a> <a class="addthis_counter addthis_pill_style"></a>
+            </div>
             <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-515eeaf54693130e"></script>
             <!-- AddThis Button END -->
           </div>
           <?php } ?>
         </div>
+              
+              <!-- -------------similar products-------------------- -->
+              <div class="col-sm-3" style="float:right;">
+                  
+                    <div class="">
+            <div class="">
+				<div class="column">
+					<!-- Elastislide Carousel -->
+					<ul id="carousel" class="elastislide-list">
+                        <li><a href="#"><img src="catalog/view/theme/gemcart/stylesheet/images/small/4.jpg" alt="image04" /></a>Rs. 15000/-</li>
+						<li><a href="#"><img src="catalog/view/theme/gemcart/stylesheet/images/small/5.jpg" alt="image05" /></a>Rs. 15000/-</li>
+						<li><a href="#"><img src="catalog/view/theme/gemcart/stylesheet/images/small/6.jpg" alt="image06" /></a>Rs. 15000/-</li>
+						<li><a href="#"><img src="catalog/view/theme/gemcart/stylesheet/images/small/7.jpg" alt="image07" /></a>Rs. 15000/-</li>
+						<li><a href="#"><img src="catalog/view/theme/gemcart/stylesheet/images/small/11.jpg" alt="image11" /></a>Rs. 15000/-</li>
+						<li><a href="#"><img src="catalog/view/theme/gemcart/stylesheet/images/small/12.jpg" alt="image12" /></a>Rs. 15000/-</li>
+						<li><a href="#"><img src="catalog/view/theme/gemcart/stylesheet/images/small/13.jpg" alt="image13" /></a>Rs. 15000/-</li>
+						<li><a href="#"><img src="catalog/view/theme/gemcart/stylesheet/images/small/14.jpg" alt="image14" /></a>Rs. 15000/-</li>
+						<li><a href="#"><img src="catalog/view/theme/gemcart/stylesheet/images/small/15.jpg" alt="image15" /></a>Rs. 15000/-</li>
+						<li><a href="#"><img src="catalog/view/theme/gemcart/stylesheet/images/small/16.jpg" alt="image16" /></a>Rs. 15000/-</li>
+						<li><a href="#"><img src="catalog/view/theme/gemcart/stylesheet/images/small/17.jpg" alt="image17" /></a>Rs. 15000/-</ligemcart
+						<li><a href="#"><img src="catalog/view/theme/gemcart/stylesheet/images/small/18.jpg" alt="image18" /></a>Rs. 15000/-</li>
+						<li><a href="#"><img src="catalog/view/theme/gemcart/stylesheet/images/small/19.jpg" alt="image19" /></a>Rs. 15000/-</li>
+						<li><a href="#"><img src="catalog/view/theme/gemcart/stylesheet/images/small/20.jpg" alt="image20" /></a>Rs. 15000/-</li>
+						<li><a href="#"><img src="catalog/view/theme/gemcart/stylesheet/images/small/1.jpg" alt="image01" /></a>Rs. 15000/-</li>
+						<li><a href="#"><img src="catalog/view/theme/gemcart/stylesheet/images/small/2.jpg" alt="image02" /></a>Rs. 15000/-</li>
+						<li><a href="#"><img src="catalog/view/theme/gemcart/stylesheet/images/small/3.jpg" alt="image03" /></a>Rs. 15000/-</li>
+						<li><a href="#"><img src="catalog/view/theme/gemcart/stylesheet/images/small/8.jpg" alt="image08" /></a>Rs. 15000/-</li>
+						<li><a href="#"><img src="catalog/view/theme/gemcart/stylesheet/images/small/9.jpg" alt="image09" /></a>Rs. 15000/-</li>
+						<li><a href="#"><img src="catalog/view/theme/gemcart/stylesheet/images/small/10.jpg" alt="image10" /></a>Rs. 15000/-</li>
+					</ul>
+					<!-- End Elastislide Carousel -->
+				</div>
+			</div>
+		</div>
+                  
+                  
+              </div>
+              <!-- -------------------End of Similar products-------------------- -->
       </div>
 
       <!-- -----------------------Related Product---------------------------- -->
     <?php if ($products) { ?>
       <h3><?php echo $text_related; ?></h3>
-            <h3><?php echo $text_related; ?></h3>
-            <h3><?php echo $text_related; ?></h3>
       <div class="row">
         <?php $i = 0; ?>
         <?php foreach ($products as $product) { ?>
@@ -705,6 +745,17 @@ $(document).ready(function() {
 <script type="text/javascript" defer src="js/autoptimize_9a15becef9b2f850af1e4f2ecea7b647.js"></script>
 <script src="js/jquery-2.1.1.js"></script>
 <script src="js/bootstrap.min.js"></script>
+  <!--  similar product -->      
+<!-- script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script -->
+	<script type="text/javascript" src="catalog/view/javascript/js/jquerypp.custom.js"></script>
+	<script type="text/javascript" src="catalog/view/javascript/js/jquery.elastislide.js"></script>
+	<script type="text/javascript">
+			
+		$( '#carousel' ).elastislide( {
+			orientation : 'vertical'
+		} );
+			
+</script>
 <script type="text/javascript" src="index.php?route=product/livepriceupdate/js&product_id=<?php echo $product_id; ?>"></script>
 <script type="text/javascript"><!--
  function c() {

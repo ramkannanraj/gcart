@@ -13,6 +13,13 @@
 .btn { padding:0px 12px }
 button.search-btn { padding: 4px 12px }
 #banner-strip{ width:100%; display:block; margin:0 auto; background:#999; }
+.breadcrumb {
+  padding: 8px 15px;
+  margin-bottom: 20px;
+  list-style: none;
+  background-color: #fff;
+  border-radius: 4px;
+}
 a.cart-items {
   cursor: pointer;
   text-decoration: none;

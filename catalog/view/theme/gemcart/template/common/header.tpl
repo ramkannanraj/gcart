@@ -29,6 +29,12 @@
 <script src="catalog/view/javascript/jquery/jquery.flexisel.js" type="text/javascript"></script>
 <link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700italic,700,400italic' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/gemcart/stylesheet/demo.css" />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/gemcart/stylesheet/elastislide.css" />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/gemcart/stylesheet/custom.css" />
+<script src="catalog/view/javascript/js/modernizr.custom.17475.js"></script>
+
 <link href="catalog/view/theme/gemcart/stylesheet/style.css" rel="stylesheet">
 <link href="catalog/view/theme/gemcart/stylesheet/style1.css" rel="stylesheet">
 <link href="catalog/view/theme/gemcart/stylesheet/menu1.css" rel="stylesheet">

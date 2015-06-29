@@ -36,6 +36,16 @@
 
   </div>
 </div>
+
+      <div id="showing">
+          <div class="container">
+              <div class="row">
+               <div  class="col-sm-4 col-md-4 col-xs-12 "><h1>REFINE YOUR SEARCH</h1></div>
+               <div  class="col-sm-8 col-md-8 col-xs-12 "><h1>SHOWING <?php echo $results; ?> <?php echo $heading_title; ?></h1></div>
+              </div>
+          </div>
+      </div>
+
 <div class="container">  
   <div class="row"><?php echo $column_left; ?>
     <?php if ($column_left && $column_right) { ?>
@@ -45,9 +55,7 @@
     <?php } else { ?>
     <?php $class = 'col-sm-12'; ?>
     <?php } ?>
-    <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
-      <h2><?php echo $heading_title; ?></h2>
-      <hr>
+    <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?> 
       
       <?php if ($products) { ?>
       <div class="row">
@@ -95,7 +103,7 @@
 </div>      
       <div class="row">
         <div class="col-sm-6 text-left"><?php echo $pagination; ?></div>
-        <div class="col-sm-6 text-right"><?php echo $results; ?></div>
+        <div class="col-sm-6 text-right"></div>
       </div>
       <?php } ?>
       <?php if (!$categories && !$products) { ?>

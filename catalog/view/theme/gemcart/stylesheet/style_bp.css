@@ -6,20 +6,19 @@
 .spacer{ clear:both;}
 #top-strip{ width:100%; display:block; margin:0 auto; background:#000; height:20px;}
 #top-strip1{width:100%; display:block; margin:0 auto; background:#65646b; padding:5px 0;   }
-#top-strip1 p{ color:#fff; font-size:12px; margin:3px 0 0; padding:0;}
-#top-strip1 strong{ background:#53155e; padding:3px 7px; text-align:center; color:#fff; margin-right:15px; }
+#top-strip1 p{ color:#fff; font-size:12px; margin:0; padding:0;}
 
 .btn-primary { background:transparent !important; border:transparent !important} 
 .btn { padding:0px 12px }
 button.search-btn { padding: 4px 12px }
-#banner-strip{ width:100%; display:block; margin:0 auto; background:#999; }
+#banner-strip{ width:100%; display:block; margin:0 auto; background:#999; height:380px;}
 a.cart-items {
   cursor: pointer;
   text-decoration: none;
 }
-#header{ margin-top:20px; background:#f3f3f3; padding:30px 30px 5px;} 
+#header{ margin-top:20px; background:#f3f3f3; padding:35px 35px 10px;} 
 .form-group{ font-size:15px; text-transform:uppercase} .form-control { border-radius:10px;}
-.navbar-form{ float:right;  } .shopping{ float:left; margin-top:10px;font-size:17px; }   #cart-total { color:#000 !important; margin-top:10px;}
+.navbar-form{ float:right;  } .shopping{ float:left}  
 .dots{ border-bottom:#000 dotted 1px; display:block;}
 .selectpicker{ padding:3px 15px; width:65%; float:right}
 .selectpicker1{ padding:3px 15px;  }
@@ -85,18 +84,7 @@ body{ /*background:#fbfaf9*/}
 }
 
 #new-arrival li{ width:340px; display:block; float:left; margin-right:60px; background:#fff; margin-bottom:45px; border:#898989 solid 1px; position:relative}
-#new-arrival li h1{    color: #2E2E2E;
-    font-size: 21px;
-    text-transform: uppercase;
-    background: transparent url("../images/bottom-bg.png") repeat-x scroll center bottom;
-    height: 58px;
-    width: 100%;
-    position: absolute;
-    bottom: -10px;
-    text-align: center;
-    padding: 7px 15px;
-    line-height: 22px;
-}
+#new-arrival li h1{ color:#2e2e2e; font-size:30px; text-transform:uppercase;  background:url(../images/bottom-bg.png) repeat-x bottom center; height:58px; width:100%; position:absolute; bottom:-10px; text-align:center; padding:14px 0;}
 #new-arrival li:nth-child(3n+3){ margin-right:0;}
 #new-arrival img{ text-align:center; display:block; margin:0 auto}
 
@@ -105,7 +93,7 @@ body{ /*background:#fbfaf9*/}
 #more-products{ background:#f1f0ef; border:#ccc solid 1px; width:100%; margin-bottom:45px; }
 #more-products h1{ color:#2e2e2e; text-align:center; text-transform:uppercase; font-size:22px;padding:10px 0; margin:0}
 
-.testimonial{ background:#cbf4f0; display:block; max-width:552px; margin-right:45px; padding: 0px 0px 32px; margin-bottom:55px;   }
+.testimonial{ background:#cbf4f0; display:block; max-width:552px; margin-right:45px; padding:40px 0; margin-bottom:55px;   }
 .testimonial h1{ text-align:center; font-size:30px; color:#2e2e2e;}
 .testimonial p{ text-align:center; font-size:15px; color:#2e2e2e;}
 
@@ -156,43 +144,22 @@ body{ /*background:#fbfaf9*/}
 .social-icon{ width:40%; display:block; margin:35px auto; }
 .social-icon li{ float:left; display:block; margin-left:15px;}
 
-#footer{ background:#d4d4d4; display:block; height:45px; width:100%;}
+#footer{ background:#d4d4d4; display:block; height:150px; width:100%;}
 
 
-@media only screen and (min-width :768px) and (max-width:980px) {
 
-#banner-strip {  background: #fff; }
- .testimonial{ background:#cbf4f0; display:block; max-width:100%; float:left; margin-right:0px; padding:37px 0; margin-bottom:55px;   }
-
-}
-
-@media only screen and (min-width :240px) and (max-width:767px) {#header { margin-bottom:20px;}
-#banner-strip {  background: #fff; }
-#top-strip1 p{ color:#fff; font-size:12px; margin:0; padding:5px 0;} 
+@media only screen and (min-width :240px) and (max-width:767px) {
+#top-strip1 p{ color:#fff; font-size:12px; margin:0; padding:5px 0;}
 .navbar-form {float:none;} .shopping{ margin-bottom:10px;}
 #track{ overflow:hidden; margin-bottom:15px;}
 #sign h1 { display:block; width:100%;}
-#sign .black-btn{ float:left; display:block; margin-left:35px; margin-top:10px;}
+#sign .black-btn{ float:left; display:block; margin-left:15px; margin-top:10px;}
  .discription{ padding:0 15px}
  .social-icon{ width:100%;} .social-icon li{ margin-bottom:10px;}
  #track h1{   margin:0 15px 0 0;}
 #new-arrival img{ text-align:center; display:block; margin:0 auto} #new-arrival li{ float:none;}
-#new-arrival li{ width:100%; display:block; float:none; margin-right:0px; margin:0 auto; margin-bottom:25px;}
+#new-arrival li{ width:340px; display:block; float:none; margin-right:0px; margin:0 auto; margin-bottom:25px;}
 #new-arrival li:nth-child(3n+3){ margin-right:0;  margin:0 auto; margin-bottom:25px;}
 .testimonial{ background:#cbf4f0; display:block; width:100%; max-width:100%;  margin-right:0px;}
-.our-services{ background:#cbf4f0; display:block;  width:100%; max-width:100%;  margin-right:0px;} #new-arrival li h1 {     font-size:18px;}
-#top-strip1 p { margin-bottom:15px;} .form-control { margin-left:15px; }
-}
-footer .footer_bottom {
-  background: transparent;
-  background: #65646a;
-  line-height: 45px;
-  color: white;
-  display: block;
-}
-.footer_bottom a{
-  color: #fff;
-}
-.footer {
-  text-align: center;
+.our-services{ background:#cbf4f0; display:block;  width:100%; max-width:100%;  margin-right:0px;}
 }

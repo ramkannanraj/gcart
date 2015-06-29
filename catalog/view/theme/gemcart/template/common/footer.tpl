@@ -8,11 +8,12 @@
         </div> 
         <div class="row">
             <div class="col-sm-6 col-md-6 col-xs-12 testimonial">
-                <h1>Our Testimonials</h1>
-                <p>Read here</p>
+                <h1>Nicely packaged and delivered in time</h1>
+                <p>“Hi Gemcart, I have received the shipment perfectly in good shape. It was nicely packaged and delivered in time. Thanks once again for your prompt service.”<span>Regards, Sanjeet<span></p>
             </div>
-            <div class="col-sm-6 col-md-6 col-xs-12 our-services">
-                <h1>Our Testimonials</h1><p>Read here</p>
+            <div class="col-sm-6 col-md-6 col-xs-12 testimonial">
+                <h1>I am 100% satisfied with you.</h1>
+                <p>“Hi Divya, Although I am familiar with online purchases, I was quite skeptical about buying diamond jewellery from an online portal. It was the exact piece that I specified, that too delivered promptly. Special thanks to Susan, the customer care executive.”</p>
             </div>
         </div>
    
@@ -45,11 +46,11 @@
  
        <!--discription -->
         <div class="row">
-          <div class="col-sm-12 col-md-12 col-xs-12  ">
+          <div class="col-sm-12 col-md-12 col-xs-12">
                <div class="discription">
-               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt tempor bibendum. In viverra felis nulla, finibus condimentum lectus feugiat id. In et commodo ligula, at convallis diam. Nulla sed quam quis tortor molestie faucibus et id enim. Aliquam elementum suscipit tortor vel volutpat. Quisque malesuada nisi at rhoncus luctus. Praesent non dapibus nibh. Morbi in nibh rutrum, semper urna sit amet, posuere justo. Praesent sed dignissim nisi. Nam eu diam quis ipsum laoreet pellentesque sed a libero.</p>
+               <p>Welcome to Gemcart.com – your online jewellery store. Here we showcase before you a wide range of gold and platinum rings for men and women for any and every occasion. Do you want a simple yet elegant ring for everyday usage? Or perhaps you are looking for something more elaborate yet sleek, like a diamond studded bad? Or you going to make that commitment to your beloved and want to buy an engagement ring instead? No matter what kind of ring you want, we have them all – in our easy to navigate online jewellery collections.</p>
                
-               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt tempor bibendum. In viverra felis nulla, finibus condimentum lectus feugiat id. In et commodo ligula, at convallis diam. Nulla sed quam quis tortor molestie faucibus et id enim. Aliquam elementum suscipit tortor vel volutpat. Quisque malesuada nisi at rhoncus luctus. Praesent non dapibus nibh. Morbi in nibh rutrum, semper urna sit amet, posuere justo. Praesent sed dignissim nisi. Nam eu diam quis ipsum laoreet pellentesque sed a libero.s</p>
+               <p>You will be amazed at the unique designs and vast selections that we have. No matter what your taste and preference, you will find the perfect ring for you or your loved ones. The best part about shopping online for jewellery is that you do not have to get embarrassed like you would be in a jewellery store if your budget is very less; in fact, no matter how less your budget, you will surely find something that you absolutely love, at a very less price. And don’t worry, paying less doesn’t mean that quality will be any less – all our rings undergo a strict QA process and are sold only if they match our highest standards. So, be assured that any product you add to cart will give you 100% satisfaction. If, in the rare circumstance that you would want to return something, we say – go ahead! Yes, make use of our money back policy and return anything that you don’t want within 30 days.</p>
               </div>
           </div> 
         </div>
@@ -111,9 +112,50 @@
     <p><?php //echo $powered; ?></p> -->
   </div>
   <br class="spacer" />
-        <div id="footer"> </div>
+    <div id="footer"> 
+      <div class="footer_bottom">
+        <div class="container">
+          
+            <div class="col-sm-12 col-md-12 col-xs-12 footer">
+                <div class="col-sm-4"><a href="#" target="_self">Terms of use </a> | 
+                    <a href="#" target="_self">Privacy Policy </a>
+                </div>
+                <div class="col-sm-4 reserved">©2015 Gemcart. All Rights Reserved</div>
+                <div class="col-sm-4 paysecure"><img alt="payment" src="image/payment_logo.jpg"></div> 
+            </div>
+          
+        </div>
+      </div>  
+    </div>
 </footer>
-<!-- <script src="catalog/view/javascript/autoptimize_9a15becef9b2f850af1e4f2ecea7b647.js" type="text/javascript"></script> -->
+<script type="text/javascript">
+$(window).load(function() {
+     $("#mostpopularslider").flexisel({
+        visibleItems: 4,
+        animationSpeed: 1000,
+        autoPlay: true,
+        autoPlaySpeed: 1000,            
+        pauseOnHover: true,
+        enableResponsiveBreakpoints: true,
+        responsiveBreakpoints: { 
+            portrait: { 
+                changePoint:480,
+                visibleItems: 1
+            }, 
+            landscape: { 
+                changePoint:640,
+                visibleItems: 2
+            },
+            tablet: { 
+                changePoint:768,
+                visibleItems: 3
+            }
+        }
+    });
+     
+});
+</script>
+<script src="catalog/view/javascript/autoptimize_9a15becef9b2f850af1e4f2ecea7b647.js" type="text/javascript"></script>
 <!--
 OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.
 Please donate via PayPal to donate@opencart.com

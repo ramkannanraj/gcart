@@ -1,0 +1,6 @@
+@charset "utf-8";
+/* CSS Document */
+
+.center-margin{position: absolute; right:0; left:0; margin:0 auto; display:block; text-align:center; z-index:999}
+ 
+@media only screen and (min-width :240px) and (max-width:767px) {.spacing{ margin-top:0px;} }

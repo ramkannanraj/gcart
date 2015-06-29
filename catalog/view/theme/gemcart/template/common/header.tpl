@@ -26,6 +26,7 @@
 <script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js" type="text/javascript"></script>
 <link href="catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
 <script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="catalog/view/javascript/jquery/jquery.flexisel.js" type="text/javascript"></script>
 <link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700italic,700,400italic' rel='stylesheet' type='text/css'>
 <link href="catalog/view/theme/gemcart/stylesheet/style.css" rel="stylesheet">
@@ -45,10 +46,10 @@
   <div class="container">
     <div class="row">
             <div  class="col-sm-2 col-md-2 col-xs-12">
-            <p>Call 1800-102-0103</p>
+            <p>Call <?php echo $telephone; ?></p>
             </div>
             <div  class="col-sm-6 col-md-6 col-xs-12">
-            <p>OFFERS FLAT 20% OFF O DIAMOND AND GEMSTONE JEWELLERY ORDERS OVER RS.20.000</p>
+            <p><strong>OFFERS</strong> FLAT 20% OFF O DIAMOND AND GEMSTONE JEWELLERY ORDERS OVER RS.20.000</p>
             </div>
             <div  class="col-sm-4 col-md-4 col-xs-12">
              <div class="bs-example">
@@ -70,7 +71,7 @@
   </div>
 </nav>
 <div id="banner-strip">
-    <div class="container" style="position: absolute; margin-left: 90px;z-index:999">
+    <div class="container center-margin">
         <div id="header">
             <div class="row dots">
                 <div  class="col-sm-7 col-md-7 col-xs-12">

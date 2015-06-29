@@ -19,7 +19,7 @@
 	background-color: #363636;
 	background-image: linear-gradient(to bottom, #444444, #222222);
 	background-repeat: repeat-x;
-	/*margin-bottom: 15px;*/
+	margin-bottom: 15px;
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
 	-khtml-border-radius: 2px;
@@ -61,7 +61,7 @@
 	margin: 5px 0px;
 	z-index: 6;
 	position: relative;
-	/*text-shadow: 0 1px 1px #000;*/
+	text-shadow: 0 1px 1px #000;
     -webkit-transition: 0.4s ease;
     -moz-transition: 0.4s ease;
     -o-transition: 0.4s ease;
@@ -70,7 +70,7 @@
 #supermenu ul li.tlli:hover a.tll {
 	background: #eee;
 	color: #444;
-	/*text-shadow: 0 1px 1px #fff;*/
+	text-shadow: 0 1px 1px #fff;
 }
 #supermenu ul li a.tllhome, #supermenu ul li a.tllhomel {
 	background: transparent url('home_icon.png') center center no-repeat !important;
@@ -93,7 +93,7 @@
 	position: absolute;
 	left: 0px;
 	z-index: 5;
-	/*padding: 5px;*/
+	padding: 5px;
 	width: 1130px;
 	-webkit-border-radius: 0px 0px 2px 2px;
 	-moz-border-radius: 0px 0px 2px 2px;
@@ -103,38 +103,38 @@
 	border-top: 0px;
 }
 #supermenu ul li div.bigdiv.withflyout {
-  /* padding: 15px;*/
+   padding: 0px;
    padding-top: 5px;
    padding-bottom: 5px;
-   max-width:230px;
+   width: 200px;
 }
 #supermenu ul li div.bigdiv.withflyout.andlogin { padding: 5px; }
 #supermenu ul li div.bigdiv.withflyout > .withchildfo > .flyouttoright{
-   display: block;
+   display: none;
    position: absolute;
    background: #fff;
-   padding: 0px 0 35px;
+   padding: 0px;
    z-index: 99;
-   top: -15px;
-   padding-left:233px; 
+   top: 0px;
+   left: 198px;
    min-height: 100%;
- 	-webkit-box-shadow: 0px 1px 1px #efefef;
-	-moz-box-shadow: 0px 1px 1px #efefef;
-	box-shadow: 0px 1px 1px #efefef;
-  z-index: -1;
+	-webkit-box-shadow: 0px 0px 4px #ccc;
+	-moz-box-shadow: 0px 0px 4px #ccc;
+	box-shadow: 0px 0px 4px #ccc;
+   z-index: -1;
 }
 #supermenu ul li div.bigdiv p { margin-bottom: 7px; }
 #supermenu ul li div.bigdiv.withflyout > .withchildfo > .flyouttoright .inflyouttoright{
    padding: 10px;
-   width: 769px;    border-left: 1px solid #ececec;
+   width: 769px;   
 }
 #supermenu  ul  li  div.bigdiv.withflyout  .withimage {
-   width:22%;
+   width: 135px;
 }
 #supermenu   .withchildfo {
     display: block;
 	vertical-align: top;
-	
+	border-bottom: 1px solid #ececec;
 }
 #supermenu   .withchildfo.hasflyout {
 	padding-right: 20px;
@@ -144,8 +144,10 @@
 }
 #supermenu .withchildfo a.theparent {
     color: #333;
-	display: block; padding:8px 25px;
- 
+	display: block;
+	padding: 5px;
+	padding-top: 9px;
+	padding-bottom: 9px;
 	text-decoration: none;
 }
 #supermenu .withchildfo:hover {
@@ -221,12 +223,12 @@
 	-moz-border-radius: 3px;
 	-khtml-border-radius: 3px;
 	border-radius: 3px;
-	/*border: 1px solid #ececec;*/
+	border: 1px solid #ececec;
 }
 #supermenu  ul  li  div .withimage .name a {
     color: #333;
 	font-size: 12px;
-	text-decoration: none; text-align:center; display:block; font-weight:bold;
+	text-decoration: none;
 }
 #supermenu  ul  li  div .withimage .dropprice {
     color: #55B12B;
@@ -399,13 +401,13 @@
 	-webkit-box-shadow: none;
 	box-shadow: none;
 }
- #supermenu.respsmall.white a.mobile-trigger, #supermenu.alt2.respsmall a.mobile-trigger, #supermenu.imgmenu.respsmall a.mobile-trigger { background: url('mkidb2.png') 100% center no-repeat; color: #555; text-shadow: none; font-size:18px; text-align:left; font-weight:bold }
+#supermenu.respsmall.white a.mobile-trigger, #supermenu.alt2.respsmall a.mobile-trigger, #supermenu.imgmenu.respsmall a.mobile-trigger { background: url('mkidb2.png') 100% center no-repeat; color: #555; text-shadow: none; }
 #supermenu.white ul li a.tll {
 	font-size: 13px;
-	color: #222; font-weight:bold;
-	padding:7px 29px;
-/*	text-shadow: 0 0px 0px #000;*/
-	/*border-top: 1px solid #fff;*/
+	color: #333;
+	padding: 15px 10px 12px 10px;
+	text-shadow: 0 0px 0px #000;
+	border-top: 1px solid #fff;
 	text-transform: uppercase;
 }
 #supermenu.white ul li div.bigdiv {
@@ -415,7 +417,7 @@
 	-khtml-border-radius: 0px;
 	border-radius: 0px;
 	border: 1px solid #777;
-	border-top: 0px; margin-top:25px;
+	border-top: 0px;
 }
 #supermenu.white.respsmall ul li div.bigdiv {
 	border: 1px solid #fff;
@@ -424,10 +426,10 @@
 #supermenu.white ul li.tlli:hover a.tll {
 	background: #fff;
 	color: #333;
-/*	text-shadow: 0 0px 0px #fff;
-*/	/*border-top: 1px solid #777;*/
+	text-shadow: 0 0px 0px #fff;
+	border-top: 1px solid #777;
 }
-#supermenu.respsmall.white ul li.tlli:hover a.tll { color: #333; /*border-top: 1px solid #fff; */}
+#supermenu.respsmall.white ul li.tlli:hover a.tll { color: #333; border-top: 1px solid #fff; }
 #supermenu.alt1 {
 	background: #333333;
 	background-image: linear-gradient(to bottom, #333333, #222222);
@@ -693,14 +695,14 @@
 	padding-bottom: 10px;
 }
 #supermenu.respsmall .superdropper span {
-	/*font-size: 20px;*/
+	font-size: 20px;
 	text-decoration: none;
-	/*padding: 5px 10px;*/
+	padding: 5px 10px;
 	background: #fff;
 	color: #000;
 	display: block;
 	margin-right: 5px;
-	margin-top: 6px;
+	margin-top: 9px;
 	width: 30px; 
 	text-align: center;
 	border-radius: 2px;
@@ -731,37 +733,8 @@
 #supermenu.respsmall .withchildfo.hasflyout.exped .superdropper span + span { display: block !important; }
 #supermenu.respsmall .withchildfo.hasflyout .superdropper span + span,
 #supermenu.respsmall .withchildfo.hasflyout.exped .superdropper span { display: none !important; }
-#supermenu.respsmall ul li.tlli:hover a.tll { background: none; /*text-shadow: 0px 0px 0px #fff; color: #fff;*/}
+#supermenu.respsmall ul li.tlli:hover a.tll { background: none; text-shadow: 0px 0px 0px #fff; color: #fff;}
 #supermenu.respsmall ul li div.bigdiv .addingaspace { display: none !important; }
-@media only screen and (min-width :981px) and (max-width:1024px) {#supermenu.white ul li a.tll {padding: 7px 17px;}}
-
-
-@media only screen and (min-width :768px) and (max-width:980px) {
-	#supermenu.respsmall ul li div .withchild, #supermenu.respsmall ul li div .withimage { width: 100% !important; float: none !important; 
-	}
-	#supermenu.respsmall.white ul li.tlli:hover a.tll { color: #fff; border-top: 1px solid #FFF;}
-	
-	#supermenu ul li div.bigdiv.withflyout > .withchildfo > .flyouttoright { padding: 0px 0px 0px 23px;	}
-	#supermenu .withchildfo.hasflyout { padding-right: 0px;}
-	#supermenu ul li div.bigdiv.withflyout { max-width:none;}
-	#supermenu ul li div.bigdiv.withflyout > .withchildfo > .flyouttoright .inflyouttoright{border-left: 1px solid #fff;}
- 	.center-margin {
-    position: relative
- }
-	#supermenu ul li div .withimage .name a { text-align:left; padding-left:30px; padding-top:15px;}
-	}
-
-@media only screen and (min-width :240px) and (max-width:767px) {
-	#supermenu.respsmall ul li div .withchild, #supermenu.respsmall ul li div .withimage { width: 100% !important; float: none !important; 
-	}
-	#supermenu.respsmall.white ul li.tlli:hover a.tll { color: #fff; border-top: 1px solid #FFF;}
-	
-	#supermenu ul li div.bigdiv.withflyout > .withchildfo > .flyouttoright { padding: 0px 0px 0px 23px;	}
-	#supermenu .withchildfo.hasflyout { padding-right: 0px;}
-	#supermenu ul li div.bigdiv.withflyout { max-width:none;}
-	#supermenu ul li div.bigdiv.withflyout > .withchildfo > .flyouttoright .inflyouttoright{border-left: 1px solid #fff;}
- 	.center-margin {
-    position: relative
- }
-	#supermenu ul li div .withimage .name a { text-align:left; padding-left:30px; padding-top:15px;}
-	}
+@media all and (max-width: 500px){
+	#supermenu.respsmall ul li div .withchild, #supermenu.respsmall ul li div .withimage { width: 100% !important; float: none !important; }
+}

@@ -30,6 +30,7 @@
 <link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700italic,700,400italic' rel='stylesheet' type='text/css'>
 <link href="catalog/view/theme/gemcart/stylesheet/style.css" rel="stylesheet">
+<link href="catalog/view/theme/gemcart/stylesheet/style1.css" rel="stylesheet">
 <link href="catalog/view/theme/gemcart/stylesheet/menu1.css" rel="stylesheet">
 <?php foreach ($styles as $style) { ?>
 <link href="<?php echo $style['href']; ?>" type="text/css" rel="<?php echo $style['rel']; ?>" media="<?php echo $style['media']; ?>" />
@@ -52,20 +53,32 @@
             <p><strong>OFFERS</strong> FLAT 20% OFF O DIAMOND AND GEMSTONE JEWELLERY ORDERS OVER RS.20.000</p>
             </div>
             <div  class="col-sm-4 col-md-4 col-xs-12">
-             <div class="bs-example">
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-primary">My Account </button>
-                        <button type="button" class="btn btn-primary">Wishlist (0)</button>
-                        <div class="btn-group">
-                            <button type="button" data-toggle="dropdown" class="btn btn-primary dropdown-toggle">Try @ Home (0) <span class="caret"></span></button>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Try @ Home (0)</a></li>
-                                <li><a href="#">Try @ Home (0)</a></li>
-                                 
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+            <div id="top-links" class="nav pull-right">
+              <ul class="list-inline">
+                  <li class="dropdown"><a href="<?php echo $account; ?>" title="<?php echo $text_account; ?>" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_account; ?></span> <span class="caret"></span></a>
+                  <ul class="dropdown-menu dropdown-menu-right">
+                    <?php if ($logged) { ?>
+                    <li><a href="<?php echo $account; ?>"><?php echo $text_account; ?></a></li>
+                    <li><a href="<?php echo $order; ?>"><?php echo $text_order; ?></a></li>
+                    <li><a href="<?php echo $transaction; ?>"><?php echo $text_transaction; ?></a></li>
+                    <li><a href="<?php echo $download; ?>"><?php echo $text_download; ?></a></li>
+                    <li><a href="<?php echo $logout; ?>"><?php echo $text_logout; ?></a></li>
+                    <?php } else { ?>
+                    <li><a href="<?php echo $register; ?>"><?php echo $text_register; ?></a></li>
+                    <li><a href="<?php echo $login; ?>"><?php echo $text_login; ?></a></li>
+                    <?php } ?>
+                  </ul>
+                </li>
+                <li><a href="<?php echo $wishlist; ?>" id="wishlist-total" title="<?php echo $text_wishlist; ?>"><i class="fa fa-heart"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_wishlist; ?></span></a></li>
+                <li class="dropdown"><a href="#" title="Try @ Home" class="dropdown-toggle" data-toggle="dropdown"><span class="hidden-xs hidden-sm hidden-md">Try @ Home (0)</span> <span class="caret"></span></a>
+                  <ul class="dropdown-menu dropdown-menu-right">
+                    <li><a href="#">Try @ Home (0)</a></li>
+                    <li><a href="#">Try @ Home (0)</a></li>
+                  </ul>
+                </li>                    
+              </ul>
+    </div>
+             
             </div>
         </div>
   </div>

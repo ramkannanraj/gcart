@@ -17,6 +17,18 @@ a.cart-items {
   cursor: pointer;
   text-decoration: none;
 }
+.list-inline  a {
+  color: #fff;
+}
+.list-inline  a:hover {
+  text-decoration: none;
+}
+.nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
+  background-color: #65646B;
+}
+ul.list-inline {
+  margin-bottom: 2px;
+}
 #header{ margin-top:20px; background:#f3f3f3; padding:30px 30px 5px;} 
 .form-group{ font-size:15px; text-transform:uppercase} .form-control { border-radius:10px;}
 .navbar-form{ float:right;  } .shopping{ float:left; margin-top:10px;font-size:17px; }   #cart-total { color:#000 !important; margin-top:10px;}

@@ -1,3 +1,4 @@
+<br class="spacer">
 <div id="heading-strip">
     <h1><span><?php echo $heading_title; ?></span></h1>
 </div>

@@ -119,7 +119,7 @@
                 </div>
 
                     <div  class="col-sm-4 col-md-4 col-xs-12"> 
-                            <form class="navbar-form" role="search">
+                            <form class="navbar-form" role="search" action="">
                                     <div class="form-group">
                                     <?php echo $search; ?>
                                     </div>

@@ -36,6 +36,26 @@ a.cart-items {
 ul.list-inline {
   margin-bottom: 2px;
 }
+span.radio-swap {
+  color: #000;
+  font-size: 12px;
+  z-index: 100;
+  top: -2px;
+  padding-left: 13px;
+  position: absolute;
+  }
+#product .form-group {
+  position: relative;
+  display: inline-block;
+}
+div#product {
+  display: block;
+  position: relative;
+}
+#product .radio {
+  position: relative;
+  display: inline-block;
+}
 #header{ margin-top:20px; background:#f3f3f3; padding:30px 30px 5px;} 
 .form-group{ font-size:15px; text-transform:uppercase} .form-control { border-radius:10px;}
 .navbar-form{ float:right;  } .shopping{ float:left; margin-top:10px;font-size:17px; }   #cart-total { color:#000 !important; margin-top:10px;}

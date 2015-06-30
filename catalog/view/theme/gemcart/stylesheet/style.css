@@ -42,7 +42,7 @@ ul.list-inline {
 }
 #product .form-group {
   position: relative;
-  display: inline-block;
+  /*display: inline-block;*/
 }
 div#product {
   display: block;
@@ -235,4 +235,10 @@ footer .footer_bottom {
 }
 .footer {
   text-align: center;
+}
+/********** Somorjit Added ************/
+
+.similar-col {
+  width: 100%!important;
+  padding: 0!important;
 }

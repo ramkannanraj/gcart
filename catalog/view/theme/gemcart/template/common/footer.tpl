@@ -7,11 +7,11 @@
           <h1><span>WHY BUY FROM US ?s</span></h1>
         </div> 
         <div class="row">
-            <div class="col-sm-6 col-md-6 col-xs-12 testimonial">
+            <div class="col-sm-12 col-md-6 col-xs-12 testimonial">
                 <h1>Nicely packaged and delivered in time</h1>
                 <p>“Hi Gemcart, I have received the shipment perfectly in good shape. It was nicely packaged and delivered in time. Thanks once again for your prompt service.”<span>Regards, Sanjeet<span></p>
             </div>
-            <div class="col-sm-6 col-md-6 col-xs-12 testimonial">
+            <div class="col-sm-12 col-md-6 col-xs-12 testimonial">
                 <h1>I am 100% satisfied with you.</h1>
                 <p>“Hi Divya, Although I am familiar with online purchases, I was quite skeptical about buying diamond jewellery from an online portal. It was the exact piece that I specified, that too delivered promptly. Special thanks to Susan, the customer care executive.”</p>
             </div>
@@ -155,7 +155,7 @@ $(window).load(function() {
      
 });
 </script>
-<script src="catalog/view/javascript/autoptimize_9a15becef9b2f850af1e4f2ecea7b647.js" type="text/javascript"></script>
+<!-- <script src="catalog/view/javascript/autoptimize_9a15becef9b2f850af1e4f2ecea7b647.js" type="text/javascript"></script> -->
 <!--
 OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.
 Please donate via PayPal to donate@opencart.com

@@ -52,6 +52,7 @@ ul.list-inline {
   position: relative;
   text-align: center; font-size:28px; margin-bottom:35px;
 }
+footer{ background:#fbfaf8; border-top:#f2f1ef solid 1px; margin-top:15px;}
 /* Somorjit 26/6/15 */
 /*-------------------------------custom added css----------------------------------*/
 .zoomContainer {

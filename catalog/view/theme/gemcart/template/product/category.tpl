@@ -59,7 +59,7 @@
       
       <?php if ($products) { ?>
       <div class="row">
-      <div  class="col-sm-9 col-md-12 col-xs-12 product-list"  >
+      <div  class="col-sm-12 col-md-12 col-xs-12 product-list"  >
               <br class="spacer" />
         <?php foreach ($products as $product) { ?>
             <li><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a>

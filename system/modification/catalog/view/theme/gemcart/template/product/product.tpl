@@ -154,7 +154,7 @@
         <?php } elseif ($column_left || $column_right) { ?>
         <?php $class = 'col-sm-6'; ?>
         <?php } else { ?>
-        <?php $class = 'col-sm-4'; ?>
+        <?php $class = 'col-sm-5'; ?>
         <?php } ?>
         <div class="<?php echo $class; ?>">
           <!-- div class="btn-group">
@@ -227,8 +227,6 @@
 		  
           <div id="product">
             <?php if ($options) { ?>
-            
-            <h3><?php echo $text_option; ?></h3>
             <?php foreach ($options as $option) { ?>
             <?php if ($option['type'] == 'select') { ?>
 			<!------------------------------------------------------------ -->
@@ -250,21 +248,23 @@
             <?php } ?>
             <?php if ($option['type'] == 'radio') { ?>
             <div class="form-group<?php echo ($option['required'] ? ' required' : ''); ?>">
-              <label class="control-label"><?php echo $option['name']; ?></label>
+              
               <div class="hrz-dsiplay" id="input-option<?php echo $option['product_option_id']; ?>">
+                <div class="radio">
+                  <p><?php echo $option['name']; ?></p>
                 <?php foreach ($option['product_option_value'] as $option_value) { ?>
  <?php  if (!$option_value['imagel'] || strpos($option_value['imagel'], 'no_image')) $option_value['imagel'] = $thumb; ?>
  <?php if ($option_value['imagexl'] == '') $option_value['imagexl'] = 'no_image'; ?>
-                <div class="radio">
-                  <label>
-                                       <input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" class="thumb" src="<?php echo $option_value['imagel']; ?>" val="<?php echo $option_value['imagexl']; ?>" value="<?php echo $option_value['product_option_value_id']; ?>" /><br />
-                      <span><?php echo $option_value['name']; ?></span>
+                
+                                       <input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" class="thumb" src="<?php echo $option_value['imagel']; ?>" val="<?php echo $option_value['imagexl']; ?>" value="<?php echo $option_value['product_option_value_id']; ?>" />
+                      <label><?php echo $option_value['name']; ?></label>
                     <?php if ($option_value['price']) { ?>
                     <!--(<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)-->
                     <?php } ?>
-                  </label>
-                </div>
+                  
                 <?php } ?>
+                
+                </div>
               </div>
             </div>
             <?php } ?>
@@ -392,18 +392,18 @@
 			
 			<!-- ------------------------------Add to Cart Button--------------------------------- -->
 			<div style="display:flex;display:-webkit-box;">
-            <div class="form-group" style="width:45%;">
+            <div class="form-group">
               <label class="control-label" for="input-quantity" style="display:none;"><?php echo $entry_qty; ?></label>
               <input type="hidden" name="quantity" value="<?php echo $minimum; ?>" size="2" id="input-quantity" class="form-control" />
               <input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
               <br />
-              <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary btn-lg btn-block" style="  background-color:#acacac !important;border-radius:0px !important;"><?php echo $button_cart; ?></button>
+              <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary btn-lg btn-block"><span class="add-to-cart"><?php echo $button_cart; ?></span></button><br/>
             </div>
 			
 			<!-- -----------------------------Buy Now Button--------------------------- -->
-			<div class="form-group" style="width: auto;margin: auto 0 auto 10%;">
+			<div class="form-group">
               <br />
-              <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary btn-lg btn-block" style="  background-color:#cbbc97 !important;border-radius:0px !important;"><?php echo $buy_cart; ?></button>
+              <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary btn-lg btn-block"><span class="buy-now"><?php echo $buy_cart; ?></span><br/></button>
             </div>
 			</div>
 			
@@ -434,7 +434,7 @@
         </div>
               
               <!-- -------------similar products-------------------- -->
-              <div class="col-sm-3" style="float:right;">
+              <div class="col-sm-2" style="float:right;">
                   
                     <div class="">
             <div class="">

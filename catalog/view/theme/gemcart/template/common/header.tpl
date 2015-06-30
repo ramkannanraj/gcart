@@ -37,6 +37,16 @@
 
 <link href="catalog/view/theme/gemcart/stylesheet/style.css" rel="stylesheet">
 <link href="catalog/view/theme/gemcart/stylesheet/style1.css" rel="stylesheet">
+<link href="catalog/view/theme/gemcart/stylesheet/listing.css" rel="stylesheet">
+<link href="catalog/view/theme/gemcart/stylesheet/listing2.css" rel="stylesheet">
+<link href="catalog/view/theme/gemcart/stylesheet/listing3.css" rel="stylesheet">
+<link href="catalog/view/theme/gemcart/stylesheet/listing4.css" rel="stylesheet">
+<link href="catalog/view/theme/gemcart/stylesheet/listing5.css" rel="stylesheet">
+<link href="catalog/view/theme/gemcart/stylesheet/purchase.css" rel="stylesheet">
+<link href="catalog/view/theme/gemcart/stylesheet/purchase2.css" rel="stylesheet">
+<link href="catalog/view/theme/gemcart/stylesheet/purchase3.css" rel="stylesheet">
+<link href="catalog/view/theme/gemcart/stylesheet/purchase4.css" rel="stylesheet">
+<link href="catalog/view/theme/gemcart/stylesheet/purchase5.css" rel="stylesheet">
 <link href="catalog/view/theme/gemcart/stylesheet/menu1.css" rel="stylesheet">
 <?php foreach ($styles as $style) { ?>
 <link href="<?php echo $style['href']; ?>" type="text/css" rel="<?php echo $style['rel']; ?>" media="<?php echo $style['media']; ?>" />

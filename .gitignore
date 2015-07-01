@@ -9,3 +9,8 @@ image/cache/
 system/cache/
 system/cache_mfp/
 system/logs/
+system/modification/
+vqmod/vqcache/
+vqmod/checked.cache
+vqmod/mods.cache
+vqmod/logs/

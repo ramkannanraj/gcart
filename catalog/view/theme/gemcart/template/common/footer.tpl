@@ -59,13 +59,13 @@
  
        <div class="social-icon">
              <ul>
-                 <li><img src="image/facebook.jpg" /></li>
-                 <li><img src="image/twitter.jpg"/></li>
-                 <li><img src="image/google.jpg" /></li>
-                 <li><img src="image/p.jpg" /></li>
-                 <li><img src="image/you-tube.jpg" /></li>
-                 <li><img src="image/video.jpg" /></li>
-                 <li><img src="image/e.jpg" /></li>
+                 <li><a href="https://www.facebook.com/pages/Dummy-Page/1644653862418403?skip_nax_wizard=true&ref_type=logout_gear" target="_blank"><img src="image/facebook.jpg" /></a></li>
+                 <li><a href="https://twitter.com/" target="_blank"><img src="image/twitter.jpg"/></a></li>
+                 <li><a href="https://plus.google.com/" target="_blank"><img src="image/google.jpg"/></a></li>
+                 <li><a href="https://in.pinterest.com/" target="_blank"><img src="image/p.jpg"/></a></li>
+                 <li><a href="https://www.youtube.com/" target="_blank"><img src="image/you-tube.jpg"/></a></li>
+                 <li><a href="https://instagram.com/" target="_blank"><img src="image/video.jpg"/></a></li>
+                 <li><a href="https://www.blogger.com/features" target="_blank"><img src="image/e.jpg"/></a></li>
              </ul>
        </div> 
  
@@ -117,8 +117,8 @@
         <div class="container">
           
             <div class="col-sm-12 col-md-12 col-xs-12 footer">
-                <div class="col-sm-4"><a href="#" target="_self">Terms of use </a> | 
-                    <a href="#" target="_self">Privacy Policy </a>
+                <div class="col-sm-4"><a href="http://localhost/gcart/index.php?route=information/information&information_id=5" target="_self">Terms of use </a> | 
+                    <a href="http://localhost/gcart/index.php?route=information/information&information_id=3" target="_self">Privacy Policy </a>
                 </div>
                 <div class="col-sm-4 reserved">©2015 Gemcart. All Rights Reserved</div>
                 <div class="col-sm-4 paysecure"><img alt="payment" src="image/payment_logo.jpg"></div> 

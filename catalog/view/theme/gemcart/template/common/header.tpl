@@ -36,6 +36,7 @@
 <script src="catalog/view/javascript/js/modernizr.custom.17475.js"></script>
 
 <link href="catalog/view/theme/gemcart/stylesheet/style.css" rel="stylesheet">
+<link href="catalog/view/theme/gemcart/stylesheet/slider.css" rel="stylesheet">
 <link href="catalog/view/theme/gemcart/stylesheet/style1.css" rel="stylesheet">
 <link href="catalog/view/theme/gemcart/stylesheet/listing.css" rel="stylesheet">
 <link href="catalog/view/theme/gemcart/stylesheet/listing2.css" rel="stylesheet">
@@ -47,7 +48,7 @@
 <link href="catalog/view/theme/gemcart/stylesheet/purchase3.css" rel="stylesheet">
 <link href="catalog/view/theme/gemcart/stylesheet/purchase4.css" rel="stylesheet">
 <link href="catalog/view/theme/gemcart/stylesheet/purchase5.css" rel="stylesheet">
-<link href="catalog/view/theme/gemcart/stylesheet/menu1.css" rel="stylesheet">
+
 <?php foreach ($styles as $style) { ?>
 <link href="<?php echo $style['href']; ?>" type="text/css" rel="<?php echo $style['rel']; ?>" media="<?php echo $style['media']; ?>" />
 <?php } ?>
@@ -113,14 +114,11 @@
                     <?php } ?>
                 </div>
 
-                    <div  class="col-sm-4 col-md-4 col-xs-12"> 
-                            <form class="navbar-form" role="search" action="">
-                                    <div class="form-group">
-                                    <?php echo $search; ?>
-                                    </div>
-                            </form>
+                <div  class="col-sm-4 col-md-4 col-xs-12"> 
+                    <div class="form-group">
+                    <?php echo $search; ?>
                     </div>
-
+                </div>
 
                 <div  class="col-sm-1 col-md-1 col-xs-12 shopping"><?php echo $cart; ?> </div>
             </div>

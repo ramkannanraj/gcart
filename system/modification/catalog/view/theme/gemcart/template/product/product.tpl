@@ -436,7 +436,7 @@
                   
                     <div class="">
             <div class="">
-				<div class="column">
+				<div class="similar-col column">
 					<!-- Elastislide Carousel -->
 					<ul id="carousel" class="elastislide-list">
                         <li><a href="#"><img src="catalog/view/theme/gemcart/stylesheet/images/small/4.jpg" alt="image04" /></a>Rs. 15000/-</li>

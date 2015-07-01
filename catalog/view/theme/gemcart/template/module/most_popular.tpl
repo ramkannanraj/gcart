@@ -5,7 +5,7 @@
 <div class="row">
   <!--most popular -->
     <div id="most-popular">
-      <ul>
+      <ul class="mostpopularslider">
           <?php foreach ($products as $product) { ?>
               <li>
                 <a href="<?php echo $product['category_href']; ?>"><img src="<?php echo $product['thumb']; ?>" class="img-responsive" /></a>
@@ -15,9 +15,5 @@
     </div>
   <!--most popular End -->
       <br class="spacer"/>
-    <!--SHOW MORE PRODUCTS + --> 
-     <div id="more-products">
-            <h1>SHOW MORE PRODUCTS +</h1>
-     </div>
 </div>
 

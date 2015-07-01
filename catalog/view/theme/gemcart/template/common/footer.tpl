@@ -129,10 +129,10 @@
     </div>
 </footer>
 <script type="text/javascript">
-$(window).load(function() {
-     $("#mostpopularslider").flexisel({
+
+     $(".mostpopularslider").flexisel({
         visibleItems: 4,
-        animationSpeed: 1000,
+        animationSpeed: 3000,
         autoPlay: true,
         autoPlaySpeed: 1000,            
         pauseOnHover: true,
@@ -153,7 +153,7 @@ $(window).load(function() {
         }
     });
      
-});
+
 </script>
 <!-- <script src="catalog/view/javascript/autoptimize_9a15becef9b2f850af1e4f2ecea7b647.js" type="text/javascript"></script> -->
 <!--

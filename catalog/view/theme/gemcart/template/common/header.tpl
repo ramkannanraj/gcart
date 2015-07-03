@@ -63,41 +63,40 @@
 <nav id="top-strip1">
   <div class="container">
     <div class="row">
-            <div  class="col-sm-2 col-md-2 col-xs-12">
-            <p>Call <?php echo $telephone; ?></p>
-            </div>
-            <div  class="col-sm-6 col-md-6 col-xs-12">
-            <p><strong>OFFERS</strong> FLAT 20% OFF O DIAMOND AND GEMSTONE JEWELLERY ORDERS OVER RS.20.000</p>
-            </div>
-            <div  class="col-sm-4 col-md-4 col-xs-12">
-            <div id="top-links" class="nav pull-right">
-              <ul class="list-inline">
-                  <li class="dropdown"><a href="<?php echo $account; ?>" title="<?php echo $text_account; ?>" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_account; ?></span> <span class="caret"></span></a>
-                  <ul class="dropdown-menu dropdown-menu-right">
-                    <?php if ($logged) { ?>
-                    <li><a href="<?php echo $account; ?>"><?php echo $text_account; ?></a></li>
-                    <li><a href="<?php echo $order; ?>"><?php echo $text_order; ?></a></li>
-                    <li><a href="<?php echo $transaction; ?>"><?php echo $text_transaction; ?></a></li>
-                    <li><a href="<?php echo $download; ?>"><?php echo $text_download; ?></a></li>
-                    <li><a href="<?php echo $logout; ?>"><?php echo $text_logout; ?></a></li>
-                    <?php } else { ?>
-                    <li><a href="<?php echo $register; ?>"><?php echo $text_register; ?></a></li>
-                    <li><a href="<?php echo $login; ?>"><?php echo $text_login; ?></a></li>
-                    <?php } ?>
-                  </ul>
-                </li>
-                <li><a href="<?php echo $wishlist; ?>" id="wishlist-total" title="<?php echo $text_wishlist; ?>"><i class="fa fa-heart"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_wishlist; ?></span></a></li>
-                <li class="dropdown"><a href="#" title="Try @ Home" class="dropdown-toggle" data-toggle="dropdown"><span class="hidden-xs hidden-sm hidden-md">Try @ Home (0)</span> <span class="caret"></span></a>
-                  <ul class="dropdown-menu dropdown-menu-right">
-                    <li><a href="#">Try @ Home (0)</a></li>
-                    <li><a href="#">Try @ Home (0)</a></li>
-                  </ul>
-                </li>                    
+      <div  class="col-sm-2 col-md-2 col-xs-12">
+        <p>Call <?php echo $telephone; ?></p>
+      </div>
+      <div  class="col-sm-6 col-md-6 col-xs-12">
+        <p><strong>OFFERS</strong> FLAT 20% OFF O DIAMOND AND GEMSTONE JEWELLERY ORDERS OVER RS.20.000</p>
+      </div>
+      <div  class="col-sm-4 col-md-4 col-xs-12">
+        <div id="top-links" class="nav pull-right">
+          <ul class="list-inline">
+              <li class="dropdown"><a href="<?php echo $account; ?>" title="<?php echo $text_account; ?>" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_account; ?></span> <span class="caret"></span></a>
+              <ul class="dropdown-menu dropdown-menu-right">
+                <?php if ($logged) { ?>
+                <li><a href="<?php echo $account; ?>"><?php echo $text_account; ?></a></li>
+                <li><a href="<?php echo $order; ?>"><?php echo $text_order; ?></a></li>
+                <li><a href="<?php echo $transaction; ?>"><?php echo $text_transaction; ?></a></li>
+                <li><a href="<?php echo $download; ?>"><?php echo $text_download; ?></a></li>
+                <li><a href="<?php echo $logout; ?>"><?php echo $text_logout; ?></a></li>
+                <?php } else { ?>
+                <li><a href="<?php echo $register; ?>"><?php echo $text_register; ?></a></li>
+                <li><a href="<?php echo $login; ?>"><?php echo $text_login; ?></a></li>
+                <?php } ?>
               </ul>
-    </div>
-             
-            </div>
+            </li>
+            <li><a href="<?php echo $wishlist; ?>" id="wishlist-total" title="<?php echo $text_wishlist; ?>"><i class="fa fa-heart"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_wishlist; ?></span></a></li>
+            <li class="dropdown"><a href="#" title="Try @ Home" class="dropdown-toggle" data-toggle="dropdown"><span class="hidden-xs hidden-sm hidden-md">Try @ Home (0)</span> <span class="caret"></span></a>
+              <ul class="dropdown-menu dropdown-menu-right">
+                <li><a href="#">Try @ Home (0)</a></li>
+                <li><a href="#">Try @ Home (0)</a></li>
+              </ul>
+            </li>                    
+          </ul>
         </div>
+      </div>
+    </div>
   </div>
 </nav>
 <div id="banner-strip">

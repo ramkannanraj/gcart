@@ -208,7 +208,7 @@ class ControllerAccountRegister extends Controller {
 			$data['email'] = '';
 		}
 
-		if (isset($this->request->post['telephone'])) {
+		/*if (isset($this->request->post['telephone'])) {
 			$data['telephone'] = $this->request->post['telephone'];
 		} else {
 			$data['telephone'] = '';
@@ -271,7 +271,7 @@ class ControllerAccountRegister extends Controller {
 		$this->load->model('localisation/country');
 
 		$data['countries'] = $this->model_localisation_country->getCountries();
-
+*/
 		// Custom Fields
 		$this->load->model('account/custom_field');
 
@@ -307,11 +307,11 @@ class ControllerAccountRegister extends Controller {
 			$data['confirm'] = '';
 		}
 
-		if (isset($this->request->post['newsletter'])) {
+		/*if (isset($this->request->post['newsletter'])) {
 			$data['newsletter'] = $this->request->post['newsletter'];
 		} else {
 			$data['newsletter'] = '';
-		}
+		}*/
 
 		if ($this->config->get('config_account_id')) {
 			$this->load->model('catalog/information');
@@ -364,7 +364,7 @@ class ControllerAccountRegister extends Controller {
 			$this->error['warning'] = $this->language->get('error_exists');
 		}
 
-		if ((utf8_strlen($this->request->post['telephone']) < 3) || (utf8_strlen($this->request->post['telephone']) > 32)) {
+		/*if ((utf8_strlen($this->request->post['telephone']) < 3) || (utf8_strlen($this->request->post['telephone']) > 32)) {
 			$this->error['telephone'] = $this->language->get('error_telephone');
 		}
 
@@ -408,7 +408,7 @@ class ControllerAccountRegister extends Controller {
 			if ($custom_field['required'] && empty($this->request->post['custom_field'][$custom_field['location']][$custom_field['custom_field_id']])) {
 				$this->error['custom_field'][$custom_field['custom_field_id']] = sprintf($this->language->get('error_custom_field'), $custom_field['name']);
 			}
-		}
+		}*/
 
 		if ((utf8_strlen($this->request->post['password']) < 4) || (utf8_strlen($this->request->post['password']) > 20)) {
 			$this->error['password'] = $this->language->get('error_password');

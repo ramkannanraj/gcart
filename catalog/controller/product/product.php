@@ -305,6 +305,7 @@ class ControllerProductProduct extends Controller {
 
 			if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
 				$data['price'] = $this->currency->format($this->tax->calculate($product_info['price'], $product_info['tax_class_id'], $this->config->get('config_tax')));
+				$raw_price = $product_info['price'];
 			} else {
 				$data['price'] = false;
 			}
@@ -393,7 +394,51 @@ class ControllerProductProduct extends Controller {
 			$data['attribute_groups'] = $this->model_catalog_product->getProductAttributes($this->request->get['product_id']);
 
 			$data['products'] = array();
+			/* Similar products */
 
+			$categories = $this->model_catalog_product->getCategories($product_id);
+			$category = end($categories);
+			$category = $this->model_catalog_category->getCategory($category['category_id']);
+
+			$limits = array(
+				'category_id' => $category['category_id'],
+				'product_id'  => $this->request->get['product_id'],
+				'limit'		  => 6,
+				'min_price'	  => $raw_price - ($raw_price * 25/100),
+				'max_price'	  => $raw_price + ($raw_price * 25/100)
+				);
+			//print_r($limits);
+			$results = $this->model_catalog_product->getSimilarProducts($limits);
+
+			foreach ($results as $result) {
+				if ($result['image']) {
+					$image = $this->model_tool_image->resize($result['image'], $this->config->get('config_image_related_width'), $this->config->get('config_image_related_height'));
+				} else {
+					$image = $this->model_tool_image->resize('placeholder.png', $this->config->get('config_image_related_width'), $this->config->get('config_image_related_height'));
+				}
+
+				if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
+					$price = $this->currency->format($this->tax->calculate($result['price'], $result['tax_class_id'], $this->config->get('config_tax')));
+				} else {
+					$price = false;
+				}
+
+				if ((float)$result['special']) {
+					$special = $this->currency->format($this->tax->calculate($result['special'], $result['tax_class_id'], $this->config->get('config_tax')));
+				} else {
+					$special = false;
+				}
+
+				$data['similarproducts'][] = array(
+					'product_id'  => $result['product_id'],
+					'thumb'       => $image,
+					'name'        => $result['name'],
+					'price'       => $price,
+					'special'     => $special,
+					'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'])
+				);
+			}
+			/* Similar products end */
 			$results = $this->model_catalog_product->getProductRelated($this->request->get['product_id']);
 
 			foreach ($results as $result) {

@@ -13,8 +13,8 @@
     <div  class="col-sm-3 col-md-3 col-xs-12 ">
         <div id="sort">
         <h1>View</h1>
-        <button type="button" id="list-view" class="btn btn-default" data-toggle="tooltip" title="<?php echo $button_list; ?>"><i class="fa fa-th-list"></i></button>
-        <button type="button" id="grid-view" class="btn btn-default" data-toggle="tooltip" title="<?php echo $button_grid; ?>"><i class="fa fa-th"></i></button>
+        <button type="button" style="border:none; margin-right:15px;" id="list-view" class="  btn-default" data-toggle="tooltip" title="<?php echo $button_list; ?>"><i class="fa fa-th-list"></i></button>
+        <button type="button" style="border:none; margin-right:15px;" id="grid-view" class="btn-default" data-toggle="tooltip" title="<?php echo $button_grid; ?>"><i class="fa fa-th"></i></button>
         </div>
     </div>
 
@@ -59,21 +59,51 @@
       
       <?php if ($products) { ?>
       <div class="row">
-      <div  class="col-sm-12 col-md-12 col-xs-12 product-list"  >
+      <div  class="col-sm-12 col-md-12 col-xs-12"  >
               <br class="spacer" />
         <?php foreach ($products as $product) { ?>
-            <li><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a>
-            <h1><?php echo $product['name']; ?>       
-                <?php if ($product['price']) { ?>
-                      <?php if (!$product['special']) { ?>
-                      <?php echo $product['price']; ?>
-                      <?php } else { ?>
-                      <span class="price-new"><?php echo $product['special']; ?></span> <span class="price-old"><?php echo $product['price']; ?></span>
-                      <?php } ?>
+        	<ul class="grid cs-style-7">
+            <li>
+            <div class="try"></div>
+            <figure>
+						<a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a>
+                        <h1><?php echo $product['name']; ?></h1>
+                        <?php if ($product['price']) { ?>
+                          <p>
+                            <?php if (!$product['special']) { ?>
+                            <?php echo $product['price']; ?>
+                            <?php } else { ?>
+                            <span class="price-new"><?php echo $product['special']; ?></span> <span class="price-old"><?php echo $product['price']; ?></span>
+                            <?php } ?>
+                            <?php if ($product['tax']) { ?>
+                            <span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
+                            <?php } ?>
+                          </p>
+                        <?php } ?>
+						<figcaption>
+							<h3><?php echo $product['name']; ?></h3>
+							<span>
+                <?php if (!$product['special']) { ?>
+                  <?php echo $product['price']; ?>
+                  <?php } else { ?>
+                  <span class="price-new"><?php echo $product['special']; ?></span> <span class="price-old"><?php echo $product['price']; ?></span>
+                  <?php } ?>
+                  <?php if ($product['tax']) { ?>
+                  <span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
                 <?php } ?>
-            </h1>
+              </span>
+							<ul class="listing-menu">
+                            <li><a href="#">Similar Products</a>|</li>
+                            <li><a href="#"><img src="catalog/view/theme/gemcart/images/wishlist.png" />Add to Wishlist</a>|</li>
+                            <li><a href="#"><img src="catalog/view/theme/gemcart/images/quick-view.png" /></a></li>
+                            </ul>
+						</figcaption>
+					</figure>
+            
+  
+           
             </li>
-          
+          </ul>
         <!-- <div class="product-layout product-list col-xs-12">
           <div class="product-thumb">
             <div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a></div>

@@ -31,10 +31,10 @@
           </div>
         </fieldset>
         <div class="buttons clearfix">
-          <div><a href="<?php echo $back; ?>" class="submit"><?php echo $button_back; ?></a></div>
-            <div class="submit">
-              <input type="submit" value="<?php echo $button_continue; ?>" class="btn btn-primary" />
-            </div>
+          <div  ><a href="<?php echo $back; ?>" class="submit"><?php echo $button_back; ?></a></div>
+        <!--  <div class="pull-right">
+            <input type="submit" value="<?php echo $button_continue; ?>" class="btn btn-primary" />
+          </div> -->
         </div>
       </form>
       <?php echo $content_bottom; ?></div>

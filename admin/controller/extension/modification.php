@@ -715,9 +715,10 @@ class ControllerExtensionModification extends Controller {
 			}
 
 			// Just after modifications are complete, if config settings say maintenance mode is on AND is different org state, then turn it back on
-			if ($org_maintenance != $this->config->get('config_maintenance')) {
+			//if ($org_maintenance != $this->config->get('config_maintenance')) {
+				$this->load->model('setting/setting');
 				$this->model_setting_setting->editSettingValue('config', 'config_maintenance', false);
-			}
+			//}
 
 			$this->session->data['success'] = $this->language->get('text_success');
 

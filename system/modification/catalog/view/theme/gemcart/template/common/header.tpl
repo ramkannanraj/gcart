@@ -37,21 +37,21 @@
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/gemcart/stylesheet/elastislide.css" />
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/gemcart/stylesheet/custom.css" />
 <script src="catalog/view/javascript/js/modernizr.custom.17475.js"></script>
-
+ 
+<link href="catalog/view/theme/gemcart/stylesheet/component.css" rel="stylesheet">
 <link href="catalog/view/theme/gemcart/stylesheet/style.css" rel="stylesheet">
-<link href="catalog/view/theme/gemcart/stylesheet/slider.css" rel="stylesheet">
 <link href="catalog/view/theme/gemcart/stylesheet/style1.css" rel="stylesheet">
-<link href="catalog/view/theme/gemcart/stylesheet/listing.css" rel="stylesheet">
+<!--<link href="catalog/view/theme/gemcart/stylesheet/listing.css" rel="stylesheet">
 <link href="catalog/view/theme/gemcart/stylesheet/listing2.css" rel="stylesheet">
-<link href="catalog/view/theme/gemcart/stylesheet/listing3.css" rel="stylesheet">
+<link href="catalog/view/theme/gemcart/stylesheet/listing3.css" rel="stylesheet"> -->
 <link href="catalog/view/theme/gemcart/stylesheet/listing4.css" rel="stylesheet">
-<link href="catalog/view/theme/gemcart/stylesheet/listing5.css" rel="stylesheet">
-<link href="catalog/view/theme/gemcart/stylesheet/purchase.css" rel="stylesheet">
+<link href="catalog/view/theme/gemcart/stylesheet/listing5.css" rel="stylesheet"> 
+<!--<link href="catalog/view/theme/gemcart/stylesheet/purchase.css" rel="stylesheet"> 
 <link href="catalog/view/theme/gemcart/stylesheet/purchase2.css" rel="stylesheet">
 <link href="catalog/view/theme/gemcart/stylesheet/purchase3.css" rel="stylesheet">
 <link href="catalog/view/theme/gemcart/stylesheet/purchase4.css" rel="stylesheet">
-<link href="catalog/view/theme/gemcart/stylesheet/purchase5.css" rel="stylesheet">
-
+<link href="catalog/view/theme/gemcart/stylesheet/purchase5.css" rel="stylesheet"> -->
+<link href="catalog/view/theme/gemcart/stylesheet/menu1.css" rel="stylesheet">
 <?php foreach ($styles as $style) { ?>
 <link href="<?php echo $style['href']; ?>" type="text/css" rel="<?php echo $style['rel']; ?>" media="<?php echo $style['media']; ?>" />
 <?php } ?>
@@ -68,40 +68,97 @@
 <nav id="top-strip1">
   <div class="container">
     <div class="row">
-      <div  class="col-sm-2 col-md-2 col-xs-12">
-        <p>Call <?php echo $telephone; ?></p>
-      </div>
-      <div  class="col-sm-6 col-md-6 col-xs-12">
-        <p><strong>OFFERS</strong> FLAT 20% OFF O DIAMOND AND GEMSTONE JEWELLERY ORDERS OVER RS.20.000</p>
-      </div>
-      <div  class="col-sm-4 col-md-4 col-xs-12">
-        <div id="top-links" class="nav pull-right">
-          <ul class="list-inline">
-              <li class="dropdown"><a href="<?php echo $account; ?>" title="<?php echo $text_account; ?>" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_account; ?></span> <span class="caret"></span></a>
-              <ul class="dropdown-menu dropdown-menu-right">
-                <?php if ($logged) { ?>
-                <li><a href="<?php echo $account; ?>"><?php echo $text_account; ?></a></li>
-                <li><a href="<?php echo $order; ?>"><?php echo $text_order; ?></a></li>
-                <li><a href="<?php echo $transaction; ?>"><?php echo $text_transaction; ?></a></li>
-                <li><a href="<?php echo $download; ?>"><?php echo $text_download; ?></a></li>
-                <li><a href="<?php echo $logout; ?>"><?php echo $text_logout; ?></a></li>
-                <?php } else { ?>
-                <li><a href="<?php echo $register; ?>"><?php echo $text_register; ?></a></li>
-                <li><a href="<?php echo $login; ?>"><?php echo $text_login; ?></a></li>
-                <?php } ?>
-              </ul>
-            </li>
-            <li><a href="<?php echo $wishlist; ?>" id="wishlist-total" title="<?php echo $text_wishlist; ?>"><i class="fa fa-heart"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_wishlist; ?></span></a></li>
-            <li class="dropdown"><a href="#" title="Try @ Home" class="dropdown-toggle" data-toggle="dropdown"><span class="hidden-xs hidden-sm hidden-md">Try @ Home (0)</span> <span class="caret"></span></a>
-              <ul class="dropdown-menu dropdown-menu-right">
-                <li><a href="#">Try @ Home (0)</a></li>
-                <li><a href="#">Try @ Home (0)</a></li>
-              </ul>
-            </li>                    
-          </ul>
-        </div>
-      </div>
+            <div  class="col-sm-2 col-md-2 col-xs-12">
+            <p>Call <?php echo $telephone; ?></p>
+            </div>
+            <div  class="col-sm-6 col-md-6 col-xs-12">
+            <p><span class="offer">OFFERS</span> FLAT 20% OFF O DIAMOND AND GEMSTONE JEWELLERY ORDERS OVER RS.20.000</p>
+            </div>
+            <div  class="col-sm-4 col-md-4 col-xs-12">
+            <div id="top-links" class="nav ">
+              <ul class="list-inline">
+                  <li class="dropdown"><a href="<?php echo $account; ?>" title="<?php echo $text_account; ?>" class="dropdown-toggle" data-toggle="dropdown"><!--<i class="fa fa-user"></i> --> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_account; ?></span> <span class="caret"></span></a>
+                  <ul class="dropdown-menu dropdown-menu-right">
+                    <?php if ($logged) { ?>
+                    <li><a href="<?php echo $account; ?>"><?php echo $text_account; ?></a></li>
+                    <li><a href="<?php echo $order; ?>"><?php echo $text_order; ?></a></li>
+                    <li><a href="<?php echo $transaction; ?>"><?php echo $text_transaction; ?></a></li>
+                    <li><a href="<?php echo $download; ?>"><?php echo $text_download; ?></a></li>
+                    <li><a href="<?php echo $logout; ?>"><?php echo $text_logout; ?></a></li>
+                    <?php } else { ?>
+                    <li><a href="<?php echo $register; ?>"><?php echo $text_register; ?></a></li>
+                    <li><a href="<?php echo $login; ?>"><?php echo $text_login; ?></a></li>
+                    <?php } ?>
+                  </ul>
+                </li>
+  <!--edit -->              
+                <li class="dropdown"><a href="<?php echo $wishlist; ?>" id="wishlist-total" title="<?php echo $text_wishlist; ?>" class="dropdown-toggle" data-toggle="dropdown"><!--<i class="fa fa-heart"></i> --> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_wishlist; ?></span> <span class="caret"></span></a>
+                   <ul class="dropdown-menu dropdown-menu-right wishlist">
+                  	 <li><a href="#"> <button type="button" class="close">&times;</button></a></li>
+                         <div  class="col-sm-12 col-md-12 col-xs-12">
+                             <h1>WISHLIST (0)</h1> <hr/>
+                             <p>You have no items in your wishlist</p>
+                             <button class="drop-btn1">Try More Products</button>
+                        </div>
+           			 </ul>
+                 </li>
+                
+                 
+                <li class="dropdown"><a href="#" title="Try @ Home" class="dropdown-toggle" data-toggle="dropdown"><span class="hidden-xs hidden-sm hidden-md">Try @ Home (0)</span> <span class="caret"></span></a>
+                   <ul class="dropdown-menu dropdown-menu-right">
+       					<li><a href="#"> 
+     					   <button type="button" class="close">&times;</button></a></li>
+      <br>
+                               <div  class="col-sm-3 col-md-3 col-xs-12"><img src="catalog/view/theme/gemcart/images/hometryon_home.png" class="img-responsive img"  /></div>
+                                <div  class="col-sm-9 col-md-9 col-xs-12">
+                                <h2>Try @ Home</h2>
+                                <p>Choose up to 5 products and we will send samples to you to try @ home. Just so that you can be sure. Learn More</p>
+                                </div>
+
+                                 <div  class="col-sm-12 col-md-12 col-xs-12">
+                                 <hr/>
+                                <h1>Your Selection</h1></div>
+
+                                <div class="selection">
+                                <li><img src="catalog/view/theme/gemcart/images/hometryon_home.png"  class="img-responsive"/>
+                                 Please choose another product</li>
+                                 <li><img src="catalog/view/theme/gemcart/images/hometryon_home.png"  class="img-responsive"/>
+                                 Please choose another product</li>
+                                
+                                <li><img src="catalog/view/theme/gemcart/images/hometryon_home.png"  class="img-responsive"/>
+                                 Please choose another product</li>
+                                 </div>
+ 
+                                    <div  class="col-sm-12 col-md-12 col-xs-12">
+                                    <hr/>
+                                    <h1>your details</h1>
+                                    <p>Our representative will contact you within 24 hours to schedule an appointment at your convenience. </p>
+                                    
+                                    </div>
+
+ 
+                                 <div  class="col-sm-5 col-md-5 col-xs-12"><strong>City :</strong></div>
+                                <div  class="col-sm-7 col-md-7 col-xs-12"><select><option value="volvo">India</option></select></div>
+                                
+                                 <div  class="col-sm-5 col-md-5 col-xs-12"><strong>Name :</strong></div>
+                                <div  class="col-sm-7 col-md-7 col-xs-12"><input type="text" /></div>
+                                
+                                 <div  class="col-sm-5 col-md-5 col-xs-12"><strong>Mobile No. :</strong></div>
+                                <div  class="col-sm-7 col-md-7 col-xs-12"><input type="text" /></div>
+                                
+                                
+                                 <div  class="col-sm-5 col-md-5 col-xs-12"><strong>Email :</strong></div>
+                                <div  class="col-sm-7 col-md-7 col-xs-12"><input type="text" /></div>
+                                
+                                 <div  class="col-sm-7 col-md-7 col-xs-12"><button class="drop-btn">Try More Products</button></div>
+                                 <div  class="col-sm-5 col-md-5 col-xs-12"><button class="drop-btn">Submit</button></div>
+                                  
+                        </ul>
+                                                 </ul>  <!--edit end --> 
     </div>
+             
+            </div>
+        </div>
   </div>
 </nav>
 <div id="banner-strip">
@@ -118,11 +175,14 @@
                     <?php } ?>
                 </div>
 
-                <div  class="col-sm-4 col-md-4 col-xs-12"> 
-                    <div class="form-group">
-                    <?php echo $search; ?>
+                    <div  class="col-sm-4 col-md-4 col-xs-12"> 
+                            <form class="navbar-form" role="search" action="">
+                                    <div class="form-group">
+                                    <?php echo $search; ?>
+                                    </div>
+                            </form>
                     </div>
-                </div>
+
 
                 <div  class="col-sm-1 col-md-1 col-xs-12 shopping"><?php echo $cart; ?> </div>
             </div>

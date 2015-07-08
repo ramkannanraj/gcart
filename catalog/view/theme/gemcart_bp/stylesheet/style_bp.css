@@ -1,0 +1,165 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*body{ background:#fbfaf9} */
+*{ margin:0; padding:0; text-decoration:none; font-family: 'PT Sans', sans-serif; outline:none; list-style:none; }
+.spacer{ clear:both;}
+#top-strip{ width:100%; display:block; margin:0 auto; background:#000; height:20px;}
+#top-strip1{width:100%; display:block; margin:0 auto; background:#65646b; padding:5px 0;   }
+#top-strip1 p{ color:#fff; font-size:12px; margin:0; padding:0;}
+
+.btn-primary { background:transparent !important; border:transparent !important} 
+.btn { padding:0px 12px }
+button.search-btn { padding: 4px 12px }
+#banner-strip{ width:100%; display:block; margin:0 auto; background:#999; height:380px;}
+a.cart-items {
+  cursor: pointer;
+  text-decoration: none;
+}
+#header{ margin-top:20px; background:#f3f3f3; padding:35px 35px 10px;} 
+.form-group{ font-size:15px; text-transform:uppercase} .form-control { border-radius:10px;}
+.navbar-form{ float:right;  } .shopping{ float:left}  
+.dots{ border-bottom:#000 dotted 1px; display:block;}
+.selectpicker{ padding:3px 15px; width:65%; float:right}
+.selectpicker1{ padding:3px 15px;  }
+
+.detail-input input[type="text"] { width:70px; margin-bottom:10px; border:#ccc solid 1px; padding:3px;}
+.detail-input1 input[type="text"] { width:100%; margin-bottom:10px; border:#ccc solid 1px; padding:3px; float:left;}
+.add-to-cart{ background:#acacac; font-size:25px; text-align:center; color:#fff; border:none; padding:7px 15px; font-weight:bold}
+.buy-now{ background:#cbbc97; font-size:25px; text-align:center; color:#fff; border:none; padding:7px 15px; font-weight:bold}
+.menu-container { margin-top: 5px; }
+#heading-strip h1 {
+  position: relative;
+  text-align: center; font-size:28px; margin-bottom:35px;
+}
+/* Somorjit 26/6/15 */
+/*-------------------------------custom added css----------------------------------*/
+.zoomContainer {
+    margin-left: 90px !important;
+    padding-right: -75px !important;  
+}
+.zoomWindowContainer div {
+    width: 400px !important;
+    height: 400px !important; 
+    border: 1px solid #ddd !important;
+}
+.thumbnail>img, .thumbnail a>img {
+  padding-left: 90px;
+}
+.pluginCountButton {
+  diaplay: none !important;
+}
+.pluginButton .pluginButtonLabel {
+  diaplay: none !important;
+}
+radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"] {}
+
+.hrz-dsiplay {display: flex;display: -webkit-box;}
+.hrz-dsiplay select {margin-left:30px;float:right;}
+.test3 {margin-top: 15px;margin-left: 15px;position: absolute;top: 0;}
+.test3 li {border: 1px solid #ddd;}
+.test3 img {z-index:99999999;}
+.form-group select {width: 60px;height: 30px;border-radius: 0px;}
+.details input{ border:#ccc solid 1px;padding:5px;text-align:center;margin:0 0 15px;background:rgba(251,250,249,0);width: 100%;}}
+body{ /*background:#fbfaf9*/}
+/* Somorjit End */
+
+#heading-strip h1 span {
+  background:#fbfaf9;
+  padding: 0 15px;
+  position: relative;
+  z-index: 1;
+}
+#heading-strip h1:before {
+  background: #000;
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+    top: 50%;
+  width: 100%;
+}
+#heading-strip h1:before {
+  left: 0;
+}
+
+#new-arrival li{ width:340px; display:block; float:left; margin-right:60px; background:#fff; margin-bottom:45px; border:#898989 solid 1px; position:relative}
+#new-arrival li h1{ color:#2e2e2e; font-size:30px; text-transform:uppercase;  background:url(../images/bottom-bg.png) repeat-x bottom center; height:58px; width:100%; position:absolute; bottom:-10px; text-align:center; padding:14px 0;}
+#new-arrival li:nth-child(3n+3){ margin-right:0;}
+#new-arrival img{ text-align:center; display:block; margin:0 auto}
+
+#most-popular li{ float:left; display:block; margin-bottom:25px;}
+
+#more-products{ background:#f1f0ef; border:#ccc solid 1px; width:100%; margin-bottom:45px; }
+#more-products h1{ color:#2e2e2e; text-align:center; text-transform:uppercase; font-size:22px;padding:10px 0; margin:0}
+
+.testimonial{ background:#cbf4f0; display:block; max-width:552px; margin-right:45px; padding:40px 0; margin-bottom:55px;   }
+.testimonial h1{ text-align:center; font-size:30px; color:#2e2e2e;}
+.testimonial p{ text-align:center; font-size:15px; color:#2e2e2e;}
+
+.our-services{ background:#cbf4f0; display:block;  max-width:552px; padding:40px 0;  margin-bottom:55px;}
+.our-services h1{ text-align:center; font-size:25px; color:#2e2e2e;}
+.our-services p{ text-align:center; font-size:15px; color:#2e2e2e;}
+
+#track .black-btn{ background:#000 !important; display:block; text-align:center; float:left; font-size:14px; color:#fff; padding:7px 25px; border-radius:4px; text-transform:uppercase;}
+#track h1{ text-align:left; display:inline ; font-weight:600;  font-size:20px; float:left; padding:0; margin:0 35px 0 0;}
+#sort h1{ text-align:left; display:inline ; font-weight:600; font-size:17px; float:left; padding:0; margin:0 15px 0 0;}
+#sort p{ text-align:left; display:inline ;  font-size:14px; padding:0; margin:0 5px 0 15px;}
+
+
+.details h5{ border:#ccc solid 1px; padding:5px; text-align:center; margin:0 0 15px;}
+.details h2{ font-size:25px; font-weight:bold; padding:0; margin:15px 0 7px;}
+.details h3{ background:#cbbc97; padding:4px; text-align:center; margin:15px 0 7px; font-size:13px; color:#fff; width:50%}
+.details h1{ padding:0; margin:0; font-size:25px; font-weight:bold}
+
+.purchase-social{ margin-top:15px;}
+.purchase-social li{ float:left; display:block; margin-right:10px;}
+
+.active{ color:#924466 !important}
+.breadcrumb li a{ color:#222 !important; text-transform:uppercase}
+
+#showing{ background:#000; width:100%; display:block; padding:10px 0}
+#showing h1{ color:#fff; font-size:19px; margin:0; padding:0; }
+
+.checkbox label { padding:0; margin:0;font-size:16px; width:150px;}
+.radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"] {margin-left:20px;}
+
+.refine { border-right:#ccc solid 1px;}
+.refine h1{ color:#000; font-size:18px; display:block; font-weight:bold;text-transform:uppercase;}
+.refine li{  display:block; margin-bottom:10px;}
+
+.product-list li{ width:265px; padding:15px; float:left; margin-left:15px; border:#ccc solid 1px; margin-bottom:15px; }
+.product-list li:nth-child(3n+3){ }
+.product-list img{ text-align:center; display:block; margin:0 auto}
+.product-list h1{ font-size:15px; color:#222; text-align:center; text-transform: uppercase;}
+
+
+#sign .black-btn{ background:#000 !important; display:block; text-align:center;font-size:14px; color:#fff; padding:7px 25px; border-radius:4px; text-transform:uppercase;}
+#sign h1{ text-align:left; display:inline ; font-weight:600; font-size:20px; float:left; padding:0; margin:0 5px 0 0;}
+#sign .email{ float:left; margin-top:-0px;}
+
+
+.discription{ font-size:14px; text-align:justify; line-height:22px; margin-bottom:10px;}
+
+.social-icon{ width:40%; display:block; margin:35px auto; }
+.social-icon li{ float:left; display:block; margin-left:15px;}
+
+#footer{ background:#d4d4d4; display:block; height:150px; width:100%;}
+
+
+
+@media only screen and (min-width :240px) and (max-width:767px) {
+#top-strip1 p{ color:#fff; font-size:12px; margin:0; padding:5px 0;}
+.navbar-form {float:none;} .shopping{ margin-bottom:10px;}
+#track{ overflow:hidden; margin-bottom:15px;}
+#sign h1 { display:block; width:100%;}
+#sign .black-btn{ float:left; display:block; margin-left:15px; margin-top:10px;}
+ .discription{ padding:0 15px}
+ .social-icon{ width:100%;} .social-icon li{ margin-bottom:10px;}
+ #track h1{   margin:0 15px 0 0;}
+#new-arrival img{ text-align:center; display:block; margin:0 auto} #new-arrival li{ float:none;}
+#new-arrival li{ width:340px; display:block; float:none; margin-right:0px; margin:0 auto; margin-bottom:25px;}
+#new-arrival li:nth-child(3n+3){ margin-right:0;  margin:0 auto; margin-bottom:25px;}
+.testimonial{ background:#cbf4f0; display:block; width:100%; max-width:100%;  margin-right:0px;}
+.our-services{ background:#cbf4f0; display:block;  width:100%; max-width:100%;  margin-right:0px;}
+}

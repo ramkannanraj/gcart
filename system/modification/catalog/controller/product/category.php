@@ -232,6 +232,15 @@ class ControllerProductCategory extends Controller {
 					$image = $this->model_tool_image->resize('placeholder.png', $this->config->get('config_image_product_width'), $this->config->get('config_image_product_height'));
 				}
 
+				$images = $this->model_catalog_product->getProductImages($result['product_id']);
+
+				foreach ($images as $addt_image) {
+					$image_additional = array(
+						'image' => $this->model_tool_image->resize($addt_image['image'], $this->config->get('config_image_product_width'), $this->config->get('config_image_product_height'))
+					);
+					break;
+				}
+
 				if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
 					$price = $this->currency->format($this->tax->calculate($result['price'], $result['tax_class_id'], $this->config->get('config_tax')));
 				} else {
@@ -259,6 +268,7 @@ class ControllerProductCategory extends Controller {
 				$data['products'][] = array(
 					'product_id'  => $result['product_id'],
 					'thumb'       => $image,
+					'image_additional' => $image_additional,
 					'name'        => $result['name'],
 					'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get('config_product_description_length')) . '..',
 					'price'       => $price,

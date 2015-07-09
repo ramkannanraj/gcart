@@ -4,7 +4,7 @@
       <!-- -->
       <br class="spacer"/>
         <div id="heading-strip">
-          <h1><span>WHY BUY FROM US ?s</span></h1>
+          <h1><span>WHY BUY FROM US ?</span></h1>
         </div> 
         <div class="row">
             <div class="col-sm-12 col-md-6 col-xs-12 testimonial">
@@ -129,9 +129,7 @@
     </div>
 </footer>
 
-
-
- <script type="text/javascript">
+<script type="text/javascript">
 $(window).load(function() {
      $("#mostpopularslider").flexisel({
         visibleItems: 4,

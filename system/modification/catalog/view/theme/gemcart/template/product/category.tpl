@@ -64,41 +64,46 @@
         <?php foreach ($products as $product) { ?>
         	<ul class="grid cs-style-7">
             <li>
-            <div class="try"></div>
-            <figure>
-						<a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a>
-                        <h1><?php echo $product['name']; ?></h1>
-                        <?php if ($product['price']) { ?>
-                          <p>
-                            <?php if (!$product['special']) { ?>
-                            <?php echo $product['price']; ?>
-                            <?php } else { ?>
-                            <span class="price-new"><?php echo $product['special']; ?></span> <span class="price-old"><?php echo $product['price']; ?></span>
-                            <?php } ?>
-                            <?php if ($product['tax']) { ?>
-                            <span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
-                            <?php } ?>
-                          </p>
-                        <?php } ?>
-						<figcaption>
-							<h3><?php echo $product['name']; ?></h3>
-							<span>
-                <?php if (!$product['special']) { ?>
-                  <?php echo $product['price']; ?>
-                  <?php } else { ?>
-                  <span class="price-new"><?php echo $product['special']; ?></span> <span class="price-old"><?php echo $product['price']; ?></span>
+              <div class="try"></div>
+                <figure>
+    						  <a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a>
+                  <h1><?php echo $product['name']; ?></h1>
+                  <?php if ($product['price']) { ?>
+                    <p>
+                      <?php if (!$product['special']) { ?>
+                      <?php echo $product['price']; ?>
+                      <?php } else { ?>
+                      <span class="price-old"><?php echo $product['price']; ?></span>
+                      <span class="price-new"><?php echo $product['special']; ?></span> 
+                      <?php } ?>
+                      <?php if ($product['tax']) { ?>
+                      <span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
+                      <?php } ?>
+                    </p>
                   <?php } ?>
-                  <?php if ($product['tax']) { ?>
-                  <span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
-                <?php } ?>
-              </span>
-							<ul class="listing-menu">
-                            <li><a href="#">Similar Products</a>|</li>
-                            <li><a href="#"><img src="catalog/view/theme/gemcart/images/wishlist.png" />Add to Wishlist</a>|</li>
-                            <li><a href="#"><img src="catalog/view/theme/gemcart/images/quick-view.png" /></a></li>
-                            </ul>
-						</figcaption>
-					</figure>
+      						<figcaption>
+                    <?php if($product['image_additional']){ ?>
+                        <a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['image_additional']['image']; ?>" class="img-responsive" /></a>
+                    <?php } ?>            
+      							<h3><?php echo $product['name']; ?></h3>
+      							<p>
+                      <?php if (!$product['special']) { ?>
+                        <?php echo $product['price']; ?>
+                      <?php } else { ?>
+                        <span class="price-old"><?php echo $product['price']; ?></span>
+                        <?php echo $product['special']; ?> 
+                      <?php } ?>
+                      <?php if ($product['tax']) { ?>
+                        <span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
+                      <?php } ?>
+                    </p>
+      							<ul class="listing-menu">
+                      <li><a href="#">Similar Products</a>|</li>
+                      <li><a href="#"><img src="catalog/view/theme/gemcart/images/wishlist.png" />Add to Wishlist</a>|</li>
+                      <li><a href="#"><img src="catalog/view/theme/gemcart/images/quick-view.png" /></a></li>
+                    </ul>
+      						</figcaption>
+					      </figure>
             
   
            

@@ -89,7 +89,6 @@
           </ul -->
 		  <div class="row">
 		  <div class="col-sm-6 col-md-6 col-xs-12">
-          <span class="old-price">$10,000.00</span>
 		  <?php if ($price) { ?>
           <ul class="list-unstyled">
             <?php if (!$special) { ?>
@@ -347,50 +346,30 @@
           <?php } ?>
         </div>
               
-              <!-- -------------similar products-------------------- -->
-              
-              
-              
-              
-              <div class="col-sm-2" style="float:right;">
-                  
-                    <div class="">
-            <div class="">
-				<div class="similar-col column">
-					<!-- Elastislide Carousel -->
-					<ul id="carousel" class="elastislide-list">
-                        <li><a href="#"><img src="catalog/view/theme/gemcart/stylesheet/images/small/4.jpg" alt="image04" /></a>Rs. 15000/-</li>
-						<li><a href="#"><img src="catalog/view/theme/gemcart/stylesheet/images/small/5.jpg" alt="image05" /></a>Rs. 15000/-</li>
-						<li><a href="#"><img src="catalog/view/theme/gemcart/stylesheet/images/small/6.jpg" alt="image06" /></a>Rs. 15000/-</li>
-						<li><a href="#"><img src="catalog/view/theme/gemcart/stylesheet/images/small/7.jpg" alt="image07" /></a>Rs. 15000/-</li>
-						<li><a href="#"><img src="catalog/view/theme/gemcart/stylesheet/images/small/11.jpg" alt="image11" /></a>Rs. 15000/-</li>
-						<li><a href="#"><img src="catalog/view/theme/gemcart/stylesheet/images/small/12.jpg" alt="image12" /></a>Rs. 15000/-</li>
-						<li><a href="#"><img src="catalog/view/theme/gemcart/stylesheet/images/small/13.jpg" alt="image13" /></a>Rs. 15000/-</li>
-						<li><a href="#"><img src="catalog/view/theme/gemcart/stylesheet/images/small/14.jpg" alt="image14" /></a>Rs. 15000/-</li>
-						<li><a href="#"><img src="catalog/view/theme/gemcart/stylesheet/images/small/15.jpg" alt="image15" /></a>Rs. 15000/-</li>
-						<li><a href="#"><img src="catalog/view/theme/gemcart/stylesheet/images/small/16.jpg" alt="image16" /></a>Rs. 15000/-</li>
-						<li><a href="#"><img src="catalog/view/theme/gemcart/stylesheet/images/small/17.jpg" alt="image17" /></a>Rs. 15000/-</li>
-                        <li><a href="#"><img src="catalog/view/theme/gemcart/stylesheet/images/small/18.jpg" alt="image18" /></a>Rs. 15000/-</li>
-						<li><a href="#"><img src="catalog/view/theme/gemcart/stylesheet/images/small/19.jpg" alt="image19" /></a>Rs. 15000/-</li>
-						<li><a href="#"><img src="catalog/view/theme/gemcart/stylesheet/images/small/20.jpg" alt="image20" /></a>Rs. 15000/-</li>
-						<li><a href="#"><img src="catalog/view/theme/gemcart/stylesheet/images/small/1.jpg" alt="image01" /></a>Rs. 15000/-</li>
-						<li><a href="#"><img src="catalog/view/theme/gemcart/stylesheet/images/small/2.jpg" alt="image02" /></a>Rs. 15000/-</li>
-						<li><a href="#"><img src="catalog/view/theme/gemcart/stylesheet/images/small/3.jpg" alt="image03" /></a>Rs. 15000/-</li>
-						<li><a href="#"><img src="catalog/view/theme/gemcart/stylesheet/images/small/8.jpg" alt="image08" /></a>Rs. 15000/-</li>
-						<li><a href="#"><img src="catalog/view/theme/gemcart/stylesheet/images/small/9.jpg" alt="image09" /></a>Rs. 15000/-</li>
-						<li><a href="#"><img src="catalog/view/theme/gemcart/stylesheet/images/small/10.jpg" alt="image10" /></a>Rs. 15000/-</li>
-					</ul>
-					<!-- End Elastislide Carousel -->
-				</div>
-			</div>
-		</div>
-                  
-                  
-              </div>
-              <!-- -------------------End of Similar products-------------------- -->
-              
-          <br class="spacer" />          
-          
+          <!-- -------------similar products-------------------- -->
+            <?php if ($similarproducts) { ?>
+            <div class="col-sm-2" style="float:right;">
+                <div class="similar-products">
+                  <div class="similar-col column">
+                    <ul id="carousel" class="elastislide-list">
+                      <?php foreach ($similarproducts as $product) { ?>
+                      <li><a href="<?php echo $product['href']; ?>">
+                      <img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a>
+                      <?php if ($product['price']) { ?>
+                        <?php if (!$product['special']) { ?>
+                          <?php echo $product['price']; ?>
+                        <?php } else { ?>
+                        <span class="price-new"><?php echo $product['special']; ?></span> <span class="price-old"><?php echo $product['price']; ?></span>
+                        <?php } ?>
+                      <?php } ?>
+                      </li>
+                       <?php } ?>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+            <?php } ?>
+          <!-- -------------------End of Similar products-------------------- -->
               
       </div>
 
@@ -768,15 +747,23 @@ $(document).ready(function() {
 });
 //--></script>
   <!--  similar product -->      
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 	<script type="text/javascript" src="catalog/view/javascript/js/jquerypp.custom.js"></script>
 	<script type="text/javascript" src="catalog/view/javascript/jquery/jquery.elastislide.js"></script>
 	<script type="text/javascript">
 			
-		$( '#carousel' ).elastislide( {
+		$( '#carousels' ).elastislide( {
 			orientation : 'vertical'
 		} );
 			
+</script> -->
+
+  <script type="text/javascript">
+      
+    $( '#carousel' ).elastislide( {
+      orientation : 'vertical'
+    } );
+      
 </script>
 <script type="text/javascript" src="index.php?route=product/livepriceupdate/js&product_id=<?php echo $product_id; ?>"></script>
 <script type="text/javascript"><!--

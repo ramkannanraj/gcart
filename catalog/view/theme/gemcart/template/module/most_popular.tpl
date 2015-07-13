@@ -41,7 +41,7 @@
             <h1>SHOW MORE PRODUCTS +</h1>
      </div> -->
 </div>
-<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script> -->
 <script type="text/javascript" src="catalog/view/javascript/js/jquerypp.custom.js"></script>
 <script type="text/javascript" src="catalog/view/javascript/jquery/jquery.elastislide.js"></script>
 <script type="text/javascript">
@@ -55,4 +55,4 @@
         minItems : 1
       } );
       
-</script> -->
+</script>

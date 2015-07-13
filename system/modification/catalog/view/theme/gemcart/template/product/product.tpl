@@ -1,7 +1,7 @@
 <?php echo $header;  ?>
 
 <!--container -->
-<div class="container">
+<div class="container" style="width:94%">
 	<ul class="breadcrumb">
 		<?php foreach ($breadcrumbs as $breadcrumb) { ?>
 		<li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
@@ -93,7 +93,7 @@
           <ul class="list-unstyled">
             <?php if (!$special) { ?>
             <li>
-              <h2 style="margin:0; padding:0"><span id="price_old"><?php echo $price; ?></span></h2>
+              <h2 style="margin:20px; padding:0"><span id="price_old"><?php echo $price; ?></span></h2>
             </li>
             <?php } else { ?>
             <li><span id="price_old" style="text-decoration: line-through;"><?php echo $price; ?></span></li>
@@ -125,15 +125,15 @@
 		  </div>
 		  </div>		  
 		  <div class="dots"></div>
-		  <div class="row">
-			<div class="col-sm-8 col-md-8 col-xs-12">
-				<p>Check for Availability in your Area</p>
-			</div>
-			<div class="col-sm-4 col-md-4 col-xs-12 details">
-				<input type="text" name="Pincode" value="Enter Pincode">
-			</div><!--col -->
+		  <!-- <div class="row">
+  			<div class="col-sm-8 col-md-8 col-xs-12">
+  				<p>Check for Availability in your Area</p>
+  			</div>
+  			<div class="col-sm-4 col-md-4 col-xs-12 details">
+  				<input type="text" name="Pincode" value="Enter Pincode">
+  			</div>
 		  </div>
-		  <div class="dots"></div>
+		  <div class="dots"></div> -->
 		  
 		  
           <div id="product">
@@ -157,23 +157,22 @@
               </select>
             </div>
             <?php } ?>
-            <?php if ($option['type'] == 'radio') { ?>
+            <?php if ($option['type'] == 'radio') { $i = 1;?>
             <div class="form-group<?php echo ($option['required'] ? ' required' : ''); ?>">
               <label class="control-label"><?php echo $option['name']; ?></label>
               <div id="input-option<?php echo $option['product_option_id']; ?>" class="input-option">
                 <?php foreach ($option['product_option_value'] as $option_value) { ?>
  <?php  if (!$option_value['imagel'] || strpos($option_value['imagel'], 'no_image')) $option_value['imagel'] = $thumb; ?>
  <?php if ($option_value['imagexl'] == '') $option_value['imagexl'] = 'no_image'; ?>
-                <div class="radio">
-                  <label>
-                                       <input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" class="thumb" src="<?php echo $option_value['imagel']; ?>" val="<?php echo $option_value['imagexl']; ?>" value="<?php echo $option_value['product_option_value_id']; ?>" />
-                    <?php echo $option_value['name']; ?>
+                <div class="radio">                  
+                                       <input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" class="thumb" src="<?php echo $option_value['imagel']; ?>" val="<?php echo $option_value['imagexl']; ?>" id="option[<?php echo $option['product_option_id'].$i; ?>]" value="<?php echo $option_value['product_option_value_id']; ?>" <?php echo ($option_value['product_option_value_id'] == 38)? "checked=checked" : ''; ?> />
+                    <?php //echo $option_value['name']; ?>
                     <?php if ($option_value['price']) { ?>
                     <!-- (<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>) -->
                     <?php } ?>
-                  </label>
+                  <label for="option[<?php echo $option['product_option_id'].$i; ?>]"><?php echo $option_value['name']; ?></label>
                 </div>
-                <?php } ?>
+                <?php $i++; } ?>
               </div>
             </div>
             <?php } ?>
@@ -347,7 +346,7 @@
         </div>
               
           <!-- -------------similar products-------------------- -->
-            <?php if ($similarproducts) { ?>
+<!--            <?php if ($similarproducts) { ?>
             <div class="col-sm-2" style="float:right;">
                 <div class="similar-products">
                   <div class="similar-col column">
@@ -368,14 +367,245 @@
                   </div>
                 </div>
             </div>
-            <?php } ?>
+            <?php } ?> -->
+            
+  <div class="col-sm-2">          
+    <div class="similar-slider">
+    <h1>similar</h1>
+     </div>
+    
+    <div id="slides"> 
+        <a href="#" class="slidesjs-previous slidesjs-navigation"><i class="icon-chevron-left icon-large"></i></a>
+        <a href="#" class="slidesjs-next slidesjs-navigation"><i class="icon-chevron-right icon-large"></i></a>
+        <img src="catalog/view/theme/gemcart/images/example-slide-1.jpg" >
+        <img src="catalog/view/theme/gemcart/images/example-slide-1.jpg" >
+        <img src="catalog/view/theme/gemcart/images/example-slide-1.jpg" >
+    </div>
+    
+                
+  </div>   <!--row -->       
           <!-- -------------------End of Similar products-------------------- -->
               
       </div>
 
+<br class="spacer" />
+<hr/>
+
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-xs-12 you">
+        <h1>You Might Also Like</h1>
+            <div class="slider4 ff-items1">
+                <li><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a></li>
+               <li><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a></li>
+                <li><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a></li>
+                <li><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a></li>
+                <li><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a></li>
+               <li><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a></li>
+                <li><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a></li>
+                <li><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a></li>
+
+            </div>
+    </div>
+</div>
+
+ 
+ <!--slider end -->
+ <!--product details start -->
+ 
+ <div class="row">
+    <div class="col-sm-8 col-md-8 col-xs-12 right-line">
+        <table class="table">
+
+        <thead>
+
+            <tr>
+
+                <th colspan="4"><h1>PRODUCT DETAILS</h1></th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td width="220"><strong>Stock Number</strong></td>
+
+                <td width="62" colspan="3">JR02895-1YP900</td>
+            </tr>
+
+            <tr>
+
+                <td><strong>Metal/Purity</strong></td>
+
+                <td colspan="3">14 Kt Yellow Gold</td>
+            </tr>
+
+            <tr>
+
+                <td><strong>Approximate Metal Weight</strong></td>
+
+                <td colspan="3">5.49 gms</td>
+            </tr>
+            <tr>
+              <td><strong>Height</strong></td>
+              <td colspan="3">20.19 mm</td>
+            </tr>
+            <tr>
+              <td><strong>Width</strong></td>
+              <td colspan="3">	14.38 mm</td>
+            </tr>
+            <tr>
+              <th colspan="4"><h2>DIAMOND DETAILS</h2></th>
+            </tr>
+            <tr>
+              <td><strong>Total Diamond(s)</strong></td>
+              <td colspan="3">5</td>
+          </tr>
+            <tr>
+              <td><strong>Diamond Weight</strong></td>
+              <td colspan="3">0.07 ct</td>
+          </tr>
+            <tr>
+              <td><strong>Diamond Quality</strong></td>
+              <td colspan="3">IJ-SI</td>
+          </tr>
+            <tr>
+              <td><strong>Setting Type</strong></td>
+              <td colspan="3">Prong,Pave</td>
+          </tr>
+            <tr>
+              <td><strong>Setting Type</strong></td>
+              <td colspan="3">Round</td>
+          </tr>
+            <tr>
+              <th colspan="4"><h2>PRICE BREAKUP</h2></th>
+            </tr>
+            <tr>
+              <td><strong>Component</strong></td>
+              <td>Rate</td>
+              <td>Weight</td>
+              <td>Value</td>
+            </tr>
+            <tr>
+              <td><strong>Gold - 14 Kt Yellow Gold</strong></td>
+              <td>Rs. 1,611/gm</td>
+              <td>5.49 gms</td>
+              <td>Rs. 8,844</td>
+            </tr>
+            <tr>
+              <td><strong>Diamonds</strong></td>
+              <td colspan="3">&nbsp;</td>
+            </tr>
+            <tr>
+              <td>IJ-SI Round - 1 No.</td>
+              <td>Rs. 61,000/ct</td>
+              <td>0.02 ct</td>
+              <td>Rs. 1,220</td>
+            </tr>
+            <tr>
+              <td>IJ-SI Round - 4 Nos.</td>
+              <td>IJ-SI Round - 4 Nos.</td>
+              <td>0.05 ct</td>
+              <td>Rs. 3,050</td>
+            </tr>
+            
+            <tr>
+              <td><strong>Making Charges</strong></td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>	Rs. 3,568</td>
+            </tr>
+            <tr>
+              <td><strong>VAT</strong></td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>VAT</td>
+            </tr>
+        </tbody>
+
+    </table>
+    <p align="center">All CaratLane products have 30-day money back policy and lifetime exchange</p>
+    
+    <div class="row">
+    <div class="col-sm-12 col-md-12 col-xs-12"><button type="submit" class="btn btn-default buy-now1">Buy Now</button></div></div>
+
+    
+    </div><!--col left end -->
+    
+        <div class="col-sm-4 col-md-4 col-xs-12 confused left-mg">
+    <h1>CONFUSED?</h1>
+    <p>CALL US AT <strong>1800-102-0103</strong></p>
+    <form class="form-horizontal">
+      <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">Name</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputEmail3" placeholder="Name">
+    </div></div>
+    
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">Mobile</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputEmail3" placeholder="Mobile">
+    </div></div>
+    
+   <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">QUERY</label>
+    <div class="col-sm-10">
+     <textarea class="form-control" rows="2"></textarea>
+    </div> </div>
+ 
+  
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">Submit Query</button>
+    </div>
+  </div>
+</form>
+<hr/>
+<br class="spacer" />
+<img src="catalog/view/theme/gemcart/images/certified.png" class="img-responsive">
+<img src="catalog/view/theme/gemcart/images/certified_logo.png" class="img-responsive">
+    </div><!--col right end -->    
+    </div><!--row end -->
+<br class="spacer" />
+<hr/>
+  
+  <!--Recently Viewed -->
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-xs-12 you">
+        <h1>Recently Viewed</h1>
+            <div class="slider4 ff-items1">
+                <li><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a></li>
+               <li><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a></li>
+                <li><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a></li>
+                <li><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a></li>
+                <li><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a></li>
+                <li><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a></li>
+               <li><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a></li>
+                <li><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a></li>
+                <li><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a></li>
+                <li><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a></li>
+            </div>
+    </div>
+</div>
+
+<!--Recently Viewed end -->
+   
+  
+  
+     
+     
+     
       
-      <!--tab --> 
-          <ul class="nav nav-tabs">
+    <!--tab --> 
+         <!-- <ul class="nav nav-tabs">
             <li class="active"><a href="#tab-description" data-toggle="tab"><?php echo $tab_description; ?></a></li>
             <?php if ($attribute_groups) { ?>
             <li><a href="#tab-specification" data-toggle="tab"><?php echo $tab_attribute; ?></a></li>
@@ -463,9 +693,9 @@
               </form>
             </div>
             <?php } ?>
-          </div>
+          </div> -->
           
-          <!--tab ed -->
+          <!--tab ed --> 
           
 
       <!-- -----------------------Related Product---------------------------- -->
@@ -756,7 +986,7 @@ $(document).ready(function() {
 			orientation : 'vertical'
 		} );
 			
-</script> -->
+</script> 
 
   <script type="text/javascript">
       
@@ -764,7 +994,7 @@ $(document).ready(function() {
       orientation : 'vertical'
     } );
       
-</script>
+</script>-->
 <script type="text/javascript" src="index.php?route=product/livepriceupdate/js&product_id=<?php echo $product_id; ?>"></script>
 <script type="text/javascript"><!--
  function c() {

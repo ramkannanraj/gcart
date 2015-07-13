@@ -24,7 +24,6 @@
 <link href="<?php echo $link['href']; ?>" rel="<?php echo $link['rel']; ?>" />
 <?php } ?>
 <script src="catalog/view/javascript/js/modernizr.custom.17475.js"></script>
-<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script> -->
 <script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js" type="text/javascript"></script>
 <link href="catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
 				
@@ -55,6 +54,40 @@
 <link href="catalog/view/theme/gemcart/stylesheet/purchase4.css" rel="stylesheet">
 <link href="catalog/view/theme/gemcart/stylesheet/purchase5.css" rel="stylesheet"> -->
 <link href="catalog/view/theme/gemcart/stylesheet/menu1.css" rel="stylesheet">
+<!--You Might Also Like -->
+<link rel="stylesheet" href="catalog/view/theme/gemcart/stylesheet/jquery.bxslider.css" type="text/css" />
+
+  <script src="catalog/view/javascript/jquery/jquery.bxslider.js"></script> 
+<script src="catalog/view/javascript/jquery/rainbow.min.js"></script> 
+ 
+
+<script>$(document).ready(function(){
+  $('.slider4').bxSlider({
+    slideWidth: 176,
+    minSlides: 2,
+    maxSlides:8,
+    moveSlides: 1,
+    slideMargin: 0
+  });
+});</script>
+ 
+ 
+ <!--similar-->
+  
+  <script src="catalog/view/javascript/jquery/jquery.slides.min.js"></script>
+  <!-- End SlidesJS Required -->
+
+  <!-- SlidesJS Required: Initialize SlidesJS with a jQuery doc ready -->
+  <script>
+    $(function() {
+      $('#slides').slidesjs({
+        width: 162,
+        height:483,
+        navigation: false
+      });
+    });
+  </script>
+
 <?php foreach ($styles as $style) { ?>
 <link href="<?php echo $style['href']; ?>" type="text/css" rel="<?php echo $style['rel']; ?>" media="<?php echo $style['media']; ?>" />
 <?php } ?>

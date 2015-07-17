@@ -95,6 +95,7 @@ div#product {
 .detail-input1 input[type="text"] { width:100%; margin-bottom:10px; border:#ccc solid 1px; padding:3px; float:left;}
 .add-to-cart{ background:#acacac; font-size:25px; text-align:center; color:#fff; border:none; padding:7px 15px; font-weight:bold}
 .buy-now{ background:#cbbc97; font-size:25px; text-align:center; color:#fff; border:none; padding:7px 15px; font-weight:bold}
+.try-home{ background:#999999; font-size:25px; text-align:center; color:#fff; border:none; padding:7px 15px; font-weight:bold}
 .menu-container { margin-top: 5px; }
 #heading-strip h1 {
   position: relative;

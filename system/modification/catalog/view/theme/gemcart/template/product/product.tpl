@@ -316,6 +316,11 @@
               <br />
               <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary btn-lg btn-block"><span class="buy-now"><?php echo $buy_cart; ?></span><br/></button>
             </div>
+            
+            <div class="form-group">
+              <br />
+              <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary btn-lg btn-block"><span class="try-home">Try @ Home</span><br/></button>
+            </div>
 			</div>
 			
 			

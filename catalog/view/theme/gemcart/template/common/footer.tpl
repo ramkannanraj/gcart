@@ -157,7 +157,29 @@ $(window).load(function() {
 });
 </script>  
 
+  <!-- jQuery -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+ 
+  <!-- FlexSlider -->
+  <script defer src="catalog/view/javascript/jquery/jquery.flexslider.js"></script>
 
+  <script type="text/javascript">
+    $(function(){
+      SyntaxHighlighter.all();
+    });
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        animationLoop: false,
+        itemWidth: 210,
+        itemMargin: 5,
+        pausePlay: true,
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  </script>
 
 <!-- <script src="catalog/view/javascript/autoptimize_9a15becef9b2f850af1e4f2ecea7b647.js" type="text/javascript"></script>  -->
 <!--

@@ -86,6 +86,16 @@
       });
     });
   </script>
+  
+  
+  
+  	<link rel="stylesheet" href="catalog/view/theme/gemcart/stylesheet/flexslider.css" type="text/css" media="screen" />
+
+	<!-- Modernizr -->
+  <script src="catalog/view/javascript/jquery/modernizr.js"></script>
+
+  
+  
 
 <?php foreach ($styles as $style) { ?>
 <link href="<?php echo $style['href']; ?>" type="text/css" rel="<?php echo $style['rel']; ?>" media="<?php echo $style['media']; ?>" />
@@ -130,12 +140,81 @@
                   	 <li><a href="#"> <button type="button" class="close">&times;</button></a></li>
                          <div  class="col-sm-12 col-md-12 col-xs-12">
                              <h1>WISHLIST (0)</h1> <hr/>
+                             
+                             <!--list list -->
  
+        <div class="flexslider carousel" style="width: 198px">
+          <ul class="slides">
+          		<li>
+                 <button type="button" class="close">&times;</button>
+                    <div class="try1"></div>
+                    <a href="#"><img src="catalog/view/theme/gemcart/images/wishlist.jpg" /></a>
+                    <h1>Ballerina Jhumkas</h1>
+                    <p> $189.60 </p>
+  	    		</li>
+  	    		<li>
+                    <div class="try1"></div>
+                    <a href="#"><img src="catalog/view/theme/gemcart/images/wishlist.jpg" /></a>
+                    <h1>Ballerina Jhumkas</h1>
+                    <p> $189.60 </p>
+  	    		</li>
+                
+                 <li>
+                  <button type="button" class="close">&times;</button>
+                    <div class="try1"></div>
+                    <a href="#"><img src="catalog/view/theme/gemcart/images/wishlist.jpg" /></a>
+                    <h1>Ballerina Jhumkas</h1>
+                    <p> $189.60 </p>
+  	    		</li>
+                
+                 <li>
+                    <div class="try1"></div>
+                    <a href="#"><img src="catalog/view/theme/gemcart/images/wishlist.jpg" /></a>
+                    <h1>Ballerina Jhumkas</h1>
+                    <p> $189.60 </p>
+  	    		</li>                
+                <li>
+                    <div class="try1"></div>
+                    <a href="#"><img src="catalog/view/theme/gemcart/images/wishlist.jpg" /></a>
+                    <h1>Ballerina Jhumkas</h1>
+                    <p> $189.60 </p>
+  	    		</li>
+                
+                <li>
+                 <button type="button" class="close">&times;</button>
+                    <div class="try1"></div>
+                    <a href="#"><img src="catalog/view/theme/gemcart/images/wishlist.jpg" /></a>
+                    <h1>Ballerina Jhumkas</h1>
+                    <p> $189.60 </p>
+  	    		</li>
+                
+                <li>
+                    <div class="try1"></div>
+                    <a href="#"><img src="catalog/view/theme/gemcart/images/wishlist.jpg" /></a>
+                    <h1>Ballerina Jhumkas</h1>
+                    <p> $189.60 </p>
+  	    		</li>
+                
+                <li>
+                    <div class="try1"></div>
+                    <a href="#"><img src="catalog/view/theme/gemcart/images/wishlist.jpg" /></a>
+                    <h1>Ballerina Jhumkas</h1>
+                    <p> $189.60 </p>
+  	    		</li>
+                
+                <li>
+                    <div class="try1"></div>
+                    <a href="#"><img src="catalog/view/theme/gemcart/images/wishlist.jpg" /></a>
+                    <h1>Ballerina Jhumkas</h1>
+                    <p> $189.60 </p>
+  	    		</li>
  
+          </ul>
+        </div>
 
                               
                               
-                             <button class="drop-btn1">Try More Products</button>
+                             <button class="drop-btn1" style="margin-top:0">Try More Products</button>
                         </div>
            			 </ul>
                  </li>

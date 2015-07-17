@@ -182,7 +182,7 @@ class ModelCatalogProduct extends Model {
 
 		//$this->db->query("DELETE FROM " . DB_PREFIX . "product_option WHERE product_id = '" . (int)$product_id . "'");
 		//$this->db->query("DELETE FROM " . DB_PREFIX . "product_option_value WHERE product_id = '" . (int)$product_id . "'");
-
+		//$this->setOptionsPrice($product_id, $data['product_option']);
 		if (isset($data['product_option'])) {
 			foreach ($data['product_option'] as $product_option) {
 				if ($product_option['type'] == 'select' || $product_option['type'] == 'radio' || $product_option['type'] == 'checkbox' || $product_option['type'] == 'image') {
@@ -193,7 +193,7 @@ class ModelCatalogProduct extends Model {
 
 						foreach ($product_option['product_option_value'] as $product_option_value) {
 							$this->setOptionsPrice($product_id, $product_option['option_id'], $product_option_value);
-							
+							exit;
 							/* R@Appsembly set default options */
 							/*if(isset($product_option_value['default'])){
 								$this->db->query("INSERT INTO " . DB_PREFIX . "product_option_value SET product_option_value_id = '" . (int)$product_option_value['product_option_value_id'] . "', product_option_id = '" . (int)$product_option_id . "', product_id = '" . (int)$product_id . "', option_id = '" . (int)$product_option['option_id'] . "', option_value_id = '" . (int)$product_option_value['option_value_id'] . "', quantity = '" . (int)$product_option_value['quantity'] . "', subtract = '" . (int)$product_option_value['subtract'] . "', default_value = '1', price = '" . (float)$product_option_value['price'] . "', price_prefix = '" . $this->db->escape($product_option_value['price_prefix']) . "', points = '" . (int)$product_option_value['points'] . "', points_prefix = '" . $this->db->escape($product_option_value['points_prefix']) . "', weight = '" . (float)$product_option_value['weight'] . "', weight_prefix = '" . $this->db->escape($product_option_value['weight_prefix']) . "'");
@@ -736,32 +736,32 @@ exit;
 										);
 		$data['gold_price'] = array('14kt' => 1234, '18kt' => 4567);
 		$data['labour_charge'] = 500;
-
+	echo "<pre>";
 			$product_diamond = $this->getProductDiamonds($product_id);
-
-			if($option_id == 13){
-					//$metal_color = $this->getMetalColorprice($product_option);
-
+			$quality = array();
+			$diamond_price = 0;
+		foreach($product_diamond as $diamond){
+			if($diamond['size'] > 1 && $diamond['size'] < 5){
+				$diamond_price += $data['diamond_price'][$diamond['quality']][1] * $diamond['weight'];
 			}
-			if($option_id == 14){
-					//$metal_color = $this->getMetalColorprice($product_option);
-
+			if($diamond['size'] > 6 && $diamond['size'] < 14){
+				$diamond_price += $data['diamond_price'][$diamond['quality']][2] * $diamond['weight'];
 			}
+			if($diamond['size'] > 15 && $diamond['size'] < 32){
+				$diamond_price += $data['diamond_price'][$diamond['quality']][3] * $diamond['weight'];
+			}
+			echo $diamond_price;
+			echo "<br>";
+		}
+		echo $diamond_price;
+		print_r($quality);	
 			if($option_id == 22){
+				//if($product_option_value[''])
 					//$metal_color = $this->getMetalColorprice($product_option);
 
 			}
-			if($option_id == 23){
-					//$metal_color = $this->getMetalColorprice($product_option);
-
-			}
-			echo "<pre>";
-			print_r($option_id);
-print_r($product_option_value);
-
-			foreach($product_diamond as $diamond){
-				//print_r($diamond);
-			}
-
+			
+			//print_r($option_id);
+			//print_r($product_option_value);
 	}
 }

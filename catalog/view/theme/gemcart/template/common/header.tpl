@@ -68,6 +68,9 @@
   });
 });</script>
  
+ <script>
+ 
+ </script>
  
  <!--similar-->
   
@@ -79,8 +82,7 @@
     $(function() {
       $('#slides').slidesjs({
         width: 162,
-        height:483,
-        navigation: false
+         navigation: false
       });
     });
   </script>
@@ -128,7 +130,11 @@
                   	 <li><a href="#"> <button type="button" class="close">&times;</button></a></li>
                          <div  class="col-sm-12 col-md-12 col-xs-12">
                              <h1>WISHLIST (0)</h1> <hr/>
-                             <p>You have no items in your wishlist</p>
+ 
+ 
+
+                              
+                              
                              <button class="drop-btn1">Try More Products</button>
                         </div>
            			 </ul>

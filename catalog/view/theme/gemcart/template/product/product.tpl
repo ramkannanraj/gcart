@@ -277,16 +277,16 @@
             </div>
             <?php } ?>
 			
-			<div class="row">
-				<div class="col-sm-4 col-md-4 col-xs-12">
-					<p>30-Day Money Back Guarantee. </p>
+			<div class="row" style="margin-top:10px;">
+				<div class="col-sm-4 col-md-4 col-xs-12" >
+					<p><img src="catalog/view/theme/gemcart/images/dots.png">30-Day Money Back Guarantee. </p>
 				</div>
   
 				<div class="col-sm-4 col-md-4 col-xs-12">
-					<p>Lifetime Exchange</p>
+					<p><img src="catalog/view/theme/gemcart/images/dots.png">Lifetime Exchange</p>
 				</div>
 				<div class="col-sm-4 col-md-4 col-xs-12">
-					<p>Certified Jewellery</p>
+					<p><img src="catalog/view/theme/gemcart/images/dots.png">Certified Jewellery</p>
 				</div>
 			</div>
 			<div class="dots"></div>
@@ -368,12 +368,13 @@
      </div>
     
     <div id="slides"> 
-        <a href="#" class="slidesjs-previous slidesjs-navigation"><i class="icon-chevron-left icon-large"></i></a>
-        <a href="#" class="slidesjs-next slidesjs-navigation"><i class="icon-chevron-right icon-large"></i></a>
-        <img src="catalog/view/theme/gemcart/images/example-slide-1.jpg" >
-        <img src="catalog/view/theme/gemcart/images/example-slide-1.jpg" >
-        <img src="catalog/view/theme/gemcart/images/example-slide-1.jpg" >
-    </div>
+        <a href="#" class="slidesjs-previous slidesjs-navigation"><img src="catalog/view/theme/gemcart/images/similar-left.jpg"></a>
+        <a href="#" class="slidesjs-next slidesjs-navigation"><img src="catalog/view/theme/gemcart/images/similar-right.jpg"></a>
+         
+        <li><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a></li>
+        
+         <li><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a></li>
+     </div> 
     
                 
   </div>   <!--row -->       
@@ -401,6 +402,11 @@
     </div>
 </div>
 
+ 
+ 
+ 
+ 
+ 
  
  <!--slider end -->
  <!--product details start -->

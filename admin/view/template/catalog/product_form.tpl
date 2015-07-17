@@ -28,6 +28,7 @@
           <ul class="nav nav-tabs">
             <li class="active"><a href="#tab-general" data-toggle="tab"><?php echo $tab_general; ?></a></li>
             <li><a href="#tab-data" data-toggle="tab"><?php echo $tab_data; ?></a></li>
+            <li><a href="#tab-diamonds" data-toggle="tab"><?php echo $tab_diamonds; ?></a></li>
             <li><a href="#tab-links" data-toggle="tab"><?php echo $tab_links; ?></a></li>
             <li><a href="#tab-attribute" data-toggle="tab"><?php echo $tab_attribute; ?></a></li>
             <li><a href="#tab-option" data-toggle="tab"><?php echo $tab_option; ?></a></li>
@@ -327,6 +328,56 @@
                 </div>
               </div>
             </div>
+            <div class="tab-pane" id="tab-diamonds">
+              <div class="table-responsive">
+                <table id="diamond" class="table table-striped table-bordered table-hover">
+                  <thead>
+                    <tr>
+                      <td class="text-left"><?php echo $entry_diamond_quality; ?></td>
+                      <td class="text-right"><?php echo $entry_diamond_size; ?></td>
+                      <td class="text-right"><?php echo $entry_diamond_nos; ?></td>
+                      <td class="text-left"><?php echo $entry_diamond_weight; ?></td>
+                      <td></td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php $diamond_row = 0; ?>
+                    <?php foreach ($product_diamonds as $product_diamond) { ?>
+                    <tr id="diamond-row<?php echo $diamond_row; ?>">
+                      <td class="text-left"><select name="product_diamond[<?php echo $diamond_row; ?>][quality]" class="form-control">
+                          <?php foreach ($diamond_quality as $dia_quality) { ?>
+                          <?php if ($dia_quality['quality'] == $product_diamond['quality']) { ?>
+                          <option value="<?php echo $dia_quality['quality']; ?>" selected="selected"><?php echo $dia_quality['name']; ?></option>
+                          <?php } else { ?>
+                          <option value="<?php echo $dia_quality['quality']; ?>"><?php echo $dia_quality['name']; ?></option>
+                          <?php } ?>
+                          <?php } ?>
+                        </select></td>
+                      <td class="text-left"><select name="product_diamond[<?php echo $diamond_row; ?>][size]" class="form-control">
+                          <?php foreach ($diamond_size as $dia_size) { ?>
+                          <?php if ($dia_size['size'] == $product_diamond['size']) { ?>
+                          <option value="<?php echo $dia_size['size']; ?>" selected="selected"><?php echo $dia_size['name']; ?></option>
+                          <?php } else { ?>
+                          <option value="<?php echo $dia_size['size']; ?>"><?php echo $dia_size['name']; ?></option>
+                          <?php } ?>
+                          <?php } ?>
+                        </select></td>
+                      <td class="text-right"><input type="text" name="product_diamond[<?php echo $diamond_row; ?>][quantity]" value="<?php echo $product_diamond['quantity']; ?>" placeholder="<?php echo $entry_quantity; ?>" class="form-control" /></td>
+                      <td class="text-left"><input type="text" name="product_diamond[<?php echo $diamond_row; ?>][weight]" value="<?php echo $product_diamond['weight']; ?>" placeholder="<?php echo $entry_weight; ?>" class="form-control" /></td>
+                      <td class="text-left"><button type="button" onclick="$('#diamond-row<?php echo $diamond_row; ?>').remove();" data-toggle="tooltip" title="<?php echo $button_remove; ?>" class="btn btn-danger"><i class="fa fa-minus-circle"></i></button></td>
+                    </tr>
+                    <?php $diamond_row++; ?>
+                    <?php } ?>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <td colspan="4"></td>
+                      <td class="text-left"><button type="button" onclick="addDiamond();" data-toggle="tooltip" title="<?php echo $button_diamond_add; ?>" class="btn btn-primary"><i class="fa fa-plus-circle"></i></button></td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
             <div class="tab-pane" id="tab-links">
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-manufacturer"><span data-toggle="tooltip" title="<?php echo $help_manufacturer; ?>"><?php echo $entry_manufacturer; ?></span></label>
@@ -557,6 +608,7 @@
                         <table id="option-value<?php echo $option_row; ?>" class="table table-striped table-bordered table-hover">
                           <thead>
                             <tr>
+                              <td class="text-left"><?php echo $entry_option_default; ?></td>
                               <td class="text-left"><?php echo $entry_option_value; ?></td>
                               <td class="text-right"><?php echo $entry_quantity; ?></td>
                               <td class="text-left"><?php echo $entry_subtract; ?></td>
@@ -569,6 +621,7 @@
                           <tbody>
                             <?php foreach ($product_option['product_option_value'] as $product_option_value) { ?>
                             <tr id="option-value-row<?php echo $option_value_row; ?>">
+                              <td><input type="radio" name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][default]" value="1" class="form-control" <?php if($product_option_value['default'] == 1) echo "checked=checked"; ?> /></td>
                               <td class="text-left"><select name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][option_value_id]" class="form-control">
                                   <?php if (isset($option_values[$product_option['option_id']])) { ?>
                                   <?php foreach ($option_values[$product_option['option_id']] as $option_value) { ?>
@@ -637,7 +690,7 @@
                           </tbody>
                           <tfoot>
                             <tr>
-                              <td colspan="6"></td>
+                              <td colspan="7"></td>
                               <td class="text-left"><button type="button" onclick="addOptionValue('<?php echo $option_row; ?>');" data-toggle="tooltip" title="<?php echo $button_option_value_add; ?>" class="btn btn-primary"><i class="fa fa-plus-circle"></i></button></td>
                             </tr>
                           </tfoot>
@@ -1195,6 +1248,7 @@ $('input[name=\'option\']').autocomplete({
 			html += '  <table id="option-value' + option_row + '" class="table table-striped table-bordered table-hover">';
 			html += '  	 <thead>'; 
 			html += '      <tr>';
+      html += '        <td class="text-left"><?php echo $entry_option_default; ?></td>';
 			html += '        <td class="text-left"><?php echo $entry_option_value; ?></td>';
 			html += '        <td class="text-right"><?php echo $entry_quantity; ?></td>';
 			html += '        <td class="text-left"><?php echo $entry_subtract; ?></td>';
@@ -1208,7 +1262,7 @@ $('input[name=\'option\']').autocomplete({
 			html += '    </tbody>';
 			html += '    <tfoot>';
 			html += '      <tr>';
-			html += '        <td colspan="6"></td>';
+			html += '        <td colspan="7"></td>';
 			html += '        <td class="text-left"><button type="button" onclick="addOptionValue(' + option_row + ');" data-toggle="tooltip" title="<?php echo $button_option_value_add; ?>" class="btn btn-primary"><i class="fa fa-plus-circle"></i></button></td>';
 			html += '      </tr>';
 			html += '    </tfoot>';
@@ -1253,6 +1307,7 @@ var option_value_row = <?php echo $option_value_row; ?>;
 
 function addOptionValue(option_row) {	
 	html  = '<tr id="option-value-row' + option_value_row + '">';
+  html += '  <td><input type="radio" name="product_option[' + option_row + '][product_option_value]['+ option_value_row + '][default]" value="1" class="form-control" /></td>';
 	html += '  <td class="text-left"><select name="product_option[' + option_row + '][product_option_value][' + option_value_row + '][option_value_id]" class="form-control">';
 	html += $('#option-values' + option_row).html();
 	html += '  </select><input type="hidden" name="product_option[' + option_row + '][product_option_value][' + option_value_row + '][product_option_value_id]" value="" /></td>';
@@ -1311,7 +1366,32 @@ function addDiscount() {
 	
 	discount_row++;
 }
-//--></script> 
+//--></script>
+<script type="text/javascript"><!--
+var diamond_row = <?php echo $diamond_row; ?>;
+
+function addDiamond() {
+  html  = '<tr id="diamond-row' + diamond_row + '">'; 
+    html += '  <td class="text-left"><select name="product_diamond[' + diamond_row + '][quality]" class="form-control">';
+    <?php foreach ($diamond_quality as $dia_quality) { ?>
+    html += '      <option value="<?php echo $dia_quality['quality']; ?>"><?php echo addslashes($dia_quality['name']); ?></option>';
+    <?php } ?>
+    html += '  </select></td>';   
+    html += '  <td class="text-left"><select name="product_diamond[' + diamond_row + '][size]" class="form-control">';
+    <?php foreach ($diamond_size as $dia_size) { ?>
+    html += '       <option value="<?php echo $dia_size['size']; ?>"><?php echo addslashes($dia_size['name']); ?></option>';
+    <?php } ?>
+    html += '  </select></td>';
+  html += '  <td class="text-right"><input type="text" name="product_diamond[' + diamond_row + '][quantity]" value="" placeholder="<?php echo $entry_quantity; ?>" class="form-control" /></td>';
+    html += '  <td class="text-left"><input type="text" name="product_diamond['+ diamond_row + '][weight]" value="" placeholder="<?php echo $entry_weight; ?>" class="form-control" /></td>';
+  html += '  <td class="text-left"><button type="button" onclick="$(\'#diamond-row' + diamond_row + '\').remove();" data-toggle="tooltip" title="<?php echo $button_remove; ?>" class="btn btn-danger"><i class="fa fa-minus-circle"></i></button></td>';
+  html += '</tr>';
+  
+  $('#diamond tbody').append(html);
+
+  diamond_row++;
+}
+//--></script>  
   <script type="text/javascript"><!--
 var special_row = <?php echo $special_row; ?>;
 

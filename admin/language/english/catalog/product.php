@@ -44,6 +44,7 @@ $_['entry_manufacturer']     = 'Manufacturer';
 $_['entry_store']            = 'Stores';
 $_['entry_date_available']   = 'Date Available';
 $_['entry_quantity']         = 'Quantity';
+$_['entry_weight']           = 'Weight';
 $_['entry_minimum']          = 'Minimum Quantity';
 $_['entry_stock_status']     = 'Out Of Stock Status';
 $_['entry_price']            = 'Price';
@@ -67,6 +68,7 @@ $_['entry_attribute']        = 'Attribute';
 $_['entry_attribute_group']  = 'Attribute Group';
 $_['entry_text']             = 'Text';
 $_['entry_option']           = 'Option';
+$_['entry_option_default']   = 'Default';
 $_['entry_option_value']     = 'Option Value';
 $_['entry_required']         = 'Required';
 $_['entry_status']           = 'Status';
@@ -79,6 +81,10 @@ $_['entry_tag']          	 = 'Product Tags';
 $_['entry_reward']           = 'Reward Points';
 $_['entry_layout']           = 'Layout Override';
 $_['entry_recurring']        = 'Recurring Profile';
+$_['entry_diamond_quality']  = 'Diamond Quality';
+$_['entry_diamond_size']     = 'Size';
+$_['entry_diamond_nos']      = 'Nos Of Diamonds';
+$_['entry_diamond_weight']   = 'Weight';
 
 // Help
 $_['help_keyword']           = 'Do not use spaces, instead replace spaces with - and make sure the keyword is globally unique.';

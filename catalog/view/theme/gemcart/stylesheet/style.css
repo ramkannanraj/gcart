@@ -514,7 +514,7 @@ footer .footer_bottom {
 
  /*.ff-items1 li:nth-child(3n+3){ margin-right:0;} */
  .ff-items1 li {  display:block; float:left; margin-right:15px; margin-left:15px; margin-bottom:45px; border:#ccc solid 1px; padding:15px 0 0;  }
-  .ff-items1 img{ padding-bottom:15px}
+  .ff-items1 img{ padding-bottom:35px; padding-top:25px}
 .ff-items1 a span{
  	background:#d9d9d7;
 display: block; font-size:17px;
@@ -594,7 +594,7 @@ display: block; font-size:17px;
     }
 
     #slides .slidesjs-previous {
-      margin-right: 5px;
+      margin-right: 105px;
       float: left;
     }
 
@@ -650,5 +650,14 @@ display: block; font-size:17px;
 	.icon-chevron-left{margin-left:5px; margin-bottom:15px; border:#ccc solid 1px; padding:2px 5px;}
 	  #slides a{ text-decoration:none;}
      .similar-slider{ position:relative; width:auto;}  
-    .similar-slider h1{   display:block; font-size:14px; position:absolute; left:48px; text-transform:uppercase; margin-top:8px;}
+    .similar-slider h1{   display:block; font-size:14px; position:absolute; left:52px; text-transform:uppercase; margin-top:8px;}
+#slides span{ font-size:13px; color:#000; text-align:center; line-height:20px; display:block; border-top:#ddd solid 1px; padding-top:10px;}  #slides img{ text-align:center; display:block; margin:0 auto;  padding-bottom:10px; } #slides p{ color:#666;}  #slides a{ margin-bottom:10px;}
 
+ .testimonial-bottom{ border:#ddd solid 1px; padding:25px; background: #FFF none repeat scroll 0% 0%;box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15); width:97%;   display:block; margin:28px 0 28px 15px; }
+  .testimonial-bottom h2 {
+    color: #222;
+    border-bottom: 1px solid #DDD;
+    padding: 0px 0px 10px;
+    margin: 0px 0px 25px;
+    font-size: 18px;
+}

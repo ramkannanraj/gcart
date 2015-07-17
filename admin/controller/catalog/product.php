@@ -72,6 +72,9 @@ class ControllerCatalogProduct extends Controller {
 		$this->load->model('catalog/product');
 
 		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
+			//echo "<pre>";
+			//print_r($this->request->post);
+			//exit;
 			$this->model_catalog_product->editProduct($this->request->get['product_id'], $this->request->post);
 
 			$this->session->data['success'] = $this->language->get('text_success');
@@ -396,6 +399,7 @@ class ControllerCatalogProduct extends Controller {
 		$data['entry_price'] = $this->language->get('entry_price');
 		$data['entry_quantity'] = $this->language->get('entry_quantity');
 		$data['entry_status'] = $this->language->get('entry_status');
+		$data['entry_weight'] = $this->language->get('entry_weight');
 
 		$data['button_copy'] = $this->language->get('button_copy');
 		$data['button_add'] = $this->language->get('button_add');
@@ -579,6 +583,7 @@ class ControllerCatalogProduct extends Controller {
 		$data['entry_attribute'] = $this->language->get('entry_attribute');
 		$data['entry_text'] = $this->language->get('entry_text');
 		$data['entry_option'] = $this->language->get('entry_option');
+		$data['entry_option_default'] = $this->language->get('entry_option_default');
 		$data['entry_option_value'] = $this->language->get('entry_option_value');
 		$data['entry_required'] = $this->language->get('entry_required');
 		$data['entry_sort_order'] = $this->language->get('entry_sort_order');
@@ -591,6 +596,10 @@ class ControllerCatalogProduct extends Controller {
 		$data['entry_reward'] = $this->language->get('entry_reward');
 		$data['entry_layout'] = $this->language->get('entry_layout');
 		$data['entry_recurring'] = $this->language->get('entry_recurring');
+		$data['entry_diamond_quality'] = $this->language->get('entry_diamond_quality');
+		$data['entry_diamond_size'] = $this->language->get('entry_diamond_size');
+		$data['entry_diamond_nos'] = $this->language->get('entry_diamond_nos');
+		$data['entry_diamond_weight'] = $this->language->get('entry_diamond_weight');
 
 		$data['help_keyword'] = $this->language->get('help_keyword');
 		$data['help_sku'] = $this->language->get('help_sku');
@@ -616,12 +625,14 @@ class ControllerCatalogProduct extends Controller {
 		$data['button_option_value_add'] = $this->language->get('button_option_value_add');
 		$data['button_discount_add'] = $this->language->get('button_discount_add');
 		$data['button_special_add'] = $this->language->get('button_special_add');
+		$data['button_diamond_add'] = $this->language->get('button_diamond_add');
 		$data['button_image_add'] = $this->language->get('button_image_add');
 		$data['button_remove'] = $this->language->get('button_remove');
 		$data['button_recurring_add'] = $this->language->get('button_recurring_add');
 
 		$data['tab_general'] = $this->language->get('tab_general');
 		$data['tab_data'] = $this->language->get('tab_data');
+		$data['tab_diamonds'] = $this->language->get('tab_diamonds');
 		$data['tab_attribute'] = $this->language->get('tab_attribute');
 		$data['tab_option'] = $this->language->get('tab_option');
 		$data['tab_recurring'] = $this->language->get('tab_recurring');
@@ -1121,6 +1132,7 @@ class ControllerCatalogProduct extends Controller {
 						'option_value_id'         => $product_option_value['option_value_id'],
 						'quantity'                => $product_option_value['quantity'],
 						'subtract'                => $product_option_value['subtract'],
+						'default'                 => $product_option_value['default_value'],
 						'price'                   => $product_option_value['price'],
 						'price_prefix'            => $product_option_value['price_prefix'],
 						'points'                  => $product_option_value['points'],
@@ -1196,6 +1208,65 @@ class ControllerCatalogProduct extends Controller {
 				'date_end'          => ($product_special['date_end'] != '0000-00-00') ? $product_special['date_end'] :  ''
 			);
 		}
+
+		//R@appsembly added on 10/07/2015
+		if (isset($this->request->post['product_diamond'])) {
+			$product_diamonds = $this->request->post['product_diamond'];
+		} elseif (isset($this->request->get['product_id'])) {
+			$product_diamonds = $this->model_catalog_product->getProductDiamonds($this->request->get['product_id']);
+		} else {
+			$product_diamonds = array();
+		}
+
+		$data['diamond_quality'] = array(array('quality'=>'IJ-SI', 'name'=> 'IJ-SI'),
+										array('quality'=>'GH-VS', 'name'=> 'GH-VS'),
+										array('quality'=>'GH-VVS', 'name'=> 'GH-VVS'),
+										array('quality'=>'EF-VVS', 'name'=> 'EF-VVS'));
+		$data['diamond_size']    = array(array('size'=>'1', 'name' => '000 - 00'),
+										array('size'=>'2', 'name' => '00 - 0'),
+										array('size'=>'3', 'name' => '0 - 1'),
+										array('size'=>'4', 'name' => '1 - 1.5'),
+										array('size'=>'5', 'name' => '1.5 - 2'),
+										array('size'=>'6', 'name' => '2 - 2.5'),
+										array('size'=>'7', 'name' => '2.5 - 3'),
+										array('size'=>'8', 'name' => '3 - 3.5'),
+										array('size'=>'9', 'name' => '3.5 - 4'),
+										array('size'=>'10', 'name' => '4 - 4.5'),
+										array('size'=>'11', 'name' => '4.5 - 5'),
+										array('size'=>'12', 'name' => '5 - 5.5'),
+										array('size'=>'13', 'name' => '5.5 - 6'),
+										array('size'=>'14', 'name' => '6 - 6.5'),
+										array('size'=>'15', 'name' => '6.5 - 7'),
+										array('size'=>'16', 'name' => '7 - 7.5'),
+										array('size'=>'17', 'name' => '7.5 - 8'),
+										array('size'=>'18', 'name' => '8 - 8.5'),
+										array('size'=>'19', 'name' => '8.5 - 9'),
+										array('size'=>'20', 'name' => '9 - 9.5'),
+										array('size'=>'21', 'name' => '9.5 - 10'),
+										array('size'=>'22', 'name' => '10 - 10.5'),
+										array('size'=>'23', 'name' => '10.5 - 11'),
+										array('size'=>'24', 'name' => '11 - 11.5'),
+										array('size'=>'25', 'name' => '11.5 - 12'),
+										array('size'=>'26', 'name' => '12 - 12.5'),
+										array('size'=>'27', 'name' => '12.5 - 13'),
+										array('size'=>'28', 'name' => '13 - 13.5'),
+										array('size'=>'29', 'name' => '13.5 - 14'),
+										array('size'=>'30', 'name' => '14 - 14.5'),
+										array('size'=>'31', 'name' => '14.5 - 15'),
+										array('size'=>'32', 'name' => '15 - 15.5')
+										);
+
+		$data['product_diamonds'] = array();
+		foreach ($product_diamonds as $product_diamond) {
+			$data['product_diamonds'][] = array(
+				'quality'           => $product_diamond['quality'],
+				'size'          	=> $product_diamond['size'],
+				'quantity'          => $product_diamond['quantity'],
+				'weight'       		=> $product_diamond['weight']
+				
+			);
+		}
+		//R@appsembly End
 
 		// Images
 		if (isset($this->request->post['product_image'])) {

@@ -83,7 +83,7 @@
                   <?php } ?>
       						<figcaption>
                     <?php if($product['image_additional']){ ?>
-                        <a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['image_additional']['image']; ?>" class="img-responsive" /></a>
+                        <a href="<?php echo $product['href']; ?>"><img style="width:360px; margin:0 auto; background:#fff;" src="<?php echo $product['image_additional']['image']; ?>"  class="img-responsive" /></a>
                     <?php } ?>            
       							<h3><?php echo $product['name']; ?></h3>
       							<p>

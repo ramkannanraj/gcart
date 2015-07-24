@@ -600,6 +600,8 @@ class ControllerCatalogProduct extends Controller {
 		$data['entry_diamond_size'] = $this->language->get('entry_diamond_size');
 		$data['entry_diamond_nos'] = $this->language->get('entry_diamond_nos');
 		$data['entry_diamond_weight'] = $this->language->get('entry_diamond_weight');
+		$data['entry_gold_quality'] = $this->language->get('entry_gold_quality');
+		$data['entry_gold_weight'] = $this->language->get('entry_gold_weight');
 
 		$data['help_keyword'] = $this->language->get('help_keyword');
 		$data['help_sku'] = $this->language->get('help_sku');
@@ -626,6 +628,7 @@ class ControllerCatalogProduct extends Controller {
 		$data['button_discount_add'] = $this->language->get('button_discount_add');
 		$data['button_special_add'] = $this->language->get('button_special_add');
 		$data['button_diamond_add'] = $this->language->get('button_diamond_add');
+		$data['button_gold_add'] = $this->language->get('button_gold_add');
 		$data['button_image_add'] = $this->language->get('button_image_add');
 		$data['button_remove'] = $this->language->get('button_remove');
 		$data['button_recurring_add'] = $this->language->get('button_recurring_add');
@@ -633,6 +636,7 @@ class ControllerCatalogProduct extends Controller {
 		$data['tab_general'] = $this->language->get('tab_general');
 		$data['tab_data'] = $this->language->get('tab_data');
 		$data['tab_diamonds'] = $this->language->get('tab_diamonds');
+		$data['tab_gold'] = $this->language->get('tab_gold');
 		$data['tab_attribute'] = $this->language->get('tab_attribute');
 		$data['tab_option'] = $this->language->get('tab_option');
 		$data['tab_recurring'] = $this->language->get('tab_recurring');
@@ -1264,6 +1268,25 @@ class ControllerCatalogProduct extends Controller {
 				'quantity'          => $product_diamond['quantity'],
 				'weight'       		=> $product_diamond['weight']
 				
+			);
+		}
+
+		//Gold
+		if (isset($this->request->post['product_gold'])) {
+			$product_gold = $this->request->post['product_gold'];
+		} elseif (isset($this->request->get['product_id'])) {
+			$product_gold = $this->model_catalog_product->getProductGold($this->request->get['product_id']);
+		} else {
+			$product_gold = array();
+		}
+
+		$data['gold_quality'] = array(array('quality'=>'1', 'name'=> '24kt'));
+		
+		$data['product_gold'] = array();
+		foreach ($product_gold as $gold) {
+			$data['product_gold'][] = array(
+				'quality'           => $gold['quality'],
+				'weight'       		=> $gold['weight']
 			);
 		}
 		//R@appsembly End

@@ -160,7 +160,7 @@
               <div id="input-option<?php echo $option['product_option_id']; ?>" class="input-option">
                 <?php foreach ($option['product_option_value'] as $option_value) { ?>
                 <div class="radio">                  
-                    <input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" id="option[<?php echo $option['product_option_id'].$i; ?>]" value="<?php echo $option_value['product_option_value_id']; ?>" <?php echo ($option_value['product_option_value_id'] == 38)? "checked=checked" : ''; ?> />
+                    <input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" id="option[<?php echo $option['product_option_id'].$i; ?>]" value="<?php echo $option_value['product_option_value_id']; ?>" <?php echo ($option_value['default'] == 1)? "checked=checked" : ''; ?> />
                     <?php //echo $option_value['name']; ?>
                     <?php if ($option_value['price']) { ?>
                     <!-- (<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>) -->
@@ -978,6 +978,13 @@ $(document).ready(function() {
 			enabled:true
 		}
 	});
+});
+
+$(document).ready(function() {
+  $('input[name=\'option[247]\']').on('click', function() {
+    var purity = $('input[name=\'option[247]\']:checked').val();
+    alert(purity);
+  });
 });
 //--></script>
   <!--  similar product -->      

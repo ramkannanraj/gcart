@@ -89,8 +89,8 @@ class ControllerProductLivepriceupdate extends Controller {
                                     if ($checked_option == $option_value['product_option_value_id']) {
                                         if (!$option_value['subtract'] || ($option_value['quantity'] > 0)) {
                                             if ((($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) && (float)$option_value['price']) {
-                                                //$price = $this->tax->calculate($option_value['price'], $product_info['tax_class_id'], $this->config->get('config_tax'));
-                                                $price = $option_value['price'];
+                                                $price = $this->tax->calculate($option_value['price'], $product_info['tax_class_id'], $this->config->get('config_tax'));
+                                                //$price = $option_value['price'];
                                             } else {
                                                 $price = false;
                                             }
@@ -110,8 +110,8 @@ class ControllerProductLivepriceupdate extends Controller {
                             if (isset($this->request->post['option'][$option['product_option_id']]) && $this->request->post['option'][$option['product_option_id']] == $option_value['product_option_value_id']) {
                                 if (!$option_value['subtract'] || ($option_value['quantity'] > 0)) {
                                     if ((($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) && (float)$option_value['price']) {
-                                        //$price = $this->tax->calculate($option_value['price'], $product_info['tax_class_id'], $this->config->get('config_tax'));
-                                        $price = $option_value['price'];
+                                        $price = $this->tax->calculate($option_value['price'], $product_info['tax_class_id'], $this->config->get('config_tax'));
+                                        //$price = $option_value['price'];
                                     } else {
                                         $price = false;
                                     }

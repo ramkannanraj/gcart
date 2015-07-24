@@ -148,7 +148,7 @@
                              
                              <!--list list -->
  
-  <div class="flexslider carousel" style="width: 198px">
+        <div class="flexslider carousel" style="width: 198px">
           <ul class="slides">
           		<li>
                  <button type="button" class="close">&times;</button>

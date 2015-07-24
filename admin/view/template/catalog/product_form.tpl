@@ -29,6 +29,7 @@
             <li class="active"><a href="#tab-general" data-toggle="tab"><?php echo $tab_general; ?></a></li>
             <li><a href="#tab-data" data-toggle="tab"><?php echo $tab_data; ?></a></li>
             <li><a href="#tab-diamonds" data-toggle="tab"><?php echo $tab_diamonds; ?></a></li>
+            <li><a href="#tab-gold" data-toggle="tab"><?php echo $tab_gold; ?></a></li>
             <li><a href="#tab-links" data-toggle="tab"><?php echo $tab_links; ?></a></li>
             <li><a href="#tab-attribute" data-toggle="tab"><?php echo $tab_attribute; ?></a></li>
             <li><a href="#tab-option" data-toggle="tab"><?php echo $tab_option; ?></a></li>
@@ -378,6 +379,44 @@
                 </table>
               </div>
             </div>
+            <div class="tab-pane" id="tab-gold">
+              <div class="table-responsive">
+                <table id="gold" class="table table-striped table-bordered table-hover">
+                  <thead>
+                    <tr>
+                      <td class="text-left"><?php echo $entry_gold_quality; ?></td>
+                      <td class="text-left"><?php echo $entry_gold_weight; ?></td>
+                      <td></td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php $gold_row = 0; ?>
+                    <?php foreach ($product_gold as $gold) { ?>
+                    <tr id="gold-row<?php echo $gold_row; ?>">
+                      <td class="text-left"><select name="product_gold[<?php echo $gold_row; ?>][quality]" class="form-control">
+                          <?php foreach ($gold_quality as $g_quality) { ?>
+                          <?php if ($g_quality['quality'] == $gold['quality']) { ?>
+                          <option value="<?php echo $g_quality['quality']; ?>" selected="selected"><?php echo $g_quality['name']; ?></option>
+                          <?php } else { ?>
+                          <option value="<?php echo $g_quality['quality']; ?>"><?php echo $g_quality['name']; ?></option>
+                          <?php } ?>
+                          <?php } ?>
+                        </select></td>
+                      <td class="text-left"><input type="text" name="product_gold[<?php echo $gold_row; ?>][weight]" value="<?php echo $gold['weight']; ?>" placeholder="<?php echo $entry_weight; ?>" class="form-control" /></td>
+                      <td class="text-left"><button type="button" onclick="$('#gold-row<?php echo $gold_row; ?>').remove();" data-toggle="tooltip" title="<?php echo $button_remove; ?>" class="btn btn-danger"><i class="fa fa-minus-circle"></i></button></td>
+                    </tr>
+                    <?php $gold_row++; ?>
+                    <?php } ?>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <td colspan="2"></td>
+                      <td class="text-left"><button type="button" onclick="addGold();" data-toggle="tooltip" title="<?php echo $button_gold_add; ?>" class="btn btn-primary"><i class="fa fa-plus-circle"></i></button></td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
             <div class="tab-pane" id="tab-links">
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-manufacturer"><span data-toggle="tooltip" title="<?php echo $help_manufacturer; ?>"><?php echo $entry_manufacturer; ?></span></label>
@@ -644,7 +683,7 @@
                                   <option value="0" selected="selected"><?php echo $text_no; ?></option>
                                   <?php } ?>
                                 </select></td>
-                              <td class="text-right"><select name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][price_prefix]" class="form-control">
+                              <td class="text-right"><select name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][price_prefix]" class="form-control" >
                                   <?php if ($product_option_value['price_prefix'] == '+') { ?>
                                   <option value="+" selected="selected">+</option>
                                   <?php } else { ?>
@@ -656,8 +695,8 @@
                                   <option value="-">-</option>
                                   <?php } ?>
                                 </select>
-                                <input type="text" name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][price]" value="<?php echo $product_option_value['price']; ?>" placeholder="<?php echo $entry_price; ?>" class="form-control" /></td>
-                              <td class="text-right"><select name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][points_prefix]" class="form-control">
+                                <input type="text" name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][price]" value="<?php echo $product_option_value['price']; ?>" placeholder="<?php echo $entry_price; ?>" class="form-control"  /></td>
+                              <td class="text-right"><select name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][points_prefix]" class="form-control" >
                                   <?php if ($product_option_value['points_prefix'] == '+') { ?>
                                   <option value="+" selected="selected">+</option>
                                   <?php } else { ?>
@@ -670,7 +709,7 @@
                                   <?php } ?>
                                 </select>
                                 <input type="text" name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][points]" value="<?php echo $product_option_value['points']; ?>" placeholder="<?php echo $entry_points; ?>" class="form-control" /></td>
-                              <td class="text-right"><select name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][weight_prefix]" class="form-control">
+                              <td class="text-right"><select name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][weight_prefix]" class="form-control" >
                                   <?php if ($product_option_value['weight_prefix'] == '+') { ?>
                                   <option value="+" selected="selected">+</option>
                                   <?php } else { ?>
@@ -1367,6 +1406,7 @@ function addDiscount() {
 	discount_row++;
 }
 //--></script>
+<!-- R@appsembly Diamond and gold End -->
 <script type="text/javascript"><!--
 var diamond_row = <?php echo $diamond_row; ?>;
 
@@ -1391,7 +1431,27 @@ function addDiamond() {
 
   diamond_row++;
 }
-//--></script>  
+//--></script>
+<script type="text/javascript"><!--
+var gold_row = <?php echo $gold_row; ?>;
+
+function addGold() {
+  html  = '<tr id="gold-row' + gold_row + '">'; 
+    html += '  <td class="text-left"><select name="product_gold[' + gold_row + '][quality]" class="form-control">';
+    <?php foreach ($gold_quality as $g_quality) { ?>
+    html += '      <option value="<?php echo $g_quality['quality']; ?>"><?php echo addslashes($g_quality['name']); ?></option>';
+    <?php } ?>
+    html += '  </select></td>';
+    html += '  <td class="text-left"><input type="text" name="product_gold['+ gold_row + '][weight]" value="" placeholder="<?php echo $entry_weight; ?>" class="form-control" /></td>';
+  html += '  <td class="text-left"><button type="button" onclick="$(\'#gold-row' + gold_row + '\').remove();" data-toggle="tooltip" title="<?php echo $button_remove; ?>" class="btn btn-danger"><i class="fa fa-minus-circle"></i></button></td>';
+  html += '</tr>';
+  
+  $('#gold tbody').append(html);
+
+  diamond_row++;
+}
+//--></script> 
+<!-- R@appsembly End -->  
   <script type="text/javascript"><!--
 var special_row = <?php echo $special_row; ?>;
 

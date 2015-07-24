@@ -165,7 +165,7 @@
  <?php  if (!$option_value['imagel'] || strpos($option_value['imagel'], 'no_image')) $option_value['imagel'] = $thumb; ?>
  <?php if ($option_value['imagexl'] == '') $option_value['imagexl'] = 'no_image'; ?>
                 <div class="radio">                  
-                                       <input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" class="thumb" src="<?php echo $option_value['imagel']; ?>" val="<?php echo $option_value['imagexl']; ?>" id="option[<?php echo $option['product_option_id'].$i; ?>]" value="<?php echo $option_value['product_option_value_id']; ?>" <?php echo ($option_value['product_option_value_id'] == 38)? "checked=checked" : ''; ?> />
+                                       <input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" class="thumb" src="<?php echo $option_value['imagel']; ?>" val="<?php echo $option_value['imagexl']; ?>" id="option[<?php echo $option['product_option_id'].$i; ?>]" value="<?php echo $option_value['product_option_value_id']; ?>" <?php echo ($option_value['default'] == 1)? "checked=checked" : ''; ?> />
                     <?php //echo $option_value['name']; ?>
                     <?php if ($option_value['price']) { ?>
                     <!-- (<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>) -->
@@ -985,6 +985,13 @@ $(document).ready(function() {
 			enabled:true
 		}
 	});
+});
+
+$(document).ready(function() {
+  $('input[name=\'option[247]\']').on('click', function() {
+    var purity = $('input[name=\'option[247]\']:checked').val();
+    alert(purity);
+  });
 });
 //--></script>
   <!--  similar product -->      

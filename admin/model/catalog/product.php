@@ -14,13 +14,19 @@ class ModelCatalogProduct extends Model {
 		foreach ($data['product_description'] as $language_id => $value) {
 			$this->db->query("INSERT INTO " . DB_PREFIX . "product_description SET product_id = '" . (int)$product_id . "', language_id = '" . (int)$language_id . "', name = '" . $this->db->escape($value['name']) . "', description = '" . $this->db->escape($value['description']) . "', tag = '" . $this->db->escape($value['tag']) . "', meta_title = '" . $this->db->escape($value['meta_title']) . "', meta_description = '" . $this->db->escape($value['meta_description']) . "', meta_keyword = '" . $this->db->escape($value['meta_keyword']) . "'");
 		}
-		/* R@Appsembly product diamond insert */
+		/* R@Appsembly product diamond and gold insert */
 		if (isset($data['product_diamond'])) {
 			foreach ($data['product_diamond'] as $product_diamond) {
 				$this->db->query("INSERT INTO " . DB_PREFIX . "product_diamond SET product_id = '" . (int)$product_id . "', quality = '" . $product_diamond['quality'] . "', size = '" . (int)$product_diamond['size'] . "', quantity = '" . (int)$product_diamond['quantity'] . "', weight = '" . $this->db->escape($product_diamond['weight']) . "'");
 			}
 		}
-		/* R@Appsembly product diamond insert */
+
+		if (isset($data['product_gold'])) {
+			foreach ($data['product_gold'] as $product_gold) {
+				$this->db->query("INSERT INTO " . DB_PREFIX . "product_gold SET product_id = '" . (int)$product_id . "', quality = '" . $product_gold['quality'] . "', weight = '" . $this->db->escape($product_gold['weight']) . "'");
+			}
+		}
+		/* R@Appsembly product diamond and gold insert */
 		if (isset($data['product_store'])) {
 			foreach ($data['product_store'] as $store_id) {
 				$this->db->query("INSERT INTO " . DB_PREFIX . "product_to_store SET product_id = '" . (int)$product_id . "', store_id = '" . (int)$store_id . "'");
@@ -41,12 +47,17 @@ class ModelCatalogProduct extends Model {
 			foreach ($data['product_option'] as $product_option) {
 				if ($product_option['type'] == 'select' || $product_option['type'] == 'radio' || $product_option['type'] == 'checkbox' || $product_option['type'] == 'image') {
 					if (isset($product_option['product_option_value'])) {
-						$this->db->query("INSERT INTO " . DB_PREFIX . "product_option SET product_id = '" . (int)$product_id . "', option_id = '" . (int)$product_option['option_id'] . "', required = '" . (int)$product_option['required'] . "'");
+						$this->db->query("INSERT INTO " . DB_PREFIX . "product_option SET product_option_id = '" . (int)$product_option['product_option_id'] . "', product_id = '" . (int)$product_id . "', option_id = '" . (int)$product_option['option_id'] . "', required = '" . (int)$product_option['required'] . "'");
 
 						$product_option_id = $this->db->getLastId();
-
 						foreach ($product_option['product_option_value'] as $product_option_value) {
-							/* R@Appsembly set default options */ 
+							if($product_option['option_id'] == 22){
+								$this->setOptionsPrice($product_id, $product_option['option_id'], $product_option_value);
+							//print_r($diamond_price);
+							//print_r($product_option_value);
+							}
+							
+							/* R@Appsembly set default options */
 							if(isset($product_option_value['default'])){
 								$this->db->query("INSERT INTO " . DB_PREFIX . "product_option_value SET product_option_value_id = '" . (int)$product_option_value['product_option_value_id'] . "', product_option_id = '" . (int)$product_option_id . "', product_id = '" . (int)$product_id . "', option_id = '" . (int)$product_option['option_id'] . "', option_value_id = '" . (int)$product_option_value['option_value_id'] . "', quantity = '" . (int)$product_option_value['quantity'] . "', subtract = '" . (int)$product_option_value['subtract'] . "', default_value = '1', price = '" . (float)$product_option_value['price'] . "', price_prefix = '" . $this->db->escape($product_option_value['price_prefix']) . "', points = '" . (int)$product_option_value['points'] . "', points_prefix = '" . $this->db->escape($product_option_value['points_prefix']) . "', weight = '" . (float)$product_option_value['weight'] . "', weight_prefix = '" . $this->db->escape($product_option_value['weight_prefix']) . "'");
 							}else{
@@ -54,9 +65,10 @@ class ModelCatalogProduct extends Model {
 							}
 							/* R@Appsembly set default options */
 						}
+						
 					}
 				} else {
-					$this->db->query("INSERT INTO " . DB_PREFIX . "product_option SET product_id = '" . (int)$product_id . "', option_id = '" . (int)$product_option['option_id'] . "', value = '" . $this->db->escape($product_option['value']) . "', required = '" . (int)$product_option['required'] . "'");
+					$this->db->query("INSERT INTO " . DB_PREFIX . "product_option SET product_option_id = '" . (int)$product_option['product_option_id'] . "', product_id = '" . (int)$product_id . "', option_id = '" . (int)$product_option['option_id'] . "', value = '" . $this->db->escape($product_option['value']) . "', required = '" . (int)$product_option['required'] . "'");
 				}
 			}
 		}
@@ -151,15 +163,23 @@ class ModelCatalogProduct extends Model {
 		foreach ($data['product_description'] as $language_id => $value) {
 			$this->db->query("INSERT INTO " . DB_PREFIX . "product_description SET product_id = '" . (int)$product_id . "', language_id = '" . (int)$language_id . "', name = '" . $this->db->escape($value['name']) . "', description = '" . $this->db->escape($value['description']) . "', tag = '" . $this->db->escape($value['tag']) . "', meta_title = '" . $this->db->escape($value['meta_title']) . "', meta_description = '" . $this->db->escape($value['meta_description']) . "', meta_keyword = '" . $this->db->escape($value['meta_keyword']) . "'");
 		}
-
+		
+		/* R@Appsembly product diamond and gold Edit */
 		$this->db->query("DELETE FROM " . DB_PREFIX . "product_diamond WHERE product_id = '" . (int)$product_id . "'");
-		/* R@Appsembly product diamond Edit */
+		$this->db->query("DELETE FROM " . DB_PREFIX . "product_gold WHERE product_id = '" . (int)$product_id . "'");
+		
 		if (isset($data['product_diamond'])) {
 			foreach ($data['product_diamond'] as $product_diamond) {
 				$this->db->query("INSERT INTO " . DB_PREFIX . "product_diamond SET product_id = '" . (int)$product_id . "', quality = '" . $product_diamond['quality'] . "', size = '" . (int)$product_diamond['size'] . "', quantity = '" . (int)$product_diamond['quantity'] . "', weight = '" . (float)$this->db->escape($product_diamond['weight']) . "'");
 			}
 		}
-		/* R@Appsembly product diamond Edit */
+
+		if (isset($data['product_gold'])) {
+			foreach ($data['product_gold'] as $product_gold) {
+				$this->db->query("INSERT INTO " . DB_PREFIX . "product_gold SET product_id = '" . (int)$product_id . "', quality = '" . $product_gold['quality'] . "', weight = '" . (float)$this->db->escape($product_gold['weight']) . "'");
+			}
+		}
+		/* R@Appsembly product diamond and gold Edit */
 		$this->db->query("DELETE FROM " . DB_PREFIX . "product_to_store WHERE product_id = '" . (int)$product_id . "'");
 
 		if (isset($data['product_store'])) {
@@ -180,36 +200,39 @@ class ModelCatalogProduct extends Model {
 			}
 		}
 
-		//$this->db->query("DELETE FROM " . DB_PREFIX . "product_option WHERE product_id = '" . (int)$product_id . "'");
-		//$this->db->query("DELETE FROM " . DB_PREFIX . "product_option_value WHERE product_id = '" . (int)$product_id . "'");
+		$this->db->query("DELETE FROM " . DB_PREFIX . "product_option WHERE product_id = '" . (int)$product_id . "'");
+		$this->db->query("DELETE FROM " . DB_PREFIX . "product_option_value WHERE product_id = '" . (int)$product_id . "'");
 		//$this->setOptionsPrice($product_id, $data['product_option']);
 		if (isset($data['product_option'])) {
 			foreach ($data['product_option'] as $product_option) {
 				if ($product_option['type'] == 'select' || $product_option['type'] == 'radio' || $product_option['type'] == 'checkbox' || $product_option['type'] == 'image') {
 					if (isset($product_option['product_option_value'])) {
-						//$this->db->query("INSERT INTO " . DB_PREFIX . "product_option SET product_option_id = '" . (int)$product_option['product_option_id'] . "', product_id = '" . (int)$product_id . "', option_id = '" . (int)$product_option['option_id'] . "', required = '" . (int)$product_option['required'] . "'");
+						$this->db->query("INSERT INTO " . DB_PREFIX . "product_option SET product_option_id = '" . (int)$product_option['product_option_id'] . "', product_id = '" . (int)$product_id . "', option_id = '" . (int)$product_option['option_id'] . "', required = '" . (int)$product_option['required'] . "'");
 
 						$product_option_id = $this->db->getLastId();
-
 						foreach ($product_option['product_option_value'] as $product_option_value) {
-							$this->setOptionsPrice($product_id, $product_option['option_id'], $product_option_value);
-							exit;
+							if($product_option['option_id'] == 22){
+								$this->setOptionsPrice($product_id, $product_option['option_id'], $product_option_value);
+							//print_r($diamond_price);
+							//print_r($product_option_value);
+							}
+							
 							/* R@Appsembly set default options */
-							/*if(isset($product_option_value['default'])){
+							if(isset($product_option_value['default'])){
 								$this->db->query("INSERT INTO " . DB_PREFIX . "product_option_value SET product_option_value_id = '" . (int)$product_option_value['product_option_value_id'] . "', product_option_id = '" . (int)$product_option_id . "', product_id = '" . (int)$product_id . "', option_id = '" . (int)$product_option['option_id'] . "', option_value_id = '" . (int)$product_option_value['option_value_id'] . "', quantity = '" . (int)$product_option_value['quantity'] . "', subtract = '" . (int)$product_option_value['subtract'] . "', default_value = '1', price = '" . (float)$product_option_value['price'] . "', price_prefix = '" . $this->db->escape($product_option_value['price_prefix']) . "', points = '" . (int)$product_option_value['points'] . "', points_prefix = '" . $this->db->escape($product_option_value['points_prefix']) . "', weight = '" . (float)$product_option_value['weight'] . "', weight_prefix = '" . $this->db->escape($product_option_value['weight_prefix']) . "'");
 							}else{
 								$this->db->query("INSERT INTO " . DB_PREFIX . "product_option_value SET product_option_value_id = '" . (int)$product_option_value['product_option_value_id'] . "', product_option_id = '" . (int)$product_option_id . "', product_id = '" . (int)$product_id . "', option_id = '" . (int)$product_option['option_id'] . "', option_value_id = '" . (int)$product_option_value['option_value_id'] . "', quantity = '" . (int)$product_option_value['quantity'] . "', subtract = '" . (int)$product_option_value['subtract'] . "', default_value = '0', price = '" . (float)$product_option_value['price'] . "', price_prefix = '" . $this->db->escape($product_option_value['price_prefix']) . "', points = '" . (int)$product_option_value['points'] . "', points_prefix = '" . $this->db->escape($product_option_value['points_prefix']) . "', weight = '" . (float)$product_option_value['weight'] . "', weight_prefix = '" . $this->db->escape($product_option_value['weight_prefix']) . "'");
-							}*/
+							}
 							/* R@Appsembly set default options */
 						}
 						
 					}
 				} else {
-					//$this->db->query("INSERT INTO " . DB_PREFIX . "product_option SET product_option_id = '" . (int)$product_option['product_option_id'] . "', product_id = '" . (int)$product_id . "', option_id = '" . (int)$product_option['option_id'] . "', value = '" . $this->db->escape($product_option['value']) . "', required = '" . (int)$product_option['required'] . "'");
+					$this->db->query("INSERT INTO " . DB_PREFIX . "product_option SET product_option_id = '" . (int)$product_option['product_option_id'] . "', product_id = '" . (int)$product_id . "', option_id = '" . (int)$product_option['option_id'] . "', value = '" . $this->db->escape($product_option['value']) . "', required = '" . (int)$product_option['required'] . "'");
 				}
 			}
 		}
-exit;
+
 		$this->db->query("DELETE FROM " . DB_PREFIX . "product_discount WHERE product_id = '" . (int)$product_id . "'");
 
 		if (isset($data['product_discount'])) {
@@ -565,6 +588,12 @@ exit;
 		return $query->rows;
 	}
 
+	public function getProductGold($product_id) {
+		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "product_gold WHERE product_id = '" . (int)$product_id . "'");
+
+		return $query->rows;
+	}
+
 	public function getProductSpecials($product_id) {
 		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "product_special WHERE product_id = '" . (int)$product_id . "' ORDER BY priority, price");
 
@@ -727,41 +756,111 @@ exit;
 		return $query->row['total'];
 	}
 
-	public function setOptionsPrice($product_id, $option_id, $product_option_value){
+	public function setOptionsPrice($product_id, $option_id, &$product_option_value){
 
 		$data['diamond_price'] = array('IJ-SI' => array(1 => 30000, 2 => 35000, 3 => 35000),
 										'GH-VS' => array(1 => 40000, 2 => 45000, 3 => 45000),
 										'GH-VVS' => array(1 => 50000, 2 => 55000, 3 => 55000),
 										'EF-VVS' => array(1 => 60000, 2 => 70000, 3 => 70000)
 										);
-		$data['gold_price'] = array('14kt' => 1234, '18kt' => 4567);
-		$data['labour_charge'] = 500;
-	echo "<pre>";
-			$product_diamond = $this->getProductDiamonds($product_id);
-			$quality = array();
-			$diamond_price = 0;
-		foreach($product_diamond as $diamond){
-			if($diamond['size'] > 1 && $diamond['size'] < 5){
-				$diamond_price += $data['diamond_price'][$diamond['quality']][1] * $diamond['weight'];
-			}
-			if($diamond['size'] > 6 && $diamond['size'] < 14){
-				$diamond_price += $data['diamond_price'][$diamond['quality']][2] * $diamond['weight'];
-			}
-			if($diamond['size'] > 15 && $diamond['size'] < 32){
-				$diamond_price += $data['diamond_price'][$diamond['quality']][3] * $diamond['weight'];
-			}
-			echo $diamond_price;
-			echo "<br>";
-		}
-		echo $diamond_price;
-		print_r($quality);	
-			if($option_id == 22){
-				//if($product_option_value[''])
-					//$metal_color = $this->getMetalColorprice($product_option);
+		$data['gold_price'] = 2558;
+		$data['gold_selling_price'] = ($data['gold_price'] * 0.03) + $data['gold_price'];
 
+		if($option_id == 14){
+			$product_gold = $this->getProductGold($product_id);
+			$gold_price = 0;
+			if($product_option_value['option_value_id'] == 51){
+				foreach($product_gold as $gold){
+					if($gold['quality'] == 1){
+						$gold_price += (($data['gold_selling_price']/24) * 14) * $gold['weight'];
+					}
+				}
+				$labour_charge = ($data['gold_selling_price'] * 0.03) * $gold['weight'];
+				$product_option_value['price'] = round($gold_price + $labour_charge);
 			}
+
+			if($product_option_value['option_value_id'] == 52){
+				foreach($product_gold as $gold){
+					if($gold['quality'] == 1){
+						$gold_price += (($data['gold_selling_price']/24) * 18) * $gold['weight'];
+					}
+				}
+				$labour_charge = ($data['gold_selling_price'] * 0.03) * $gold['weight'];
+				$product_option_value['price'] = round($gold_price + $labour_charge);
+			}
+		}
+
+		if($option_id == 22){
+			$product_diamond = $this->getProductDiamonds($product_id);
+			$diamond_price = 0;
+
+			if($product_option_value['option_value_id'] == 75){
+				foreach($product_diamond as $diamond){
+					if($diamond['size'] >= 1 && $diamond['size'] <= 5){
+						$diamond_price += $data['diamond_price']['IJ-SI'][1] * $diamond['weight'];
+					}
+					if($diamond['size'] >= 6 && $diamond['size'] <= 14){
+						$diamond_price += $data['diamond_price']['IJ-SI'][2] * $diamond['weight'];
+					}
+					if($diamond['size'] >= 15 && $diamond['size'] <= 32){
+						$diamond_price += $data['diamond_price']['IJ-SI'][3] * $diamond['weight'];
+					}
+				}
+				$product_option_value['price'] = $diamond_price;
+			}	
 			
-			//print_r($option_id);
-			//print_r($product_option_value);
+			if($product_option_value['option_value_id'] == 76){
+				foreach($product_diamond as $diamond){
+					if($diamond['size'] >= 1 && $diamond['size'] <= 5){
+						$diamond_price += $data['diamond_price']['GH-VS'][1] * $diamond['weight'];
+					}
+					if($diamond['size'] >= 6 && $diamond['size'] <= 14){
+						$diamond_price += $data['diamond_price']['GH-VS'][2] * $diamond['weight'];
+					}
+					if($diamond['size'] >= 15 && $diamond['size'] <= 32){
+						$diamond_price += $data['diamond_price']['GH-VS'][3] * $diamond['weight'];
+					}
+				}
+				$product_option_value['price'] = $diamond_price;
+			}	
+			
+			if($product_option_value['option_value_id'] == 77){
+				foreach($product_diamond as $diamond){
+					if($diamond['size'] >= 1 && $diamond['size'] <= 5){
+						$diamond_price += $data['diamond_price']['GH-VVS'][1] * $diamond['weight'];
+					}
+					if($diamond['size'] >= 6 && $diamond['size'] <= 14){
+						$diamond_price += $data['diamond_price']['GH-VVS'][2] * $diamond['weight'];
+					}
+					if($diamond['size'] >= 15 && $diamond['size'] <= 32){
+						$diamond_price += $data['diamond_price']['GH-VVS'][3] * $diamond['weight'];
+					}
+				}
+				$product_option_value['price'] = $diamond_price;
+			}
+
+			if($product_option_value['option_value_id'] == 78){
+				foreach($product_diamond as $diamond){
+					if($diamond['size'] >= 1 && $diamond['size'] <= 5){
+						$diamond_price += $data['diamond_price']['EF-VVS'][1] * $diamond['weight'];
+					}
+					if($diamond['size'] >= 6 && $diamond['size'] <= 14){
+						$diamond_price += $data['diamond_price']['EF-VVS'][2] * $diamond['weight'];
+					}
+					if($diamond['size'] >= 15 && $diamond['size'] <= 32){
+						$diamond_price += $data['diamond_price']['EF-VVS'][3] * $diamond['weight'];
+					}
+				}
+				$product_option_value['price'] = $diamond_price;
+			}	
+		}
 	}
+
+
+
+
+
+
+
+
 }

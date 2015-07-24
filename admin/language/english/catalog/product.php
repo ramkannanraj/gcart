@@ -85,6 +85,8 @@ $_['entry_diamond_quality']  = 'Diamond Quality';
 $_['entry_diamond_size']     = 'Size';
 $_['entry_diamond_nos']      = 'Nos Of Diamonds';
 $_['entry_diamond_weight']   = 'Weight';
+$_['entry_gold_quality']     = 'Gold Quality';
+$_['entry_gold_weight']      = 'Weight';
 
 // Help
 $_['help_keyword']           = 'Do not use spaces, instead replace spaces with - and make sure the keyword is globally unique.';

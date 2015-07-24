@@ -383,17 +383,123 @@ class ModelCatalogProduct extends Model {
 
 		$product_option_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "product_option po LEFT JOIN `" . DB_PREFIX . "option` o ON (po.option_id = o.option_id) LEFT JOIN " . DB_PREFIX . "option_description od ON (o.option_id = od.option_id) WHERE po.product_id = '" . (int)$product_id . "' AND od.language_id = '" . (int)$this->config->get('config_language_id') . "' ORDER BY o.sort_order");
 
+		$data['diamond_price'] = array('IJ-SI' => array(1 => 30000, 2 => 35000, 3 => 35000),
+										'GH-VS' => array(1 => 40000, 2 => 45000, 3 => 45000),
+										'GH-VVS' => array(1 => 50000, 2 => 55000, 3 => 55000),
+										'EF-VVS' => array(1 => 60000, 2 => 70000, 3 => 70000)
+										);
+		$data['gold_price'] = 2558;
+		$data['gold_selling_price'] = ($data['gold_price'] * 0.03) + $data['gold_price'];
+
 		foreach ($product_option_query->rows as $product_option) {
 			$product_option_value_data = array();
 
 			$product_option_value_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "product_option_value pov LEFT JOIN " . DB_PREFIX . "option_value ov ON (pov.option_value_id = ov.option_value_id) LEFT JOIN " . DB_PREFIX . "option_value_description ovd ON (ov.option_value_id = ovd.option_value_id) WHERE pov.product_id = '" . (int)$product_id . "' AND pov.product_option_id = '" . (int)$product_option['product_option_id'] . "' AND ovd.language_id = '" . (int)$this->config->get('config_language_id') . "' ORDER BY ov.sort_order");
 
 			foreach ($product_option_value_query->rows as $product_option_value) {
+				if($product_option['option_id'] == 23){
+					$product_gold = $this->getProductGold($product_id);
+					$gold_price = 0;
+
+					if($product_option_value['option_value_id'] == 51){
+
+					}	
+				}	
+				if($product_option['option_id'] == 14){
+					$product_gold = $this->getProductGold($product_id);
+					$gold_price = 0;
+
+					if($product_option_value['option_value_id'] == 51){
+						foreach($product_gold as $gold){
+							if($gold['quality'] == 1){
+								$gold_price += (($data['gold_selling_price']/24) * 14) * $gold['weight'];
+							}
+						}
+						$labour_charge = ($data['gold_selling_price'] * 0.03) * $gold['weight'];
+						$product_option_value['price'] = round($gold_price + $labour_charge);
+					}
+
+					if($product_option_value['option_value_id'] == 52){
+						foreach($product_gold as $gold){
+							if($gold['quality'] == 1){
+								$gold_price += (($data['gold_selling_price']/24) * 18) * $gold['weight'];
+							}
+						}
+						$labour_charge = ($data['gold_selling_price'] * 0.03) * $gold['weight'];
+						$product_option_value['price'] = round($gold_price + $labour_charge);
+					}
+				}
+
+				if($product_option['option_id'] == 22){
+					$product_diamond = $this->getProductDiamonds($product_id);
+					$diamond_price = 0;
+
+					if($product_option_value['option_value_id'] == 75){
+						foreach($product_diamond as $diamond){
+							if($diamond['size'] >= 1 && $diamond['size'] <= 5){
+								$diamond_price += $data['diamond_price']['IJ-SI'][1] * $diamond['weight'];
+							}
+							if($diamond['size'] >= 6 && $diamond['size'] <= 14){
+								$diamond_price += $data['diamond_price']['IJ-SI'][2] * $diamond['weight'];
+							}
+							if($diamond['size'] >= 15 && $diamond['size'] <= 32){
+								$diamond_price += $data['diamond_price']['IJ-SI'][3] * $diamond['weight'];
+							}
+						}
+						$product_option_value['price'] = $diamond_price;
+					}	
+					
+					if($product_option_value['option_value_id'] == 76){
+						foreach($product_diamond as $diamond){
+							if($diamond['size'] >= 1 && $diamond['size'] <= 5){
+								$diamond_price += $data['diamond_price']['GH-VS'][1] * $diamond['weight'];
+							}
+							if($diamond['size'] >= 6 && $diamond['size'] <= 14){
+								$diamond_price += $data['diamond_price']['GH-VS'][2] * $diamond['weight'];
+							}
+							if($diamond['size'] >= 15 && $diamond['size'] <= 32){
+								$diamond_price += $data['diamond_price']['GH-VS'][3] * $diamond['weight'];
+							}
+						}
+						$product_option_value['price'] = $diamond_price;
+					}	
+					
+					if($product_option_value['option_value_id'] == 77){
+						foreach($product_diamond as $diamond){
+							if($diamond['size'] >= 1 && $diamond['size'] <= 5){
+								$diamond_price += $data['diamond_price']['GH-VVS'][1] * $diamond['weight'];
+							}
+							if($diamond['size'] >= 6 && $diamond['size'] <= 14){
+								$diamond_price += $data['diamond_price']['GH-VVS'][2] * $diamond['weight'];
+							}
+							if($diamond['size'] >= 15 && $diamond['size'] <= 32){
+								$diamond_price += $data['diamond_price']['GH-VVS'][3] * $diamond['weight'];
+							}
+						}
+						$product_option_value['price'] = $diamond_price;
+					}
+
+					if($product_option_value['option_value_id'] == 78){
+						foreach($product_diamond as $diamond){
+							if($diamond['size'] >= 1 && $diamond['size'] <= 5){
+								$diamond_price += $data['diamond_price']['EF-VVS'][1] * $diamond['weight'];
+							}
+							if($diamond['size'] >= 6 && $diamond['size'] <= 14){
+								$diamond_price += $data['diamond_price']['EF-VVS'][2] * $diamond['weight'];
+							}
+							if($diamond['size'] >= 15 && $diamond['size'] <= 32){
+								$diamond_price += $data['diamond_price']['EF-VVS'][3] * $diamond['weight'];
+							}
+						}
+						$product_option_value['price'] = $diamond_price;
+					}	
+				}
 				$product_option_value_data[] = array(
 					'product_option_value_id' => $product_option_value['product_option_value_id'],
 					'option_value_id'         => $product_option_value['option_value_id'],
 					'name'                    => $product_option_value['name'],
 					'image'                   => $product_option_value['image'],
+					'default'                 => $product_option_value['default_value'],
 					'quantity'                => $product_option_value['quantity'],
 					'subtract'                => $product_option_value['subtract'],
 					'price'                   => $product_option_value['price'],
@@ -576,5 +682,17 @@ class ModelCatalogProduct extends Model {
 		} else {
 			return 0;
 		}
+	}
+
+	public function getProductDiamonds($product_id) {
+		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "product_diamond WHERE product_id = '" . (int)$product_id . "'");
+
+		return $query->rows;
+	}
+
+	public function getProductGold($product_id) {
+		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "product_gold WHERE product_id = '" . (int)$product_id . "'");
+
+		return $query->rows;
 	}
 }

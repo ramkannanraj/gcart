@@ -163,8 +163,8 @@ $(window).load(function() {
   <!-- FlexSlider -->
   <script defer src="catalog/view/javascript/jquery/jquery.flexslider.js"></script>
 
-  <script type="text/javascript">
-    $(function(){
+ <script type="text/javascript">
+   $(function(){
       SyntaxHighlighter.all();
     });
     $(window).load(function(){

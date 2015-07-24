@@ -37,6 +37,40 @@ class ControllerProductProduct extends Controller {
 					);
 				}
 			}
+			
+			/* R@appsembly Get default diamond and purity type */
+			/*if (isset($this->request->get['model'])) {
+				$path = '';
+
+				$parts = explode('_', (string)$this->request->get['model']);
+				print_r(count($parts));
+				if(count($parts) >= 2){
+					$quality = $parts[0];
+					$purity = $parts[1];
+				}elseif(count($parts) == 1){
+					$quality = $parts[0];
+				}
+				print_r($quality); exit;
+				foreach ($parts as $path_id) {
+					if (!$path) {
+						$path = $path_id;
+					} else {
+						$path .= '_' . $path_id;
+					}
+
+					$category_info = $this->model_catalog_category->getCategory($path_id);
+
+					if ($category_info) {
+						$data['breadcrumbs'][] = array(
+							'text' => $category_info['name'],
+							'href' => $this->url->link('product/category', 'path=' . $path)
+						);
+					}
+				}
+			}else{
+				$valued_url = false;
+			}*/	
+			/* R@appsembly Get default diamond and purity type */
 
 			// Set the last category breadcrumb
 			$category_info = $this->model_catalog_category->getCategory($category_id);
@@ -209,6 +243,10 @@ class ControllerProductProduct extends Controller {
 				$url .= '&limit=' . $this->request->get['limit'];
 			}
 
+			if (isset($this->request->get['model'])) {
+				$url .= '&model=' . $this->request->get['model'];
+			}
+
 			$data['breadcrumbs'][] = array(
 				'text' => $product_info['name'],
 				'href' => $this->url->link('product/product', $url . '&product_id=' . $this->request->get['product_id'])
@@ -305,13 +343,6 @@ $this->document->addScript('catalog/view/javascript/jquery/jquery.elevateZoom-3.
 				);
 			}
 
-			if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
-				$data['price'] = $this->currency->format($this->tax->calculate($product_info['price'], $product_info['tax_class_id'], $this->config->get('config_tax')));
-				$raw_price = $product_info['price'];
-			} else {
-				$data['price'] = false;
-			}
-
 			if ((float)$product_info['special']) {
 				$data['special'] = $this->currency->format($this->tax->calculate($product_info['special'], $product_info['tax_class_id'], $this->config->get('config_tax')));
 			} else {
@@ -336,7 +367,7 @@ $this->document->addScript('catalog/view/javascript/jquery/jquery.elevateZoom-3.
 			}
 
 			$data['options'] = array();
-
+			$default_option_price = 0;
 			foreach ($this->model_catalog_product->getProductOptions($this->request->get['product_id']) as $option) {
 				$product_option_value_data = array();
 
@@ -345,8 +376,10 @@ $this->document->addScript('catalog/view/javascript/jquery/jquery.elevateZoom-3.
 						if (!$option_value['subtract'] || ($option_value['quantity'] > 0)) {
 							if ((($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) && (float)$option_value['price']) {
 								$price = $this->currency->format($this->tax->calculate($option_value['price'], $product_info['tax_class_id'], $this->config->get('config_tax') ? 'P' : false));
+								$raw_price = $option_value['price'];
 							} else {
 								$price = false;
+								$raw_price = 0;
 							}
 
 							$product_option_value_data[] = array(
@@ -355,10 +388,15 @@ $this->document->addScript('catalog/view/javascript/jquery/jquery.elevateZoom-3.
 								'product_option_value_id' => $option_value['product_option_value_id'],
 								'option_value_id'         => $option_value['option_value_id'],
 								'name'                    => $option_value['name'],
+								'default'				  => $option_value['default'],
 								'image'                   => $this->model_tool_image->resize($option_value['image'], 50, 50),
 								'price'                   => $price,
 								'price_prefix'            => $option_value['price_prefix']
 							);
+							//print_r($option_value);
+							if($option_value['default'] == 1){
+								$default_option_price += $raw_price;
+							}
 						}
 					}
 
@@ -372,6 +410,13 @@ $this->document->addScript('catalog/view/javascript/jquery/jquery.elevateZoom-3.
 						'required'             => $option['required']
 					);
 				}	
+			}
+			
+			if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
+				$data['price'] = $this->currency->format($this->tax->calculate($default_option_price, $product_info['tax_class_id'], $this->config->get('config_tax')));
+				$raw_price = $default_option_price;
+			} else {
+				$data['price'] = false;
 			}
 
 			if ($product_info['minimum']) {
@@ -400,7 +445,7 @@ $this->document->addScript('catalog/view/javascript/jquery/jquery.elevateZoom-3.
 			$data['attribute_groups'] = $this->model_catalog_product->getProductAttributes($this->request->get['product_id']);
 
 			$data['products'] = array();
-			/* Similar products */
+			/* R@appsembly Similar products */
 
 			$categories = $this->model_catalog_product->getCategories($product_id);
 			$category = end($categories);
@@ -444,7 +489,8 @@ $this->document->addScript('catalog/view/javascript/jquery/jquery.elevateZoom-3.
 					'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'])
 				);
 			}
-			/* Similar products end */
+			/* R@appsembly Similar products end */
+
 			$results = $this->model_catalog_product->getProductRelated($this->request->get['product_id']);
 
 			foreach ($results as $result) {

@@ -3,7 +3,7 @@
     <div class="row">
       <!-- -->
       <br class="spacer"/>
-        <div id="heading-strip">
+        <div id="heading-strip2">
           <h1><span>WHY BUY FROM US ?</span></h1>
         </div> 
         <div class="row">
@@ -18,14 +18,14 @@
         </div>
    
         <!-- -->
-        <div class="col-sm-6 col-md-6 col-xs-12 ">
+        <div class="col-sm-12 col-md-6 col-xs-12 ">
               <div id="track">
                   <h1>TRACK YOUR ORDER</h1>
                   <button type="button" class="black-btn btn-primary">Track Now</button>
               </div>
         </div>
 
-        <div class="col-sm-6 col-md-6 col-xs-12  ">
+        <div class="col-sm-12 col-md-6 col-xs-12  ">
                 <div id="sign">
                     <h1>SIGN UP FOR OFFERS</h1>
                     <form class="navbar-form email" role="search"  >
@@ -120,8 +120,8 @@
                 <div class="col-sm-4"><a href="#" target="_self">Terms of use </a> | 
                     <a href="#" target="_self">Privacy Policy </a>
                 </div>
-                <div class="col-sm-4 reserved">©2015 Gemcart. All Rights Reserved</div>
-                <div class="col-sm-4 paysecure"><img alt="payment" src="image/payment_logo.jpg"></div> 
+                <div class="col-sm-4 reserved"><p>©2015 Gemcart. All Rights Reserved</p></div>
+                <div class="col-sm-4 paysecure"><img alt="payment" src="image/payment_logo.jpg" class="img-responsive"></div> 
             </div>
           
         </div>
@@ -158,29 +158,28 @@ $(window).load(function() {
 </script>  
 
   <!-- jQuery -->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
- 
+ <!-- <script src="catalog/view/javascript/jquery/jquery.min.js"></script> -->
+  
   <!-- FlexSlider -->
   <script defer src="catalog/view/javascript/jquery/jquery.flexslider.js"></script>
 
- <script type="text/javascript">
-   $(function(){
+    <script type="text/javascript">
+    $(function(){
       SyntaxHighlighter.all();
     });
     $(window).load(function(){
       $('.flexslider').flexslider({
         animation: "slide",
-        animationLoop: false,
+        animationLoop: true,
         itemWidth: 210,
-        itemMargin: 5,
-        pausePlay: true,
+         pausePlay: true,
         start: function(slider){
           $('body').removeClass('loading');
         }
       });
     });
   </script>
-
+ 
 <!-- <script src="catalog/view/javascript/autoptimize_9a15becef9b2f850af1e4f2ecea7b647.js" type="text/javascript"></script>  -->
 <!--
 OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.

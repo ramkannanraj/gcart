@@ -68,11 +68,7 @@
   });
 });</script>
  
- <script>
- 
- </script>
- 
- <!--similar-->
+  <!--similar-->
   
   <script src="catalog/view/javascript/jquery/jquery.slides.min.js"></script>
   <!-- End SlidesJS Required -->
@@ -111,16 +107,15 @@
 <nav id="top-strip1">
   <div class="container">
     <div class="row">
-            <div  class="col-sm-2 col-md-2 col-xs-12">
+           
+            <div  class="col-sm-7 col-md-7 col-xs-12">
             <p>Call <?php echo $telephone; ?></p>
-            </div>
-            <div  class="col-sm-6 col-md-6 col-xs-12">
             <p><span class="offer">OFFERS</span> FLAT 20% OFF O DIAMOND AND GEMSTONE JEWELLERY ORDERS OVER RS.20.000</p>
             </div>
-            <div  class="col-sm-4 col-md-4 col-xs-12">
+            <div  class="col-sm-2 col-md-2 col-xs-12">
             <div id="top-links" class="nav ">
               <ul class="list-inline">
-                  <li class="dropdown"><a href="<?php echo $account; ?>" title="<?php echo $text_account; ?>" class="dropdown-toggle" data-toggle="dropdown"><!--<i class="fa fa-user"></i> --> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_account; ?></span> <span class="caret"></span></a>
+                  <li class="dropdown"><a href="<?php echo $account; ?>" title="<?php echo $text_account; ?>" class="dropdown-toggle" data-toggle="dropdown"><!--<i class="fa fa-user"></i> -->  <?php echo $text_account; ?>  </a>
                   <ul class="dropdown-menu dropdown-menu-right">
                     <?php if ($logged) { ?>
                     <li><a href="<?php echo $account; ?>"><?php echo $text_account; ?></a></li>
@@ -134,16 +129,20 @@
                     <?php } ?>
                   </ul>
                 </li>
-  <!--edit -->              
-                <li class="dropdown"><a href="<?php echo $wishlist; ?>" id="wishlist-total" title="<?php echo $text_wishlist; ?>" class="dropdown-toggle" data-toggle="dropdown"><!--<i class="fa fa-heart"></i> --> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_wishlist; ?></span> <span class="caret"></span></a>
-                   <ul class="dropdown-menu dropdown-menu-right wishlist">
-                  	 <li><a href="#"> <button type="button" class="close">&times;</button></a></li>
-                         <div  class="col-sm-12 col-md-12 col-xs-12">
-                             <h1>WISHLIST (0)</h1> <hr/>
-                             
-                             <!--list list -->
- 
-        <div class="flexslider carousel" style="width: 198px">
+              </ul>  <!--edit end --> 
+            </div>
+            </div>
+            
+            <div  class="col-sm-3 col-md-3 col-xs-12 wishlist-menu">
+                <ul>
+                    <li> 
+                    <a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">WISHLIST (0)</a></li>
+                    <div id="light" class="white_content wishlist" >
+                    <a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"><span style="float:right"><img src="catalog/view/theme/gemcart/images/close.jpg"></span></a>
+                    
+                    <h1>WISHLIST</h1> <hr/>
+       
+       <div class="flexslider carousel wish-img" >
           <ul class="slides">
           		<li>
                  <button type="button" class="close">&times;</button>
@@ -153,6 +152,7 @@
                     <p> $189.60 </p>
   	    		</li>
   	    		<li>
+                <br/>
                     <div class="try1"></div>
                     <a href="#"><img src="catalog/view/theme/gemcart/images/wishlist.jpg" /></a>
                     <h1>Ballerina Jhumkas</h1>
@@ -168,12 +168,14 @@
   	    		</li>
                 
                  <li>
+                 <br/>
                     <div class="try1"></div>
                     <a href="#"><img src="catalog/view/theme/gemcart/images/wishlist.jpg" /></a>
                     <h1>Ballerina Jhumkas</h1>
                     <p> $189.60 </p>
-  	    		</li>                
-                <li>
+  	    		</li>    
+                 <li>
+                 <br/>
                     <div class="try1"></div>
                     <a href="#"><img src="catalog/view/theme/gemcart/images/wishlist.jpg" /></a>
                     <h1>Ballerina Jhumkas</h1>
@@ -189,6 +191,7 @@
   	    		</li>
                 
                 <li>
+                <br/>
                     <div class="try1"></div>
                     <a href="#"><img src="catalog/view/theme/gemcart/images/wishlist.jpg" /></a>
                     <h1>Ballerina Jhumkas</h1>
@@ -196,6 +199,7 @@
   	    		</li>
                 
                 <li>
+                <br/>
                     <div class="try1"></div>
                     <a href="#"><img src="catalog/view/theme/gemcart/images/wishlist.jpg" /></a>
                     <h1>Ballerina Jhumkas</h1>
@@ -203,6 +207,7 @@
   	    		</li>
                 
                 <li>
+                <br/>
                     <div class="try1"></div>
                     <a href="#"><img src="catalog/view/theme/gemcart/images/wishlist.jpg" /></a>
                     <h1>Ballerina Jhumkas</h1>
@@ -211,22 +216,19 @@
  
           </ul>
         </div>
-
-                              
-                              
-                             <button class="drop-btn1" style="margin-top:0">Try More Products</button>
-                        </div>
-           			 </ul>
-                 </li>
-                
-                 
-                <li class="dropdown"><a href="#" title="Try @ Home" class="dropdown-toggle" data-toggle="dropdown"><span class="hidden-xs hidden-sm hidden-md">Try @ Home (0)</span> <span class="caret"></span></a>
-                   <ul class="dropdown-menu dropdown-menu-right">
-       					<li><a href="#"> 
-     					   <button type="button" class="close">&times;</button></a></li>
-      <br>
-                               <div  class="col-sm-3 col-md-3 col-xs-12"><img src="catalog/view/theme/gemcart/images/hometryon_home.png" class="img-responsive img"  /></div>
-                                <div  class="col-sm-9 col-md-9 col-xs-12">
+        
+        <button class="drop-btn1">Try More Products</button>
+          </div> 
+             
+       
+       <!--try home -->     
+             <li> 
+                    <a href = "javascript:void(0)" onclick = "document.getElementById('try').style.display='block';document.getElementById('fade').style.display='block'">Try @ Home (0)</a></li>
+                    <div id="try" class="white_content1 tryhome" >
+                    <a href = "javascript:void(0)" onclick = "document.getElementById('try').style.display='none';document.getElementById('fade').style.display='none'"><span style="float:right"><img src="catalog/view/theme/gemcart/images/close.jpg" style="border:none"></span></a>
+                    
+                                          <div  class="col-sm-4 col-md-4 col-xs-12"><img src="catalog/view/theme/gemcart/images/hometryon_home.png" class="img-responsive img"  /></div>
+                                <div  class="col-sm-8 col-md-8 col-xs-12" style="float:right">
                                 <h2>Try @ Home</h2>
                                 <p>Choose up to 5 products and we will send samples to you to try @ home. Just so that you can be sure. Learn More</p>
                                 </div>
@@ -249,8 +251,8 @@
                                     <hr/>
                                     <h1>your details</h1>
                                     <p>Our representative will contact you within 24 hours to schedule an appointment at your convenience. </p>
-                                    
-                                    </div>
+                                    <br>
+                                     </div>
 
  
                                  <div  class="col-sm-5 col-md-5 col-xs-12"><strong>City :</strong></div>
@@ -267,13 +269,15 @@
                                 <div  class="col-sm-7 col-md-7 col-xs-12"><input type="text" /></div>
                                 
                                  <div  class="col-sm-7 col-md-7 col-xs-12"><button class="drop-btn">Try More Products</button></div>
-                                 <div  class="col-sm-5 col-md-5 col-xs-12"><button class="drop-btn">Submit</button></div>
-                                  
-                        </ul>
-                                                 </ul>  <!--edit end --> 
-    </div>
-             
+                                 <div  class="col-sm-5 col-md-5 col-xs-12"><button class="drop-btn">Submit</button></div>          
+   
+ 
+          </div> 
+             <!--try home end -->  
+            </ul>
             </div>
+            
+            
         </div>
   </div>
 </nav>

@@ -50,7 +50,7 @@
   display: none;
   -webkit-backface-visibility: hidden;
   display: inline-block;
-width:210px;
+width:210px !important;
 margin: 0px 0px 15px 15px;
 padding: 5px;
 float: left;
@@ -61,13 +61,13 @@ border: 1px solid #CCC;
 }
 .flexslider h1{
     font-size: 16px !important;
-    margin-top: 30px; padding-bottom:0 !important;
+    margin-top:0px; padding-bottom:0 !important;
   padding-left: 10px !important;
 }
 
 .flexslider p {
     font-size: 16px !important;
-    color: #222;
+    color: #222 !important;
     font-weight: bold;
     padding-left: 10px !important;
 }
@@ -106,7 +106,7 @@ html[xmlns] .flexslider .slides {
  * DEFAULT THEME
  * ====================================================================================================================*/
 .flexslider {
-  margin: 0 0 0px;
+   margin: 0 0 0px;
   background: #ffffff;
   border: 4px solid #ffffff;
   position: relative;
@@ -149,19 +149,19 @@ html[xmlns] .flexslider .slides {
   height: 40px;
   margin: -20px 0 0;
   position: absolute;
-  top: 50%;
+  top:20%;
   z-index: 10;
   overflow: hidden;
   opacity: 0;
   cursor: pointer;
   color: rgba(0, 0, 0, 0.8);
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
-  -webkit-transition: all 0.3s ease-in-out;
+/*  -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-}
+*/}
 .flex-direction-nav a:before {
   font-family: "flexslider-icon";
   font-size: 40px;
@@ -173,6 +173,29 @@ html[xmlns] .flexslider .slides {
 .flex-direction-nav a.flex-next:before {
   content: ''; 
 }
+
+ 
+.most:hover .flex-direction-nav .flex-prev{background:#eee url(images/prev-arrow.png) no-repeat center center; left:-35px;  padding:70px 0; }
+.most:hover .flex-direction-nav .flex-next{ background:#eee url(images/next-arrow.png) no-repeat center center; right:-35px;  opacity: 1; padding:70px 0;}
+.most .flex-direction-nav .flex-prev{background:#eee url(images/prev-arrow.png) no-repeat center center; left:-35px;  padding:70px 0; }
+.most .flex-direction-nav .flex-next{ background:#eee url(images/next-arrow.png) no-repeat center center; right:-35px;  opacity: 1; padding:70px 0;}
+
+
+.most li img{ width:257px !important;} .most li{ width:257px !important; border:none !important}
+.most {max-width: 1130px; margin:0 auto; display:block}
+
+ 
+.wish-img:hover .flex-direction-nav .flex-prev{background:url(images/prev-arrow.png) no-repeat center center; left:0px; top:45%;  padding:20px 0; } 
+.wish-img:hover .flex-direction-nav .flex-next{ background:url(images/next-arrow.png) no-repeat center center; right:0px; top:45%;   padding:20px 0;}
+
+/*.wish-img li img{ width:257px !important;} .wish-img li{ width:257px !important; border:none !important}
+.wish-img {max-width:1070px; margin:0 auto; display:block} 
+.wish-img .flex-direction-nav .flex-prev{ top:45%; left:0px; padding:20px 0;}
+.wish-img .flex-direction-nav .flex-next{right:0px; top:45%;   padding:20px 0;}
+*/
+
+
+
 .flex-direction-nav .flex-prev {
   left: -50px; background:url(images/prev-arrow.png) no-repeat center top;
 }
@@ -182,14 +205,14 @@ html[xmlns] .flexslider .slides {
 }
 .flexslider:hover .flex-direction-nav .flex-prev {
   opacity: 0.7;
-  left: 10px;
+  left: -10px; 
 }
 .flexslider:hover .flex-direction-nav .flex-prev:hover {
   opacity: 1;
 }
 .flexslider:hover .flex-direction-nav .flex-next {
   opacity: 0.7;
-  right: 10px;
+  right: -10px;
 }
 .flexslider:hover .flex-direction-nav .flex-next:hover {
   opacity: 1;

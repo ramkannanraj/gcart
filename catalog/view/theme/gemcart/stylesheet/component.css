@@ -25,7 +25,7 @@
 	position: relative;
 }
 
-.grid h1 { font-size:18px; margin-top:30px; padding-left:15px;
+.grid h1 { font-size:17px; margin-top:30px; padding-left:15px;
  }
 
 .grid figure img {
@@ -53,7 +53,7 @@ left:-4px; background: url(images/try-home.png) no-repeat}
 .grid figcaption span{  display:inline-block; margin-right:25px; font-size:14px; color:#222; font-weight: normal; text-decoration:line-through; }
 .grid p{ font-size:18px; color:#222; font-weight:bold; padding-left:15px;}
 .grid figcaption h3 {
-	margin: 0; font-size:18px;
+	margin: 0; font-size:17px;
 	padding: 0;
 	color: #333; text-align:center;
 }
@@ -136,7 +136,7 @@ left:-4px; background: url(images/try-home.png) no-repeat}
 }
  ul.listing-menu{ padding:0; margin:10px 0 0; width:100%; border-top:#fff solid 1px; }
  ul.listing-menu li { float:left; font-size:13px; display:inline-block; color:#333; width:auto; padding:10px 0 0; border:none; height:auto; margin:0}
-  ul.listing-menu li a{ padding:0 6px; text-align:center; color:#333; font-size:13px; text-decoration:none} 
+  ul.listing-menu li a{ padding:0 7px; text-align:center; color:#333; font-size:12px; text-decoration:none} 
    ul.listing-menu li a:hover{ color:#8bc3c7}
     ul.listing-menu img{ padding:0; margin:2px 0 0 4px ; float:left; display:inline-block;}
 

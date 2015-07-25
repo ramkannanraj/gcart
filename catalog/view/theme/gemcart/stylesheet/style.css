@@ -2,7 +2,8 @@
 /* CSS Document */
 
 /*body{ background:#fbfaf9} */
-*{ margin:0; padding:0; text-decoration:none; font-family: 'PT Sans', sans-serif; outline:none; list-style:none; }
+ 
+*{ margin:0; padding:0; text-decoration:none; font-family: 'PT Sans', sans-serif; outline:none; list-style:none; outline:none;}
 .spacer{ clear:both;}
  .header-wrapper-desktop {
     display: block !important;
@@ -13,11 +14,13 @@
     background-size: 100% auto;
     box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.15);
 }
- 
+.required select {
+    width: 30% !important; margin-right:15px !important} 
  
 #top-strip{ width:100%; display:block; margin:0 auto; background:#000; height:20px;}
 #top-strip1{width:100%; display:block; margin:0 auto; background:#65646b; padding:5px 0;   }
-#top-strip1 p{ color:#fff; font-size:12px; margin:3px 0 0; padding:0;}
+#top-strip1 p{ color:#fff; font-size:12px; margin:3px 25px 0 0; padding:0; float:left;}
+#top-strip1 p+p{ color:#fff; font-size:12px; margin:3px 0 0; padding:0; float:left;}
 #top-strip1 .offer{ background:#53155e; padding:3px 7px; text-align:center; color:#fff; margin-right:15px; }
  
 .btn-primary { background:transparent !important; border:transparent !important} 
@@ -26,7 +29,7 @@ button.search-btn { padding: 4px 12px }
 #banner-strip{ width:100%; display:block; margin:0 auto; background:#999; }
 .breadcrumb {
   padding: 8px 15px;
-  margin-bottom: 20px;
+/*  margin-bottom: 20px;*/
   list-style: none;
   background-color: #fff;
   border-radius: 4px;
@@ -94,6 +97,7 @@ div#product {
 .detail-input input[type="text"] { width:70px; margin-bottom:10px; border:#ccc solid 1px; padding:3px;}
 .detail-input1 input[type="text"] { width:100%; margin-bottom:10px; border:#ccc solid 1px; padding:3px; float:left;}
 .add-to-cart{ background:#acacac; font-size:25px; text-align:center; color:#fff; border:none; padding:7px 15px; font-weight:bold}
+.add-to-cart span:hover{ background:#999999 !important;}
 .buy-now{ background:#cbbc97; font-size:25px; text-align:center; color:#fff; border:none; padding:7px 15px; font-weight:bold}
 .try-home{ background:#999999; font-size:25px; text-align:center; color:#fff; border:none; padding:7px 15px; font-weight:bold}
 .menu-container { margin-top: 5px; }
@@ -148,7 +152,7 @@ body{ /*background:#fbfaf9*/}
 /* Somorjit End */
 
 #heading-strip h1 span {
-  background:#fbfaf9;
+  background:#fff;
   padding: 0 15px;
   position: relative;
   z-index: 1;
@@ -165,14 +169,35 @@ body{ /*background:#fbfaf9*/}
 #heading-strip h1:before {
   left: 0;
 }
-#heading-strip h1 {
+#heading-strip2 h1 {
+  position: relative;
+  text-align: center; font-size:28px; margin:10px 15px 35px;
+}
+#heading-strip2 h1 span {
+  background:#fbfaf9;
+  padding: 0 15px;
+  position: relative;
+  z-index: 1;
+}
+#heading-strip2 h1:before {
+  background: #000;
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+    top: 50%;
+  width: 100%;
+}
+#heading-strip2 h1:before {
+  left: 0;
+}
+#heading-strip2 h1 {
   position: relative;
   text-align: center; font-size:28px; margin:10px 15px 35px;
 }
 
-
 #heading-strip1 h1 span {
-  background:#fbfaf9;
+  background:#fff;
   padding: 0 15px;
   position: relative;
   z-index: 1;
@@ -393,34 +418,11 @@ display: block; font-size:17px;
 #footer{ background:#d4d4d4; display:block; height:45px; width:100%;}
 
 
-@media only screen and (min-width :768px) and (max-width:980px) {
 
-#banner-strip {  background: #fff; }
- .testimonial{ background:#cbf4f0; display:block; max-width:100%; float:left; margin-right:0px; padding:37px 0; margin-bottom:55px;   }
-
-}
-
-@media only screen and (min-width :240px) and (max-width:767px) {#header { margin-bottom:20px;}
-#banner-strip {  background: #fff; }
-#top-strip1 p{ color:#fff; font-size:12px; margin:0; padding:5px 0;} 
-.navbar-form {float:none;} .shopping{ margin-bottom:10px;}
-#track{ overflow:hidden; margin-bottom:15px;}
-#sign h1 { display:block; width:100%;}
-#sign .black-btn{ float:left; display:block; margin-left:35px; margin-top:10px;}
- .discription{ padding:0 15px}
- .social-icon{ width:100%;} .social-icon li{ margin-bottom:10px;}
- #track h1{   margin:0 15px 0 0;}
-#new-arrival img{ text-align:center; display:block; margin:0 auto} #new-arrival li{ float:none;}
-#new-arrival li{ width:100%; display:block; float:none; margin-right:0px; margin:0 auto; margin-bottom:25px;}
-#new-arrival li:nth-child(3n+3){ margin-right:0;  margin:0 auto; margin-bottom:25px;}
-.testimonial{ background:#cbf4f0; display:block; width:100%; max-width:100%;  margin-right:0px;}
-.our-services{ background:#cbf4f0; display:block;  width:100%; max-width:100%;  margin-right:0px;} #new-arrival li h1 {     font-size:18px;}
-#top-strip1 p { margin-bottom:15px;} .form-control { margin-left:15px; }
-}
 footer .footer_bottom {
   background: transparent;
-  background: #65646a;
-  line-height: 45px;
+  background: #65646a; padding-top:10px; padding-bottom:10px;
+ 
   color: white;
   display: block;
 }
@@ -447,24 +449,22 @@ footer .footer_bottom {
 .dropdown-menu hr {
     margin-top:4px;
     margin-bottom: 4px;}
-.selection li{ float:left; display:block; font-size:11px; padding:0 10px 10px; width:100%; vertical-align:middle;}
+.selection li{ float:left; display:block; font-size:11px; padding:0 10px 10px; width:100% !important; vertical-align:middle;}
 .selection img{ float:left; display: inline-block; width:35px; vertical-align:top; margin-right:15px; border:#ccc dotted 1px;  }
 .dropdown-menu select{ width:100%; display:block; border:#ccc solid 1px; margin-top:7px;}
 .dropdown-menu strong{font-size:11px; font-weight:bold }
 .dropdown-menu input[type="text"]{ width:98%; display:block; border:#ccc solid 1px; margin-top:7px;}
 .drop-btn{ background:#acacac; font-size:13px; width:80%; height:25px; border:none; color:#fff; margin-top:10px; margin-bottom:10px; }
 .drop-btn1{ background:#acacac; font-size:14px; float:right; width:20%; height:35px; border:none; color:#fff; margin-top:10px; margin-bottom:10px; }
-.wishlist{ min-width:900px !important;}
-.bs-example{ float:left;}	
+.wishlist{ min-width:950px !important; border:#ddd solid 1px; margin:0 auto; display:block; padding:10px 35px 0px; }
+.bs-example{ float:left;}
+ .wishlist h1{font-size: 14px;
+margin: 0px;
+padding: 0px 0px 10px;
+font-weight: bold;
+text-align: left;  }
 	
-	
-	@media only screen and (min-width :240px) and (max-width:767px) {
- 
-.wishlist{ min-width:300px !important;}
-.bs-example{ float:none;}	.btn-group, .btn-group-vertical { width:100%; padding:6px 0 0px}
-.drop-btn1{ background:#acacac; font-size:14px; float:left; width:100%; height:35px; border:none; color:#fff; margin-top:10px; margin-bottom:10px; }
 
-	}
 
 
 /*dhana edit css*/
@@ -661,4 +661,149 @@ display: block; font-size:17px;
     padding: 0px 0px 10px;
     margin: 0px 0px 25px;
     font-size: 18px;
+}
+.wishlist-menu ul{ margin:0; padding:0} .wishlist-menu li{ width: 49%;float:left; display:block; padding: 3px 30px;} .wishlist-menu li:last-child{ padding-right:0}
+.wishlist-menu li a{ text-transform:uppercase; display: block;clear: both;font-weight: 400;line-height: 1.42857;color: #fff;white-space: nowrap; font-size:12px;}
+.wishlist-menu li a:hover{ text-decoration:none} .nav li a{ font-size:12px; text-transform:uppercase}
+ .wishlist hr{ margin-bottom:10px !important; margin-top:10px !important;}
+
+.white_content {
+	display: none;
+	position: absolute;
+	top: 119%;
+	right: 60%;
+ 	height:auto;
+	padding: 16px 16px 10px;
+ 
+	background-color: white;
+	z-index:1002;
+/*	overflow: auto;*/ border: 1px solid rgba(0, 0, 0, 0.15);
+ box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.176);
+}
+
+.white_content2 {
+	display: none;
+	position: relative;
+	top: 119%;
+	right:0%;
+ 	height:auto;
+	padding:10px 10px 10px; width:100%;
+ 
+	background-color: #f3f3f5; border-bottom:#e6e6e6 solid 1px; border-top:#e6e6e6 solid 1px;
+	z-index:1002; margin-bottom:10px;
+ }
+
+.white_content1 {
+	display: none;
+	position: absolute;
+	top: 119%;
+	right:11%;
+ 	height:auto;
+	padding: 16px 0 0;
+ 
+	background-color: white;
+	z-index:1002;border: 1px solid rgba(0, 0, 0, 0.15);
+ 
+box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.176);
+/*	overflow: auto;*/
+}
+.tryhome select {
+    width: 100%;
+    display: block;
+    border: 1px solid #CCC;
+    margin-top: 7px;
+}
+.tryhome hr{ margin-bottom:10px !important; margin-top:10px !important;}
+ .tryhome{min-width:300px !important;}
+.tryhome p{color: #222 !important;
+font-size: 12px;
+margin: 3px 0px 0px !important;
+padding: 0px;}
+.tryhome h2{font-size: 14px;
+margin: 0px;
+padding: 0px;
+font-weight: bold;
+text-align: left;}
+.tryhome input[type="text"] {
+    width: 98%;
+    display: block;
+    border: 1px solid #CCC;
+    margin-top: 7px;
+}
+.tryhome img {
+    float: left;
+    display: inline-block;
+     vertical-align: top;
+    margin-right: 15px;
+    border: 1px dotted #CCC;
+}
+
+.tryhome h1 {
+    font-size: 14px;
+    margin: 0px;
+    padding: 0px 0px 10px;
+    font-weight: bold;
+    text-align: left;
+}
+	@media only screen and (min-width :981px) and (max-width:1024px) {.testimonial, .testimonial1{max-width: 44%;}.ff-items li {
+    width: 439px;} .ff-items li:nth-child(3n+3){ margin-right:30px;}}
+
+	@media only screen and (min-width :768px) and (max-width:980px) {
+
+#banner-strip {  background: #fff; }
+ .testimonial{ background:#cbf4f0; display:block; max-width:93%; float:left; margin-right:0px; padding:37px 0; margin-bottom:55px;   }
+.testimonial1{ background:#cbf4f0; display:block; max-width:93%; float:left; margin-right:0px; padding:37px 0; margin-bottom:55px;   }
+ .ff-items li {width:322px; display:block; float:left; margin-right:30px; margin-left:15px; margin-bottom:45px; border:#898989 solid 1px; }
+.wishlist {  min-width:auto !important;} #sign{ margin-top:25px;}
+
+#mfilter-opts-price-min, #mfilter-opts-price-max {
+    width: 100px;
+    min-width:94px !important; display:block;
+    max-width:94px; margin-bottom:10px} 
+	.thumbnail > img, .thumbnail a > img {
+     padding-bottom: 152px;
+}.test3 li {
+     padding:0px 0px;
+}
+}
+
+@media only screen and (min-width :240px) and (max-width:767px) {#header { margin-bottom:20px;}
+#banner-strip {  background: #fff; }
+#top-strip1 p{ color:#fff; font-size:12px; margin:0; padding:5px 0;} 
+.navbar-form {float:none;} .shopping{ margin-bottom:10px;}
+#track{ overflow:hidden; margin-bottom:15px;}
+#sign h1 { display:block; width:100%;}
+#sign .black-btn{ float:left; display:block; margin-left:35px; margin-top:10px;}
+ .discription{ padding:0 15px}
+ .social-icon{ width:100%;} .social-icon li{ margin-bottom:10px;}
+ #track h1{   margin:0 15px 0 0;}
+#new-arrival img{ text-align:center; display:block; margin:0 auto} #new-arrival li{ float:none;}
+#new-arrival li{ width:100%; display:block; float:none; margin-right:0px; margin:0 auto; margin-bottom:25px;}
+#new-arrival li:nth-child(3n+3){ margin-right:0;  margin:0 auto; margin-bottom:25px;}
+.testimonial{ background:#cbf4f0; display:block; width:100%; max-width:90%;  margin-right:0px;}
+.testimonial1{ background:#cbf4f0; display:block; width:100%; max-width:90%;  margin-right:0px;}
+.our-services{ background:#cbf4f0; display:block;  width:100%; max-width:100%;  margin-right:0px;} #new-arrival li h1 {     font-size:18px;}
+#top-strip1 p { margin-bottom:15px;} 
+
+.wishlist{ min-width:300px !important;}
+.bs-example{ float:none;}	.btn-group, .btn-group-vertical { width:100%; padding:6px 0 0px}
+.drop-btn1{ background:#acacac; font-size:14px; float:left; width:100%; height:35px; border:none; color:#fff;  margin-bottom:10px; }
+.reserved p{ line-height:20px !important; padding:0; margin:0;}#sort{ margin-bottom:15px; overflow: hidden}#showing h1{ padding-bottom:10px;}
+ 	}
+@media only screen and (min-width :240px) and (max-width:360px) {
+.ff-items li {    width:auto;}
+#top-strip1 p+p{ color:#fff; font-size:12px; margin:3px 0 10px; padding:0; float:left;}
+.wishlist-menu li:first-child{ padding-left:0}
+.testimonial{ background:#cbf4f0; display:block; width:100%; max-width:85%;  margin-right:0px;}
+.testimonial1{ background:#cbf4f0; display:block; width:100%; max-width:85%;  margin-right:0px;}
+.form-control { margin-left:0px; }
+#track h1 {margin: 0px 15px 15px 0px;}.navbar-form { width:100%}#sign .black-btn {margin-left:0px; margin-top:0}
+#sort{ margin-bottom:15px; overflow: hidden;} #showing h1{ padding-bottom:10px;}
+.thumbnail > img, .thumbnail a > img {
+    padding-left: 90px;
+    padding-bottom: 115px;
+}.test3 li {
+    border: 1px solid #DDD;
+    padding:0px 0px;
+}.add-to-cart,.buy-now, .try-home{ display:block; font-size:15px;} .btn {white-space: normal;}
 }

@@ -118,10 +118,15 @@
           <?php } ?>
 		  </div>
 		  <div class="col-sm-6 col-md-6 col-xs-12 details">
-              <h3><a href="#">Click for Offers</a></h3>
-              
+               
+<h3>              <a href = "javascript:void(0)" onclick = "document.getElementById('offers').style.display='block';document.getElementById('fade').style.display='block'">Click for Offers</a></h3>
 			<p><strong>Shipping within 15 days</strong></p>
+ 
 		  </div>
+         <div class="col-sm-12 col-md-12 col-xs-12">  
+          <div id="offers" class="white_content2">Flat 15% Off. Use Promo Code: BONUS<a href = "javascript:void(0)" onclick = "document.getElementById('offers').style.display='none';document.getElementById('fade').style.display='none'"><span style="float:right"><img src="catalog/view/theme/gemcart/images/close1.jpg"></span></a></div>
+          </div>
+          
 		  </div>		  
 		  <div class="dots"></div>
 		  <!-- <div class="row">
@@ -160,7 +165,7 @@
               <div id="input-option<?php echo $option['product_option_id']; ?>" class="input-option">
                 <?php foreach ($option['product_option_value'] as $option_value) { ?>
                 <div class="radio">                  
-                    <input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" id="option[<?php echo $option['product_option_id'].$i; ?>]" value="<?php echo $option_value['product_option_value_id']; ?>" <?php echo ($option_value['default'] == 1)? "checked=checked" : ''; ?> />
+                    <input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" id="option[<?php echo $option['product_option_id'].$i; ?>]" value="<?php echo $option_value['product_option_value_id']; ?>" <?php echo ($option_value['product_option_value_id'] == 38)? "checked=checked" : ''; ?> />
                     <?php //echo $option_value['name']; ?>
                     <?php if ($option_value['price']) { ?>
                     <!-- (<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>) -->
@@ -298,7 +303,7 @@
               <input type="hidden" name="quantity" value="<?php echo $minimum; ?>" size="2" id="input-quantity" class="form-control" />
               <input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
               <br />
-              <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary btn-lg btn-block"><span class="add-to-cart"><?php echo $button_cart; ?></span></button><br/>
+              <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary btn-lg btn-block "><span class="add-to-cart"><?php echo $button_cart; ?></span></button><br/>
             </div>
 			
  
@@ -978,13 +983,6 @@ $(document).ready(function() {
 			enabled:true
 		}
 	});
-});
-
-$(document).ready(function() {
-  $('input[name=\'option[247]\']').on('click', function() {
-    var purity = $('input[name=\'option[247]\']:checked').val();
-    alert(purity);
-  });
 });
 //--></script>
   <!--  similar product -->      

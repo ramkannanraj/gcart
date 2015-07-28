@@ -1,6 +1,8 @@
-<div id="search" class="input-group">
-  <input type="text" name="search" value="<?php echo $search; ?>" placeholder="<?php echo $text_search; ?>" class="form-control" />
-  <span class="input-group-btn">
-    <button type="button" class="btn btn-default btn-lg search-btn"><i class="fa fa-search"></i></button>
-  </span>
-</div>
+
+
+   <form class="navbar-form" role="search">
+                                    <div class="form-group" style="margin-top:-20px">
+                                    <label for="pwd">Search </label>
+                                    <input type="text" name="search"  value="<?php echo $search; ?>" placeholder="<?php echo $text_search; ?>" class="form-control" id="search">
+                                    </div>
+                            </form>

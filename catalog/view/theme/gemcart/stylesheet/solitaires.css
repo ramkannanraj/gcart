@@ -1,0 +1,124 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{ background:#f1f0ef}
+*{ margin:0; padding:0; text-decoration:none; font-family: 'PT Sans', sans-serif; outline:none; list-style:none; }
+.spacer{ clear:both;}
+ 
+ #page{ background:#fff; margin:0 auto; max-width:1200px;}
+ .bs-example{ width:100%;}   
+.active{ color:#924466 !important}
+.breadcrumb li a{ color:#222 !important; text-transform:uppercase}
+
+#showing{ background:#000; width:100%; display:block; padding:10px 0}
+#showing h1{ color:#fff; font-size:19px; margin:0; padding:0; text-align:left }
+
+ .slidesjs-pagination{ display:none}
+ .table-bordered a{ position:relative}
+ 
+.tab-menu ul{ padding:0; margin:0;} .tab-menu { margin-top:45px; margin-bottom:25px;}
+.tab-menu li{
+	float: left;
+	position: relative;
+ 	border-right: none;
+	width:360px;   
+	background:#f5f5f5;  color:#fff;  border-right:#ccc solid 1px;
+	cursor: pointer;} 
+	.tab-menu img{ float:right; display: inline-block; margin-top:6px;}	
+	.tab-menu li.active{ text-decoration:none; background:#7f7f7f !important; border-radius: 0px !important;  color:#fff !important; } 
+	.tab-menu li.active a{ color:#fff;}
+	.tab-menu li a{       padding-top:4px; display:block; font-size:13px; padding-bottom:8px;}  .tab-menu li a:hover{ color:#fff;       padding-top:4px;}
+   .tab-menu .dropdown-menu{ padding:10px 10px 0; }
+  .tab-menu p{ padding-top:17px; font-size:14px;} .tab-menu h2{ color:#000; margin:5px 0}
+   	.tab-menu strong{   padding-top:4px; font-weight:bold; display:block; font-size:25px; padding-bottom:7px;} 
+	.tab-menu h1{ font-size:14px; text-align:left; font-weight:normal;  line-height:14px; padding:5px 0 0; margin:0; display:inline-block;}
+
+.changes{ background:#666666; border-radius:4px; text-align:center; font-size:15px; padding:3px 5px; color:#fffs; width:42%; margin:10px;} .changes a{padding:3px 5px !important;color:#fff; padding-left:0 !important}
+  
+  
+ .checkbox input[type="checkbox"] {
+    display:none; 
+}
+.checkbox p { display:inline-block; font-size:15px; font-weight: 700; margin-right:15px;}
+.checkbox label {
+    display:inline-block; float:left;
+    background-color:#fff; border:#acacac solid 1px;
+    padding:2px 11px; margin-right:15px;
+     font-size:12px;
+}
+.checkbox label:hover{
+    display:inline-block;
+    background-color:#ddd;border:#acacac solid 1px;
+    padding:2px 11px; margin-right:15px;
+     font-size:12px;
+}
+
+.checkbox input[type="checkbox"]:checked + label { 
+    background-color:#ccc !important;
+}
+
+/**/
+ .radio input[type="radio"] {
+    display:none; 
+}
+.radio  p { display:inline-block; font-size:15px; font-weight: 700; margin-right:15px;}
+.radio label {
+    display:inline-block; float:left;
+    background-color:#7f7c7c; border:#fff solid 1px;
+    padding:10px 9px; color:#fff;
+     font-size:15px;
+}
+.radio label:hover{
+    display:inline-block;
+    background-color:#222;border:#fff solid 1px;
+    padding:10px 9px; color:#fff;
+     font-size:15px;
+}
+
+.radio input[type="radio"]:checked + label { 
+    background-color:#222 !important;
+}
+
+
+.shapes h1{ font-size:16px; color:#222; text-transform:uppercase; padding:0; margin:0 0 15px; font-weight:bold}
+.line-1{ border-bottom:3px #fff solid; padding:0 !important; line-height:0; display:block; width:100%}
+
+.scrollbar{ 
+    background-color:lightgray;height: auto;
+    max-height:700px;
+    overflow-x:hidden;
+    overflow-y:scroll; 
+    min-width: 135px;
+    margin-top: 0px; 
+   }
+  .scrollbar1 tbody{ 
+     max-height:100%; height:150px;
+    overflow-x:hidden;
+    overflow-y:scroll; 
+    min-width: 135px;
+    margin-top: 0px; 
+   } 
+   
+ .fixed-table-container{width:100%;height:520px; /**/position:relative;/**/padding-top:30px;/**/}.fixed-table-container-inner{overflow-x:hidden;overflow-y:auto;height:100%;}.header-background{background-color:#7f7f7f;height:30px;/**/position:absolute;top:0;right:0;left:0; }table{background-color:white;width:100%; }.th-inner{position:absolute;top:0;line-height:30px;/**/text-align:left;border-left:1px solid #fff;padding-left:5px;}
+ .fix-table > thead > tr > th { color:#fff;}
+ 
+ .dots {
+  border-bottom: #000 dotted 1px;
+  display: block;
+}
+.add-to-cart{ background:#acacac; font-size:25px; text-align:center; color:#fff; border:none; padding:7px 15px; font-weight:bold}
+.buy-now{ background:#cbbc97; font-size:25px; text-align:center; color:#fff; border:none; padding:7px 15px; font-weight:bold}
+
+.purchase-social1{ margin-top:0px;}
+.purchase-social1 li{ float:left; display:block; margin-right:10px;}
+
+   
+.details h5{ border:#ccc solid 1px; padding:5px; text-align:center; margin:0 0 15px;}
+.details h2{ font-size:25px; font-weight:bold; padding:0; margin:15px 0 7px;}
+.details h3{ padding:4px; text-align:left; margin:15px 0 7px; font-size:14px; color: #996600;}
+.details h1{ padding:0; margin:0; font-size:25px; font-weight:bold}
+ 
+   
+ @media only screen and (min-width :240px) and (max-width:767px) {
+ 
+}

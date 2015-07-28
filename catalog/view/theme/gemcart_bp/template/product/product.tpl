@@ -1,7 +1,7 @@
 <?php echo $header;  ?>
 
 <!--container -->
-<div class="container">
+<div class="container" style="width:94%">
 	<ul class="breadcrumb">
 		<?php foreach ($breadcrumbs as $breadcrumb) { ?>
 		<li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
@@ -46,7 +46,7 @@
           <div class="btn-group">           
             <!-- AddThis Button BEGIN -->
             <div class="addthis_toolbox addthis_default_style">
-              <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a> 
+              <a class="addthis_button_facebook_like" fb:like:layout="button_count"><img src="catalog/view/theme/gemcart/images/purchase-so-1.jpg" /></a> 
               <a class="addthis_button_tweet"></a> 
               <a class="addthis_button_pinterest_pinit"></a> 
               <a class="addthis_counter addthis_pill_style"></a>
@@ -58,95 +58,6 @@
 
 
 
-          <ul class="nav nav-tabs">
-            <li class="active"><a href="#tab-description" data-toggle="tab"><?php echo $tab_description; ?></a></li>
-            <?php if ($attribute_groups) { ?>
-            <li><a href="#tab-specification" data-toggle="tab"><?php echo $tab_attribute; ?></a></li>
-            <?php } ?>
-            <?php if ($review_status) { ?>
-            <li><a href="#tab-review" data-toggle="tab"><?php echo $tab_review; ?></a></li>
-            <?php } ?>
-          </ul>
-          <div class="tab-content">
-            <div class="tab-pane active" id="tab-description"><?php echo $description; ?></div>
-            <?php if ($attribute_groups) { ?>
-            <div class="tab-pane" id="tab-specification">
-              <table class="table table-bordered">
-                <?php foreach ($attribute_groups as $attribute_group) { ?>
-                <thead>
-                  <tr>
-                    <td colspan="2"><strong><?php echo $attribute_group['name']; ?></strong></td>
-                  </tr>
-                </thead>
-                <tbody>
-                  <?php foreach ($attribute_group['attribute'] as $attribute) { ?>
-                  <tr>
-                    <td><?php echo $attribute['name']; ?></td>
-                    <td><?php echo $attribute['text']; ?></td>
-                  </tr>
-                  <?php } ?>
-                </tbody>
-                <?php } ?>
-              </table>
-            </div>
-            <?php } ?>
-            <?php if ($review_status) { ?>
-            <div class="tab-pane" id="tab-review">
-              <form class="form-horizontal">
-                <div id="review"></div>
-                <h2><?php echo $text_write; ?></h2>
-                <?php if ($review_guest) { ?>
-                <div class="form-group required">
-                  <div class="col-sm-12">
-                    <label class="control-label" for="input-name"><?php echo $entry_name; ?></label>
-                    <input type="text" name="name" value="" id="input-name" class="form-control" />
-                  </div>
-                </div>
-                <div class="form-group required">
-
-				
-				
-				
-                  <div class="col-sm-12">
-                    <label class="control-label" for="input-review"><?php echo $entry_review; ?></label>
-                    <textarea name="text" rows="5" id="input-review" class="form-control"></textarea>
-                    <div class="help-block"><?php echo $text_note; ?></div>
-                  </div>
-                </div>
-                <div class="form-group required">
-                  <div class="col-sm-12">
-                    <label class="control-label"><?php echo $entry_rating; ?></label>
-                    &nbsp;&nbsp;&nbsp; <?php echo $entry_bad; ?>&nbsp;
-                    <input type="radio" name="rating" value="1" />
-                    &nbsp;
-                    <input type="radio" name="rating" value="2" />
-                    &nbsp;
-                    <input type="radio" name="rating" value="3" />
-                    &nbsp;
-                    <input type="radio" name="rating" value="4" />
-                    &nbsp;
-                    <input type="radio" name="rating" value="5" />
-                    &nbsp;<?php echo $entry_good; ?></div>
-                </div>
-                <?php if ($site_key) { ?>
-                  <div class="form-group">
-                    <div class="col-sm-12">
-                      <div class="g-recaptcha" data-sitekey="<?php echo $site_key; ?>"></div>
-                    </div>
-                  </div>
-                <?php } ?>
-                <div class="buttons clearfix">
-                  <div class="pull-right">
-                    <button type="button" id="button-review" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary"><?php echo $button_continue; ?></button>
-                  </div>
-                </div>
-                <?php } else { ?>
-                <?php echo $text_login; ?>
-                <?php } ?>
-              </form>
-            </div>
-            <?php } ?>
-          </div>
         </div>
         <?php if ($column_left && $column_right) { ?>
         <?php $class = 'col-sm-6'; ?>
@@ -181,7 +92,7 @@
           <ul class="list-unstyled">
             <?php if (!$special) { ?>
             <li>
-              <h2><?php echo $price; ?></h2>
+              <h2 style="margin:20px; padding:0"><?php echo $price; ?></h2>
             </li>
             <?php } else { ?>
             <li><span style="text-decoration: line-through;"><?php echo $price; ?></span></li>
@@ -207,68 +118,70 @@
           <?php } ?>
 		  </div>
 		  <div class="col-sm-6 col-md-6 col-xs-12 details">
-              <h3><a href="#">Click for Offers</a></h3>
-              
+               
+<h3>              <a href = "javascript:void(0)" onclick = "document.getElementById('offers').style.display='block';document.getElementById('fade').style.display='block'">Click for Offers</a></h3>
 			<p><strong>Shipping within 15 days</strong></p>
+ 
 		  </div>
+         <div class="col-sm-12 col-md-12 col-xs-12">  
+          <div id="offers" class="white_content2">Flat 15% Off. Use Promo Code: BONUS<a href = "javascript:void(0)" onclick = "document.getElementById('offers').style.display='none';document.getElementById('fade').style.display='none'"><span style="float:right"><img src="catalog/view/theme/gemcart/images/close1.jpg"></span></a></div>
+          </div>
+          
 		  </div>		  
-		  <!-- <div class="dots"></div>
-  		  <div class="row">
-    			<div class="col-sm-8 col-md-8 col-xs-12">
-    				<p>Check for Availability in your Area</p>
-    			</div>
-    			<div class="col-sm-4 col-md-4 col-xs-12 details">
-    				<input type="text" name="Pincode" value="Enter Pincode">
-    			</div>
-  		  </div> -->
 		  <div class="dots"></div>
+		  <!-- <div class="row">
+  			<div class="col-sm-8 col-md-8 col-xs-12">
+  				<p>Check for Availability in your Area</p>
+  			</div>
+  			<div class="col-sm-4 col-md-4 col-xs-12 details">
+  				<input type="text" name="Pincode" value="Enter Pincode">
+  			</div>
+		  </div>
+		  <div class="dots"></div> -->
 		  
 		  
           <div id="product">
             <?php if ($options) { ?>
             <?php foreach ($options as $option) { ?>
             <?php if ($option['type'] == 'select') { ?>
-			         <!------------------------------------------------------------ -->
-              <div class="hrz-dsiplay form-group<?php echo ($option['required'] ? ' required' : ''); ?>">
-                <label class="control-label" for="input-option<?php echo $option['product_option_id']; ?>"><?php echo $option['name']; ?></label>
-                <select name="option[<?php echo $option['product_option_id']; ?>]" id="input-option<?php echo $option['product_option_id']; ?>" class="form-control">
-                  <option value=""><?php echo $text_select; ?></option>
-                  <?php foreach ($option['product_option_value'] as $option_value) { ?>
-                  <option value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>
-                  <?php if ($option_value['price']) { ?>
-                  <!--(<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)-->
-                  <?php } ?>
-                  </option>
-                  <?php } ?>
-                </select>
-              </div>
-              <div class="dots"></div>
+			<!------------------------------------------------------------ -->
+            <div class="hrz-dsiplay form-group<?php echo ($option['required'] ? ' required' : ''); ?>">
+              <label class="control-label" for="input-option<?php echo $option['product_option_id']; ?>"><?php echo $option['name']; ?></label>
+              <select name="option[<?php echo $option['product_option_id']; ?>]" id="input-option<?php echo $option['product_option_id']; ?>" class="form-control">
+                <option value=""><?php echo $text_select; ?></option>
+                <?php foreach ($option['product_option_value'] as $option_value) { ?>
+                <option value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>
+                <?php if ($option_value['price']) { ?>
+                <!--(<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)-->
+                <?php } ?>
+                </option>
+                <?php } ?>
+              </select>
+            </div>
             <?php } ?>
-            <?php if ($option['type'] == 'radio') { ?>
+            <?php if ($option['type'] == 'radio') { $i = 1;?>
             <div class="form-group<?php echo ($option['required'] ? ' required' : ''); ?>">
               <label class="control-label"><?php echo $option['name']; ?></label>
               <div id="input-option<?php echo $option['product_option_id']; ?>" class="input-option">
                 <?php foreach ($option['product_option_value'] as $option_value) { ?>
-                <div class="radio">
-                  <label>
-                    <input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php echo $option_value['product_option_value_id']; ?>" />
-                    <?php echo $option_value['name']; ?>
+                <div class="radio">                  
+                    <input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" id="option[<?php echo $option['product_option_id'].$i; ?>]" value="<?php echo $option_value['product_option_value_id']; ?>" <?php echo ($option_value['default'] == 1)? "checked=checked" : ''; ?> />
+                    <?php //echo $option_value['name']; ?>
                     <?php if ($option_value['price']) { ?>
                     <!-- (<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>) -->
                     <?php } ?>
-                  </label>
+                  <label for="option[<?php echo $option['product_option_id'].$i; ?>]"><?php echo $option_value['name']; ?></label>
                 </div>
-                <?php } ?>
+                <?php $i++; } ?>
               </div>
             </div>
-            <div class="dots"></div>
             <?php } ?>
-			      <!-- ------------------------------------------------------------ -->
-			
+			<!-- ------------------------------------------------------------ -->
+			<div class="dots"></div>
             <?php if ($option['type'] == 'scheckbox') { ?>
             <div class="form-group<?php echo ($option['required'] ? ' required' : ''); ?>">
               <label class="control-label"><?php echo $option['name']; ?></label>
-			        <label class="control-label"><?php echo $option['name']; ?></label>
+			  <label class="control-label"><?php echo $option['name']; ?></label>
               <div id="input-option<?php echo $option['product_option_id']; ?>">
                 <?php foreach ($option['product_option_value'] as $option_value) { ?>
                 <div class="checkbox">
@@ -369,19 +282,19 @@
             </div>
             <?php } ?>
 			
-      			<div class="row">
-      				<div class="col-sm-4 col-md-4 col-xs-12">
-      					<p>30-Day Money Back Guarantee. </p>
-      				</div>
-        
-      				<div class="col-sm-4 col-md-4 col-xs-12">
-      					<p>Lifetime Exchange</p>
-      				</div>
-      				<div class="col-sm-4 col-md-4 col-xs-12">
-      					<p>Certified Jewellery</p>
-      				</div>
-      			</div>
-      			<div class="dots"></div>
+			<div class="row" style="margin-top:10px;">
+				<div class="col-sm-4 col-md-4 col-xs-12" >
+					<p><img src="catalog/view/theme/gemcart/images/dots.png">30-Day Money Back Guarantee. </p>
+				</div>
+  
+				<div class="col-sm-4 col-md-4 col-xs-12">
+					<p><img src="catalog/view/theme/gemcart/images/dots.png">Lifetime Exchange</p>
+				</div>
+				<div class="col-sm-4 col-md-4 col-xs-12">
+					<p><img src="catalog/view/theme/gemcart/images/dots.png">Certified Jewellery</p>
+				</div>
+			</div>
+			<div class="dots"></div>
 			
 			<!-- ------------------------------Add to Cart Button--------------------------------- -->
 			<div style="display:flex;display:-webkit-box;">
@@ -390,15 +303,23 @@
               <input type="hidden" name="quantity" value="<?php echo $minimum; ?>" size="2" id="input-quantity" class="form-control" />
               <input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
               <br />
-              <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary btn-lg btn-block"><span class="add-to-cart"><?php echo $button_cart; ?></span></button><br/>
+              <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary btn-lg btn-block "><span class="add-to-cart"><?php echo $button_cart; ?></span></button><br/>
             </div>
 			
-			      <!-- -----------------------------Buy Now Button--------------------------- -->
-      			<div class="form-group">
-                    <br />
-                    <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary btn-lg btn-block"><span class="buy-now"><?php echo $buy_cart; ?></span><br/></button>
-                  </div>
-      			</div>
+ 
+            
+            
+			<!-- -----------------------------Buy Now Button--------------------------- -->
+			<div class="form-group">
+              <br />
+              <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary btn-lg btn-block"><span class="buy-now"><?php echo $buy_cart; ?></span><br/></button>
+            </div>
+            
+            <div class="form-group">
+              <br />
+              <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary btn-lg btn-block"><span class="try-home">Try @ Home</span><br/></button>
+            </div>
+			</div>
 			
 			
             <?php if ($minimum > 1) { ?>
@@ -406,7 +327,7 @@
             <?php } ?>
           </div>
           <?php if ($review_status) { ?>
-          <div class="rating">
+         <!-- <div class="rating">
             <p>
               <?php for ($i = 1; $i <= 5; $i++) { ?>
               <?php if ($rating < $i) { ?>
@@ -417,40 +338,374 @@
               <?php } ?>
               <a href="" onclick="$('a[href=\'#tab-review\']').trigger('click'); return false;"><?php echo $reviews; ?></a> / <a href="" onclick="$('a[href=\'#tab-review\']').trigger('click'); return false;"><?php echo $text_write; ?></a></p>
             <hr>
+            
             <!-- AddThis Button BEGIN -->
-            <div class="addthis_toolbox addthis_default_style"><a class="addthis_button_facebook_like" fb:like:layout="button_count"></a> <a class="addthis_button_tweet"></a> <a class="addthis_button_pinterest_pinit"></a> <a class="addthis_counter addthis_pill_style"></a>
-            </div>
-            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-515eeaf54693130e"></script>
-            <!-- AddThis Button END -->
-          </div>
+           <!-- <div class="addthis_toolbox addthis_default_style"><a class="addthis_button_facebook_like" fb:like:layout="button_count"></a> <a class="addthis_button_tweet"></a> <a class="addthis_button_pinterest_pinit"></a> <a class="addthis_counter addthis_pill_style"></a>
+            </div> -->
+           <!-- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-515eeaf54693130e"></script> -->
+            <!-- AddThis Button END
+          </div>  -->
           <?php } ?>
         </div>
               
-        <!-- -------------similar products-------------------- -->
-        <?php if ($similarproducts) { ?>
-        <div class="col-sm-2" style="float:right;">
-            <div class="similar-products">
-      				<div class="similar-col column">
-      					<ul id="similar-products" class="elastislide-list">
-                  <?php foreach ($similarproducts as $product) { ?>
-                  <li><a href="<?php echo $product['href']; ?>">
-                  <img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a>
-                  <?php if ($product['price']) { ?>
-                    <?php if (!$product['special']) { ?>
-                      <?php echo $product['price']; ?>
-                    <?php } else { ?>
-                    <span class="price-new"><?php echo $product['special']; ?></span> <span class="price-old"><?php echo $product['price']; ?></span>
-                    <?php } ?>
-                  <?php } ?>
-                  </li>
-                   <?php } ?>
-      					</ul>
-      				</div>
-		        </div>
-        </div>
-        <?php } ?>
-        <!-- -------------------End of Similar products-------------------- -->
+          <!-- -------------similar products-------------------- -->
+<!--            <?php if ($similarproducts) { ?>
+            <div class="col-sm-2" style="float:right;">
+                <div class="similar-products">
+                  <div class="similar-col column">
+                    <ul id="carousel" class="elastislide-list">
+                      <?php foreach ($similarproducts as $product) { ?>
+                      <li><a href="<?php echo $product['href']; ?>">
+                      <img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a>
+                      <?php if ($product['price']) { ?>
+                        <?php if (!$product['special']) { ?>
+                          <?php echo $product['price']; ?>
+                        <?php } else { ?>
+                        <span class="price-new"><?php echo $product['special']; ?></span> <span class="price-old"><?php echo $product['price']; ?></span>
+                        <?php } ?>
+                      <?php } ?>
+                      </li>
+                       <?php } ?>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+            <?php } ?> -->
+            
+  <div class="col-sm-2">          
+    <div class="similar-slider">
+    <h1>similar</h1>
+     </div>
+    
+    <div id="slides"> 
+        <a href="#" class="slidesjs-previous slidesjs-navigation"><img src="catalog/view/theme/gemcart/images/similar-left.jpg"></a>
+        <a href="#" class="slidesjs-next slidesjs-navigation"><img src="catalog/view/theme/gemcart/images/similar-right.jpg"></a>
+         
+        <li><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a></li>
+        
+         <li><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a></li>
+     </div> 
+    
+                
+  </div>   <!--row -->       
+          <!-- -------------------End of Similar products-------------------- -->
+              
+      </div>
+
+<br class="spacer" />
+<hr/>
+
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-xs-12 you">
+        <h1>You Might Also Like</h1>
+            <div class="slider4 ff-items1">
+                <li><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a></li>
+               <li><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a></li>
+                <li><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a></li>
+                <li><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a></li>
+                <li><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a></li>
+               <li><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a></li>
+                <li><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a></li>
+                <li><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a></li>
+
+            </div>
     </div>
+</div>
+
+ 
+ 
+ 
+ 
+ 
+ 
+ <!--slider end -->
+ <!--product details start -->
+ 
+ <div class="row">
+    <div class="col-sm-8 col-md-8 col-xs-12 right-line">
+        <table class="table">
+
+        <thead>
+
+            <tr>
+
+                <th colspan="4"><h1>PRODUCT DETAILS</h1></th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td width="220"><strong>Stock Number</strong></td>
+
+                <td width="62" colspan="3">JR02895-1YP900</td>
+            </tr>
+
+            <tr>
+
+                <td><strong>Metal/Purity</strong></td>
+
+                <td colspan="3">14 Kt Yellow Gold</td>
+            </tr>
+
+            <tr>
+
+                <td><strong>Approximate Metal Weight</strong></td>
+
+                <td colspan="3">5.49 gms</td>
+            </tr>
+            <tr>
+              <td><strong>Height</strong></td>
+              <td colspan="3">20.19 mm</td>
+            </tr>
+            <tr>
+              <td><strong>Width</strong></td>
+              <td colspan="3">	14.38 mm</td>
+            </tr>
+            <tr>
+              <th colspan="4"><h2>DIAMOND DETAILS</h2></th>
+            </tr>
+            <tr>
+              <td><strong>Total Diamond(s)</strong></td>
+              <td colspan="3">5</td>
+          </tr>
+            <tr>
+              <td><strong>Diamond Weight</strong></td>
+              <td colspan="3">0.07 ct</td>
+          </tr>
+            <tr>
+              <td><strong>Diamond Quality</strong></td>
+              <td colspan="3">IJ-SI</td>
+          </tr>
+            <tr>
+              <td><strong>Setting Type</strong></td>
+              <td colspan="3">Prong,Pave</td>
+          </tr>
+            <tr>
+              <td><strong>Setting Type</strong></td>
+              <td colspan="3">Round</td>
+          </tr>
+            <tr>
+              <th colspan="4"><h2>PRICE BREAKUP</h2></th>
+            </tr>
+            <tr>
+              <td><strong>Component</strong></td>
+              <td>Rate</td>
+              <td>Weight</td>
+              <td>Value</td>
+            </tr>
+            <tr>
+              <td><strong>Gold - 14 Kt Yellow Gold</strong></td>
+              <td>Rs. 1,611/gm</td>
+              <td>5.49 gms</td>
+              <td>Rs. 8,844</td>
+            </tr>
+            <tr>
+              <td><strong>Diamonds</strong></td>
+              <td colspan="3">&nbsp;</td>
+            </tr>
+            <tr>
+              <td>IJ-SI Round - 1 No.</td>
+              <td>Rs. 61,000/ct</td>
+              <td>0.02 ct</td>
+              <td>Rs. 1,220</td>
+            </tr>
+            <tr>
+              <td>IJ-SI Round - 4 Nos.</td>
+              <td>IJ-SI Round - 4 Nos.</td>
+              <td>0.05 ct</td>
+              <td>Rs. 3,050</td>
+            </tr>
+            
+            <tr>
+              <td><strong>Making Charges</strong></td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>	Rs. 3,568</td>
+            </tr>
+            <tr>
+              <td><strong>VAT</strong></td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>VAT</td>
+            </tr>
+        </tbody>
+
+    </table>
+    <p align="center">All CaratLane products have 30-day money back policy and lifetime exchange</p>
+    
+    <div class="row">
+    <div class="col-sm-12 col-md-12 col-xs-12"><button type="submit" class="btn btn-default buy-now1">Buy Now</button></div></div>
+
+    
+    </div><!--col left end -->
+    
+        <div class="col-sm-4 col-md-4 col-xs-12 confused left-mg">
+    <h1>CONFUSED?</h1>
+    <p>CALL US AT <strong>1800-102-0103</strong></p>
+    <form class="form-horizontal">
+      <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">Name</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputEmail3" placeholder="Name">
+    </div></div>
+    
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">Mobile</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputEmail3" placeholder="Mobile">
+    </div></div>
+    
+   <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">QUERY</label>
+    <div class="col-sm-10">
+     <textarea class="form-control" rows="2"></textarea>
+    </div> </div>
+ 
+  
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">Submit Query</button>
+    </div>
+  </div>
+</form>
+<hr/>
+<br class="spacer" />
+<img src="catalog/view/theme/gemcart/images/certified.png" class="img-responsive">
+<img src="catalog/view/theme/gemcart/images/certified_logo.png" class="img-responsive">
+    </div><!--col right end -->    
+    </div><!--row end -->
+<br class="spacer" />
+<hr/>
+  
+  <!--Recently Viewed -->
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-xs-12 you">
+        <h1>Recently Viewed</h1>
+            <div class="slider4 ff-items1">
+                <li><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a></li>
+               <li><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a></li>
+                <li><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a></li>
+                <li><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a></li>
+                <li><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a></li>
+                <li><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a></li>
+               <li><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a></li>
+                <li><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a></li>
+                <li><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a></li>
+                <li><a href="#"><span>Rs. 21,270<p>Honey 3 in Ring</p></span><img src="catalog/view/theme/gemcart/images/you-might-img.jpg"></a></li>
+            </div>
+    </div>
+</div>
+
+<!--Recently Viewed end -->
+   
+  
+  
+     
+     
+     
+      
+    <!--tab --> 
+         <!-- <ul class="nav nav-tabs">
+            <li class="active"><a href="#tab-description" data-toggle="tab"><?php echo $tab_description; ?></a></li>
+            <?php if ($attribute_groups) { ?>
+            <li><a href="#tab-specification" data-toggle="tab"><?php echo $tab_attribute; ?></a></li>
+            <?php } ?>
+            <?php if ($review_status) { ?>
+            <li><a href="#tab-review" data-toggle="tab"><?php echo $tab_review; ?></a></li>
+            <?php } ?>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="tab-description"><?php echo $description; ?></div>
+            <?php if ($attribute_groups) { ?>
+            <div class="tab-pane" id="tab-specification">
+              <table class="table table-bordered">
+                <?php foreach ($attribute_groups as $attribute_group) { ?>
+                <thead>
+                  <tr>
+                    <td colspan="2"><strong><?php echo $attribute_group['name']; ?></strong></td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php foreach ($attribute_group['attribute'] as $attribute) { ?>
+                  <tr>
+                    <td><?php echo $attribute['name']; ?></td>
+                    <td><?php echo $attribute['text']; ?></td>
+                  </tr>
+                  <?php } ?>
+                </tbody>
+                <?php } ?>
+              </table>
+            </div>
+            <?php } ?>
+            <?php if ($review_status) { ?>
+            <div class="tab-pane" id="tab-review">
+              <form class="form-horizontal">
+                <div id="review"></div>
+                <h2><?php echo $text_write; ?></h2>
+                <?php if ($review_guest) { ?>
+                <div class="form-group required">
+                  <div class="col-sm-12">
+                    <label class="control-label" for="input-name"><?php echo $entry_name; ?></label>
+                    <input type="text" name="name" value="" id="input-name" class="form-control" />
+                  </div>
+                </div>
+                <div class="form-group required">
+
+				
+				
+				
+                  <div class="col-sm-12">
+                    <label class="control-label" for="input-review"><?php echo $entry_review; ?></label>
+                    <textarea name="text" rows="5" id="input-review" class="form-control"></textarea>
+                    <div class="help-block"><?php echo $text_note; ?></div>
+                  </div>
+                </div>
+                <div class="form-group required">
+                  <div class="col-sm-12">
+                    <label class="control-label"><?php echo $entry_rating; ?></label>
+                    &nbsp;&nbsp;&nbsp; <?php echo $entry_bad; ?>&nbsp;
+                    <input type="radio" name="rating" value="1" />
+                    &nbsp;
+                    <input type="radio" name="rating" value="2" />
+                    &nbsp;
+                    <input type="radio" name="rating" value="3" />
+                    &nbsp;
+                    <input type="radio" name="rating" value="4" />
+                    &nbsp;
+                    <input type="radio" name="rating" value="5" />
+                    &nbsp;<?php echo $entry_good; ?></div>
+                </div>
+                <?php if ($site_key) { ?>
+                  <div class="form-group">
+                    <div class="col-sm-12">
+                      <div class="g-recaptcha" data-sitekey="<?php echo $site_key; ?>"></div>
+                    </div>
+                  </div>
+                <?php } ?>
+                <div class="buttons clearfix">
+                  <div class="pull-right">
+                    <button type="button" id="button-review" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary"><?php echo $button_continue; ?></button>
+                  </div>
+                </div>
+                <?php } else { ?>
+                <?php echo $text_login; ?>
+                <?php } ?>
+              </form>
+            </div>
+            <?php } ?>
+          </div> -->
+          
+          <!--tab ed --> 
+          
 
       <!-- -----------------------Related Product---------------------------- -->
     <?php if ($products) { ?>
@@ -527,11 +782,19 @@
         <?php } ?>
       </p>
       <?php } ?>
+      
+      
+      
       <?php echo $content_bottom; ?></div>
     <?php echo $column_right; ?>
 
   </div>
 </div>
+
+
+
+
+
 <script type="text/javascript"><!--
 $('select[name=\'recurring_id\'], input[name="quantity"]').change(function(){
 	$.ajax({
@@ -722,14 +985,23 @@ $(document).ready(function() {
 	});
 });
 //--></script>
-<!--  similar product -->      
-  <script type="text/javascript" src="catalog/view/javascript/js/jquerypp.custom.js"></script>
-	<script type="text/javascript" src="catalog/view/javascript/js/jquery.elastislide.js"></script>
+  <!--  similar product -->      
+<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script type="text/javascript" src="catalog/view/javascript/js/jquerypp.custom.js"></script>
+	<script type="text/javascript" src="catalog/view/javascript/jquery/jquery.elastislide.js"></script>
 	<script type="text/javascript">
 			
-		$( '#similar-products' ).elastislide( {
+		$( '#carousels' ).elastislide( {
 			orientation : 'vertical'
 		} );
 			
-</script>
+</script> 
+
+  <script type="text/javascript">
+      
+    $( '#carousel' ).elastislide( {
+      orientation : 'vertical'
+    } );
+      
+</script>-->
 <?php echo $footer; ?>

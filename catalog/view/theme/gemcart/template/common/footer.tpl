@@ -128,6 +128,9 @@
       </div>  </div>
     </div>
 </footer>
+<script src="catalog/view/javascript/jquery/jquery-2.1.1.js"></script>
+<script>var $j = jQuery.noConflict(true);</script>
+<script src="catalog/view/javascript/jquery/main.js"></script> <!-- Resource jQuery -->
 
 <script type="text/javascript">
 $(window).load(function() {
@@ -179,6 +182,8 @@ $(window).load(function() {
       });
     });
   </script>
+
+
  
 <!-- <script src="catalog/view/javascript/autoptimize_9a15becef9b2f850af1e4f2ecea7b647.js" type="text/javascript"></script>  -->
 <!--

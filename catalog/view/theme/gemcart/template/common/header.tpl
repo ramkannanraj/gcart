@@ -40,6 +40,8 @@
 <link href="catalog/view/theme/gemcart/stylesheet/component.css" rel="stylesheet">
 <link href="catalog/view/theme/gemcart/stylesheet/style.css" rel="stylesheet">
 <link href="catalog/view/theme/gemcart/stylesheet/style1.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/gemcart/stylesheet/solitaires.css" />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/gemcart/stylesheet/solitaires1.css" />
 <!--<link href="catalog/view/theme/gemcart/stylesheet/listing.css" rel="stylesheet">
 <link href="catalog/view/theme/gemcart/stylesheet/listing2.css" rel="stylesheet">
 <link href="catalog/view/theme/gemcart/stylesheet/listing3.css" rel="stylesheet"> -->
@@ -119,18 +121,15 @@
                   <ul class="dropdown-menu dropdown-menu-right">
                     <?php if ($logged) { ?>
                     <li><a href="<?php echo $account; ?>"><?php echo $text_account; ?></a></li>
-                    <li><a href="<?php echo $order; ?>"><?php echo $text_order; ?></a></li>
-                    <li><a href="<?php echo $transaction; ?>"><?php echo $text_transaction; ?></a></li>
-                    <li><a href="<?php echo $download; ?>"><?php echo $text_download; ?></a></li>
-                    <li><a href="<?php echo $logout; ?>"><?php echo $text_logout; ?></a></li>
                     <?php } else { ?>
                     <li><a href="<?php echo $register; ?>"><?php echo $text_register; ?></a></li>
                     <li><a href="<?php echo $login; ?>"><?php echo $text_login; ?></a></li>
                     <?php } ?>
                   </ul>
                 </li>
-              </ul>  <!--edit end --> 
-            </div>
+                       </ul>  <!--edit end --> 
+    </div>
+             
             </div>
             
             <div  class="col-sm-3 col-md-3 col-xs-12 wishlist-menu">
@@ -140,7 +139,7 @@
                     <div id="light" class="white_content wishlist" >
                     <a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"><span style="float:right"><img src="catalog/view/theme/gemcart/images/close.jpg"></span></a>
                     
-                    <h1>WISHLIST</h1> <hr/>
+                    <h1>WISHLIST </h1> <hr/>
        
        <div class="flexslider carousel wish-img" >
           <ul class="slides">
@@ -281,10 +280,19 @@
         </div>
   </div>
 </nav>
+
+
+    
+    
 <div id="banner-strip">
     <div class="container center-margin">
-        <div id="header">
-            <div class="row dots">
+    
+     	<div id="cd-intro-tagline">
+ 		</div> <!-- #cd-intro-tagline -->
+        <div class="header cd-secondary-nav"> 
+        	 <div class="container">
+ 
+             <div class="row dots">
                 <div  class="col-sm-7 col-md-7 col-xs-12">
                   <?php if ($logo) { ?>
                     <a href="<?php echo $home; ?>">
@@ -339,8 +347,8 @@
                 <?php } ?>
           <!-- Mega Menu End -->
     
-        </div>
-    </div>
+        
+    </div></div></div>
     <div id="myCarousel" class="carousel slide" data-ride="carousel"> 
   <!-- Indicators -->
   
@@ -368,7 +376,7 @@
       </div>
         <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a> 
     </div>
-
+</div>
 </div>
 <!-- <header>
   <div class="container">

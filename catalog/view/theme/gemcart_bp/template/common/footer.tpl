@@ -3,29 +3,29 @@
     <div class="row">
       <!-- -->
       <br class="spacer"/>
-        <div id="heading-strip">
-          <h1><span>WHY BUY FROM US ?s</span></h1>
+        <div id="heading-strip2">
+          <h1><span>WHY BUY FROM US ?</span></h1>
         </div> 
         <div class="row">
             <div class="col-sm-12 col-md-6 col-xs-12 testimonial">
                 <h1>Nicely packaged and delivered in time</h1>
                 <p>“Hi Gemcart, I have received the shipment perfectly in good shape. It was nicely packaged and delivered in time. Thanks once again for your prompt service.”<span>Regards, Sanjeet<span></p>
             </div>
-            <div class="col-sm-12 col-md-6 col-xs-12 testimonial">
+            <div class="col-sm-12 col-md-6 col-xs-12 testimonial1">
                 <h1>I am 100% satisfied with you.</h1>
-                <p>“Hi Divya, Although I am familiar with online purchases, I was quite skeptical about buying diamond jewellery from an online portal. It was the exact piece that I specified, that too delivered promptly. Special thanks to Susan, the customer care executive.”</p>
+                <p>“Hi Divya, Although I am familiar with online purchases, I was quite skeptical about buying diamond jewellery from an online portal. It was the exact piece that I specified, that too delivered promptly. Special thanks to Susan..”</p>
             </div>
         </div>
    
         <!-- -->
-        <div class="col-sm-6 col-md-6 col-xs-12 ">
+        <div class="col-sm-12 col-md-6 col-xs-12 ">
               <div id="track">
                   <h1>TRACK YOUR ORDER</h1>
                   <button type="button" class="black-btn btn-primary">Track Now</button>
               </div>
         </div>
 
-        <div class="col-sm-6 col-md-6 col-xs-12  ">
+        <div class="col-sm-12 col-md-6 col-xs-12  ">
                 <div id="sign">
                     <h1>SIGN UP FOR OFFERS</h1>
                     <form class="navbar-form email" role="search"  >
@@ -59,13 +59,13 @@
  
        <div class="social-icon">
              <ul>
-                 <li><a href="https://www.facebook.com/pages/Dummy-Page/1644653862418403?skip_nax_wizard=true&ref_type=logout_gear" target="_blank"><img src="image/facebook.jpg" /></a></li>
-                 <li><a href="https://twitter.com/" target="_blank"><img src="image/twitter.jpg"/></a></li>
-                 <li><a href="https://plus.google.com/" target="_blank"><img src="image/google.jpg"/></a></li>
-                 <li><a href="https://in.pinterest.com/" target="_blank"><img src="image/p.jpg"/></a></li>
-                 <li><a href="https://www.youtube.com/" target="_blank"><img src="image/you-tube.jpg"/></a></li>
-                 <li><a href="https://instagram.com/" target="_blank"><img src="image/video.jpg"/></a></li>
-                 <li><a href="https://www.blogger.com/features" target="_blank"><img src="image/e.jpg"/></a></li>
+                 <li><img src="image/facebook.jpg" /></li>
+                 <li><img src="image/twitter.jpg"/></li>
+                 <li><img src="image/google.jpg" /></li>
+                 <li><img src="image/p.jpg" /></li>
+                 <li><img src="image/you-tube.jpg" /></li>
+                 <li><img src="image/video.jpg" /></li>
+                 <li><img src="image/e.jpg" /></li>
              </ul>
        </div> 
  
@@ -115,24 +115,25 @@
     <div id="footer"> 
       <div class="footer_bottom">
         <div class="container">
-          
+          <div class="row">
             <div class="col-sm-12 col-md-12 col-xs-12 footer">
-                <div class="col-sm-4"><a href="http://localhost/gcart/index.php?route=information/information&information_id=5" target="_self">Terms of use </a> | 
-                    <a href="http://localhost/gcart/index.php?route=information/information&information_id=3" target="_self">Privacy Policy </a>
+                <div class="col-sm-4"><a href="#" target="_self">Terms of use </a> | 
+                    <a href="#" target="_self">Privacy Policy </a>
                 </div>
-                <div class="col-sm-4 reserved">©2015 Gemcart. All Rights Reserved</div>
-                <div class="col-sm-4 paysecure"><img alt="payment" src="image/payment_logo.jpg"></div> 
+                <div class="col-sm-4 reserved"><p>©2015 Gemcart. All Rights Reserved</p></div>
+                <div class="col-sm-4 paysecure"><img alt="payment" src="image/payment_logo.jpg" class="img-responsive"></div> 
             </div>
           
         </div>
-      </div>  
+      </div>  </div>
     </div>
 </footer>
-<script type="text/javascript">
 
-     $(".mostpopularslider").flexisel({
+<script type="text/javascript">
+$(window).load(function() {
+     $("#mostpopularslider").flexisel({
         visibleItems: 4,
-        animationSpeed: 3000,
+        animationSpeed: 1000,
         autoPlay: true,
         autoPlaySpeed: 1000,            
         pauseOnHover: true,
@@ -153,9 +154,33 @@
         }
     });
      
+});
+</script>  
 
-</script>
-<!-- <script src="catalog/view/javascript/autoptimize_9a15becef9b2f850af1e4f2ecea7b647.js" type="text/javascript"></script> -->
+  <!-- jQuery -->
+ <!-- <script src="catalog/view/javascript/jquery/jquery.min.js"></script> -->
+  
+  <!-- FlexSlider -->
+  <script defer src="catalog/view/javascript/jquery/jquery.flexslider.js"></script>
+
+    <script type="text/javascript">
+    $(function(){
+      SyntaxHighlighter.all();
+    });
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        animationLoop: true,
+        itemWidth: 210,
+         pausePlay: true,
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  </script>
+ 
+<!-- <script src="catalog/view/javascript/autoptimize_9a15becef9b2f850af1e4f2ecea7b647.js" type="text/javascript"></script>  -->
 <!--
 OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.
 Please donate via PayPal to donate@opencart.com

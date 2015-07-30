@@ -52,9 +52,15 @@
         <div class="tab-pane active" id="red">
         <div id="edit">
              <div class="col-sm-8"> 
+             
+             
              <h2>Default Shipping and Billing Address <span><a href="#">Edit</a></span></h2>
              <p>You have no default billing address in your address book.</p>
              <p>You have no default shipping address in your address book.</p>
+             
+             
+             
+             
             </div>
          </div>
         
@@ -245,14 +251,77 @@
         </div>
         <div class="tab-pane" id="yellow">
            <div id="edit">
-             <div class="col-sm-8"> 
-             <h2>Default Shipping and Billing Address <span><a href="#">Edit</a></span></h2>
+             <div class="col-sm-12"> 
+              <button type="button" class="close"><img src="catalog/view/theme/gemcart/images/close.jpg" /></li></button>
+              <div class="row">
+               <div class="col-sm-3">
+                   <div class="accout-wishlist">
+                   <li>
+                   <div class="try1"></div>
+                   <img src="catalog/view/theme/gemcart/images/account-wishlist-1.jpg" /></li> </div>
+               </div>
+               
+                <div class="col-sm-7 wishlist-details">
+                <h1>Glaze Solitaire Ring</h1>
+                <p>Diamond(0.4996 Ct, IJ, SI, Round), 18 Kt Yellow Gold
+                    Approx Metal Weight 4.09 gms</p>
+                    <br />
+                    <div class="row">
+                     <div class="col-sm-3"><h2>Ring Size</h2></div>
+                    <div class="col-sm-4"><select><option>Select One</option></select></div>
+                    <div class="col-sm-5">	<p>Not Sure? We can help. </p></div>
+                    </div>
+                </div>
+                
+                 <div class="col-sm-2">
+                 <div id="wishlist-btn">
+                 <h3>Rs. 46,912</h3>
+                  <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="buy-now"> Buy Now</button> 
+                  <p>OR</p>
+                  <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="try-home">Try @ Home </button>
+                 </div>
+                 </div>
+                   
+              </div>
+              <hr/>
+              <button type="button" class="close"><img src="catalog/view/theme/gemcart/images/close.jpg" /></li></button>
+                <div class="row">
+               <div class="col-sm-3">
+                   <div class="accout-wishlist">
+                   <li>
+                    <img src="catalog/view/theme/gemcart/images/account-wishlist-1.jpg" /></li> </div>
+               </div>
+               
+                <div class="col-sm-7 wishlist-details">
+                <h1>Glaze Solitaire Ring</h1>
+                <p>Diamond(0.4996 Ct, IJ, SI, Round), 18 Kt Yellow Gold
+                    Approx Metal Weight 4.09 gms</p>
+                    <br />
+                    <div class="row">
+                     <div class="col-sm-3"><h2>Ring Size</h2></div>
+                    <div class="col-sm-4"><select><option>Select One</option></select></div>
+                    <div class="col-sm-5">	<p>Not Sure? We can help. </p></div>
+                    </div>
+                </div>
+                
+                 <div class="col-sm-2">
+                 <div id="wishlist-btn">
+                 <h3>Rs. 46,912</h3>
+                  <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="buy-now"> Buy Now</button> 
+                  <p>OR</p>
+                  <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="try-home">Try @ Home </button>
+                 </div>
+                 </div>
+                   
+              </div>
+              
+              
             </div>
          </div>
          
          <div id="open">
              <div class="col-sm-8"> 
-             <h2>Default Shipping and Billing Address <span><a href="#">Edit</a></span></h2>
+            <!-- <h2>Default Shipping and Billing Address <span><a href="#">Edit</a></span></h2> -->
             </div>
          </div>
          

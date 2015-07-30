@@ -16,11 +16,11 @@
     <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
     <!-- START -->
         <!--showing -->
-<div id="showing">
+<!--<div id="showing">
 <div class="container">
 <div class="row">
  <div  class="col-sm-12 col-md-12 col-xs-12 "><h1>SHOWING 505 DIAMONDS</h1></div>
- </div></div></div>
+ </div></div></div> -->
 <!--showing end -->
   
  
@@ -117,7 +117,7 @@
 <!--accordion -->
  <div class="container"> 
 <div class="row">
-  <div  class="col-sm-12 col-md-12 col-xs-12"  > 
+  <div  class="col-sm-12 col-md-12 col-xs-12 filter-btn"  > 
    <!--tab -->
         
      <section id="multiple" data-accordion-group>
@@ -217,14 +217,15 @@
  
  
 <!--tab -->
- <script src="js/jquery.mixitup.min.js"></script>
-<script src="js/main.js"></script> 
+ <script src="catalog/view/javascript/jquery/jquery.mixitup.min.js"></script>
+<script src="catalog/view/javascript/jquery/main.js"></script> 
+ <link rel="stylesheet" type="text/css" href="catalog/view/theme/gemcart/stylesheet/jquery.accordion1.css" />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/gemcart/stylesheet/demo1.css" />
+
+
  
-
-<script src="js/bootstrap.min.js"></script>
-
 <!--tab -->
-<script type="text/javascript" src="js/jquery.accordion.js"></script> 
+<script type="text/javascript" src="catalog/view/javascript/jquery/jquery.accordion.js"></script> 
 
 <script type="text/javascript">$(document).ready(function() {
         $('#only-one [data-accordion]').accordion();

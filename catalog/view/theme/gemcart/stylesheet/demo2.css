@@ -1,0 +1,115 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Helvetica Neue", "Helvetica", sans-serif;
+    color: #333;
+    min-width: 320px;
+}
+
+body > section {
+    margin-bottom: 80px;
+}
+
+.filter-btn button {
+    margin: 0;
+   padding:10px 45px;
+    background: inherit;
+    border: inherit;
+    font: inherit;
+    outline: none;
+    width: 100%; font-size:17px; color:#4b4a4b;
+    display: block;
+    text-align:right;
+    color: inherit;
+}
+
+ 
+.intro p {
+  margin-bottom: 40px;
+}
+
+.intro .btn {
+    display: inline-block;
+    vertical-align: top;
+    max-width: auto;
+    margin: 0 auto;
+    border: 1px solid #888;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 0 5px;
+    margin-bottom: 15px;
+}
+
+.intro .btn:hover,
+.intro .btn:active {
+  background: black;
+  border-color: black;
+  color: white;
+}
+
+.intro .btn:focus {
+  text-decoration: underline;
+  border-color: #333;
+}
+
+.intro .btn img {
+  margin-right: 5px;
+}
+
+.snippet {
+  max-width: 768px;
+  padding: 0 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.copyright {
+    text-align: center;
+}
+
+[data-accordion] [data-content] {
+    background:#d5d3d3;
+}
+
+[data-accordion] [data-content] [data-content] {
+    background:#fff;
+}
+
+[data-accordion] [data-content] [data-content] [data-content] {
+    background:#fff;
+}
+
+ 
+@media (max-width: 768px) {
+    .hp-table table, .hp-table thead, .hp-table .hp-table tbody, .hp-table th, .hp-table td, .hp-table tr { 
+        display: block; 
+    }
+    .hp-table thead tr { 
+        display: none;
+    }
+    .hp-table tr { border: 0px solid #ccc; margin-bottom: 10px; }
+    
+    .hp-table td:before { 
+        top: 6px;
+        left: 6px;
+        width: 45%; 
+        padding-right: 10px; 
+        white-space: nowrap;
+    }
+
+    .hp-table td:nth-of-type(2):before { 
+        content: "Default:";
+        font-weight: bold;
+    }
+    .hp-table td:nth-of-type(3):before { 
+        content: "Type:";
+        font-weight: bold;
+    }
+    .hp-table td:nth-of-type(4):before { 
+        content: "Description:";
+        font-weight: bold;
+    }
+}

@@ -260,7 +260,7 @@ xgallery
 @media only screen and (min-width: 1170px) {
   .cd-gallery {
     padding: 50px 2%;
-    float:left;
+    float:left; 
     -webkit-transition: width 0.3s;
     -moz-transition: width 0.3s;
     transition: width 0.3s;
@@ -383,7 +383,7 @@ xfilter
 }
 @media only screen and (min-width: 1170px) {
   .cd-filter {
-    width:28%; float:right; 
+    width:30%; float:right; margin-top:48px; 
   }
   .cd-filter form {
     padding:50px 15px;
@@ -399,7 +399,7 @@ xfilter
   text-indent: 100%;
   color: transparent;
   white-space: nowrap;
-  background: transparent url(../images/price-arrow.png) no-repeat center center;
+  background: transparent url(images/price-arrow.png) no-repeat center center;
   z-index: 3;
 }
 .cd-filter-trigger.filter-is-visible {

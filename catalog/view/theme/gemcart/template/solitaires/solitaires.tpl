@@ -17,11 +17,11 @@
            
       <!-- START-->
           <!--showing -->
-<div id="showing">
+<!--<div id="showing">
 <div class="container">
 <div class="row">
  <div  class="col-sm-12 col-md-12 col-xs-12 "><h1>SHOWING 505 DIAMONDS</h1></div>
- </div></div></div>
+ </div></div></div> -->
 <!--showing end -->
   
  
@@ -117,13 +117,10 @@
 
 
 <!--accordion -->
- <div class="container"> 
+<div class="container"> 
 <div class="row">
-  <div  class="col-sm-12 col-md-12 col-xs-12"  > 
-   <section class="cd-gallery">
-  <!--tab -->
-        
-     <section id="multiple" data-accordion-group>
+  <div  class="col-sm-12 col-md-12 col-xs-12 filter-btn"  > 
+       <section id="multiple" data-accordion-group>
       <section data-accordion>
         <button data-control>View Filter</button>
         <div data-content>
@@ -136,45 +133,45 @@
                     <div  class="col-sm-4 col-md-4 col-xs-12 shapes"  >
                        <h1>Shape</h1>
                                <div id="input-option239" class="input-option">
-                                  <div class="checkbox">                  
+                                  <div class="shape-checkbox">                  
                                        <input name="option[239]" class="thumb" src="image/catalog/up.png" val="no_image" id="option[2391]" value="42" type="checkbox">
                                        <label for="option[2391]"><img src="image/catalog/shape-1.png" /></label>
                                    </div>
-                                  <div class="checkbox">                  
+                                  <div class="shape-checkbox">                  
                                        <input name="option[239]" class="thumb"  val="no_image" id="option[2392]" value="40" type="checkbox">
                                        <label for="option[2392]"><img src="image/catalog/shape-2.png" /></label>
                                     </div>
-                                  <div class="checkbox">                  
+                                  <div class="shape-checkbox">                  
                                        <input name="option[239]" class="thumb"  val="no_image" id="option[2393]" value="41" type="checkbox">
                                        <label for="option[2393]"><img src="image/catalog/shape-2.png" /></label>
                                          </div>
-                                  <div class="checkbox">                  
+                                  <div class="shape-checkbox">                  
                                        <input name="option[239]" class="thumb"  val="no_image" id="option[2394]" value="39" type="checkbox">
                                        <label for="option[2394]"><img src="image/catalog/shape-4.png" /></label>
                                     </div>
-                                    <div class="checkbox">                  
+                                    <div class="shape-checkbox">                  
                                        <input name="option[239]" class="thumb"  val="no_image" id="option[2394]" value="39" type="checkbox">
                                                             <!-- (+$31.60) -->
                                       <label for="option[2394]"><img src="image/catalog/shape-5.png" /></label>
                                     </div>
                                     <br class="spacer" />
-                                    <div class="checkbox">                  
+                                    <div class="shape-checkbox">                  
                                        <input name="option[239]" class="thumb" src="image/catalog/up.png" val="no_image" id="option[2391]" value="42" type="checkbox">
                                        <label for="option[2391]"><img src="image/catalog/shape-6.png" /></label>
                                    </div>
-                                  <div class="checkbox">                  
+                                  <div class="shape-checkbox">                  
                                        <input name="option[239]" class="thumb"  val="no_image" id="option[2392]" value="40" type="checkbox">
                                        <label for="option[2392]"><img src="image/catalog/shape-7.png" /></label>
                                     </div>
-                                  <div class="checkbox">                  
+                                  <div class="shape-checkbox">                  
                                        <input name="option[239]" class="thumb"  val="no_image" id="option[2393]" value="41" type="checkbox">
                                        <label for="option[2393]"><img src="image/catalog/shape-8.png" /></label>
                                          </div>
-                                  <div class="checkbox">                  
+                                  <div class="shape-checkbox">                  
                                        <input name="option[239]" class="thumb"  val="no_image" id="option[2394]" value="39" type="checkbox">
                                        <label for="option[2394]"><img src="image/catalog/shape-9.png" /></label>
                                     </div>
-                                    <div class="checkbox">                  
+                                    <div class="shape-checkbox">                  
                                        <input name="option[239]" class="thumb"  val="no_image" id="option[2394]" value="39" type="checkbox">
                                                             <!-- (+$31.60) -->
                                       <label for="option[2394]"><img src="image/catalog/shape-10.png" /></label>
@@ -207,24 +204,24 @@
                     <div  class="col-sm-3 col-md-3 col-xs-12 shapes"  >
                        <h1>Cut</h1>
                                <div id="input-option239" class="input-option">
-                                  <div class="radio">                  
+                                  <div class="solitaires-radio">                  
                                        <input name="option[239]" class="thumb" src="image/catalog/up.png" val="no_image" id="option[239]" value="4" type="radio">
                                        <label for="option[239]">EX</label>
                                    </div>
-                                 <div class="radio">                 
+                                 <div class="solitaires-radio">                 
                                        <input name="option[239]" class="thumb"  val="no_image" id="option[232]" value="4" type="radio">
                                        <label for="option[232]">VG</label>
                                     </div>
-                                 <div class="radio">                  
+                                 <div class="solitaires-radio">                  
                                        <input name="option[239]" class="thumb"  val="no_image" id="option[233]" value="4" type="radio">
                                        <label for="option[233]">G</label>
                                          </div>
-                                  <div class="radio">                  
+                                  <div class="solitaires-radio">                  
                                        <input name="option[239]" class="thumb"  val="no_image" id="option[234]" value="9" type="radio">
                                        <label for="option[234]">MED</label>
                                     </div>
                                     
-                                  <div class="radio">                  
+                                  <div class="solitaires-radio">                  
                                        <input name="option[239]" class="thumb"  val="no_image" id="option[2347]" value="9" type="radio">
                                        <label for="option[2347]">AGSO</label>
                                     </div>  
@@ -236,46 +233,46 @@
                      <div  class="col-sm-4 col-md-4 col-xs-12 shapes"  >
                      <h1>Color</h1>
                              <div id="input-option239" class="input-option">
-                                  <div class="radio">                  
+                                  <div class="solitaires-radio">                  
                                        <input name="option[239]" class="thumb" src="image/catalog/up.png" val="no_image" id="option[2398]" value="4" type="radio">
                                        <label for="option[2398]">D</label>
                                    </div>
-                                 <div class="radio">                 
+                                 <div class="solitaires-radio">                 
                                        <input name="option[239]" class="thumb"  val="no_image" id="option[2325]" value="4" type="radio">
                                        <label for="option[2325]">E</label>
                                     </div>
-                                 <div class="radio">                  
+                                 <div class="solitaires-radio">                  
                                        <input name="option[239]" class="thumb"  val="no_image" id="option[2335]" value="4" type="radio">
                                        <label for="option[2337]">F</label>
                                          </div>
-                                  <div class="radio">                  
+                                  <div class="solitaires-radio">                  
                                        <input name="option[239]" class="thumb"  val="no_image" id="option[2340]" value="9" type="radio">
                                        <label for="option[2340]">G</label>
                                     </div>
                                     
-                                    <div class="radio">                  
+                                    <div class="solitaires-radio">                  
                                        <input name="option[239]" class="thumb"  val="no_image" id="option[230]" value="9" type="radio">
                                        <label for="option[230]">H</label>
                                     </div>
-                                    <div class="radio">                  
+                                    <div class="solitaires-radio">                  
                                        <input name="option[239]" class="thumb"  val="no_image" id="option[2040]" value="9" type="radio">
                                        <label for="option[2040]">I</label>
                                     </div>
-                                    <div class="radio">                  
+                                    <div class="solitaires-radio">                  
                                        <input name="option[239]" class="thumb"  val="no_image" id="option[240]" value="9" type="radio">
                                        <label for="option[240]">J</label>
                                     </div>
-                                    <div class="radio">                  
+                                    <div class="solitaires-radio">                  
                                        <input name="option[239]" class="thumb"  val="no_image" id="option[340]" value="9" type="radio">
                                        <label for="option[340]">K</label>
                                     </div>
                                     
-                                    <div class="radio">                  
+                                    <div class="solitaires-radio">                  
                                        <input name="option[239]" class="thumb"  val="no_image" id="option[30]" value="9" type="radio">
                                        <label for="option[30]">L</label>
                                     </div>
                                     
-                                    <div class="radio">                  
+                                    <div class="solitaires-radio">                  
                                        <input name="option[239]" class="thumb"  val="no_image" id="option[34]" value="9" type="radio">
                                        <label for="option[34]">M</label>
                                     </div>
@@ -285,47 +282,47 @@
                 <div  class="col-sm-5 col-md-5 col-xs-12 shapes"  >
                      <h1>cLARITY</h1>
                              <div id="input-option239" class="input-option">
-                                  <div class="radio">                  
+                                  <div class="solitaires-radio">                  
                                        <input name="option[239]" class="thumb" src="image/catalog/up.png" val="no_image" id="option[12]" value="4" type="radio">
                                        <label for="option[12]">SI1</label>
                                    </div>
-                                 <div class="radio">                 
+                                 <div class="solitaires-radio">                 
                                        <input name="option[239]" class="thumb"  val="no_image" id="option[11]" value="4" type="radio">
                                        <label for="option[11]">SI2</label>
                                     </div>
-                                   <div class="radio">                 
+                                   <div class="solitaires-radio">                 
                                        <input name="option[239]" class="thumb"  val="no_image" id="option[11]" value="4" type="radio">
                                        <label for="option[11]">SI3</label>
                                     </div>
                                     
-                                      <div class="radio">                  
+                                      <div class="solitaires-radio">                  
                                        <input name="option[239]" class="thumb"  val="no_image" id="option[22]" value="9" type="radio">
                                        <label for="option[22]">VS1</label>
                                     </div>
                                     
-                                 <div class="radio">                  
+                                 <div class="solitaires-radio">                  
                                        <input name="option[239]" class="thumb"  val="no_image" id="option[33]" value="4" type="radio">
                                        <label for="option[33]">VS2</label>
                                          </div>
                                 
                                     
-                                    <div class="radio">                  
+                                    <div class="solitaires-radio">                  
                                        <input name="option[239]" class="thumb"  val="no_image" id="option[231]" value="9" type="radio">
                                        <label for="option[231]">VVS1</label>
                                     </div>
-                                    <div class="radio">                  
+                                    <div class="solitaires-radio">                  
                                        <input name="option[239]" class="thumb"  val="no_image" id="option[202]" value="9" type="radio">
                                        <label for="option[202]">VVS2</label>
                                     </div>
-                                    <div class="radio">                  
+                                    <div class="solitaires-radio">                  
                                        <input name="option[239]" class="thumb"  val="no_image" id="option[210]" value="9" type="radio">
                                        <label for="option[210]">IF</label>
                                     </div>
-                                    <div class="radio">                  
+                                    <div class="solitaires-radio">                  
                                        <input name="option[239]" class="thumb"  val="no_image" id="option[390]" value="9" type="radio">
                                        <label for="option[390]">FL</label>
                                     </div>
-                                    <div class="radio">                  
+                                    <div class="solitaires-radio">                  
                                        <input name="option[239]" class="thumb"  val="no_image" id="option[390]" value="9" type="radio">
                                        <label for="option[390]">I1</label>
                                     </div>
@@ -350,15 +347,15 @@
                     <div  class="col-sm-2 col-md-2 col-xs-12 shapes"  >
                        <h1>Polish</h1>
                                <div id="input-option239" class="input-option">
-                                  <div class="radio">                 
+                                  <div class="solitaires-radio">                 
                                        <input name="option[239]" class="thumb"  val="no_image" id="option[2355]" value="4" type="radio">
                                        <label for="option[2355]">VG</label>
                                     </div>
-                                 <div class="radio">                  
+                                 <div class="solitaires-radio">                  
                                        <input name="option[239]" class="thumb"  val="no_image" id="option[2355]" value="4" type="radio">
                                        <label for="option[2355]">G</label>
                                          </div>
-                                  <div class="radio">                  
+                                  <div class="solitaires-radio">                  
                                        <input name="option[239]" class="thumb"  val="no_image" id="option[2355]" value="9" type="radio">
                                        <label for="option[2355]">MED</label>
                                     </div>
@@ -370,24 +367,24 @@
                      <div  class="col-sm-3 col-md-3 col-xs-12 shapes"  >
                          <h1>symmetry</h1>
                              <div id="input-option239" class="input-option">
-                                  <div class="radio">                  
+                                  <div class="solitaires-radio">                  
                                        <input name="option[239]" class="thumb" src="image/catalog/up.png" val="no_image" id="option[2355]" value="4" type="radio">
                                        <label for="option[2355]">EX</label>
                                    </div>
-                                 <div class="radio">                 
+                                 <div class="solitaires-radio">                 
                                        <input name="option[239]" class="thumb"  val="no_image" id="option[2355]" value="4" type="radio">
                                        <label for="option[2355]">FAIR</label>
                                     </div>
-                                 <div class="radio">                  
+                                 <div class="solitaires-radio">                  
                                        <input name="option[239]" class="thumb"  val="no_image" id="option[2355]" value="4" type="radio">
                                        <label for="option[2355]">VG</label>
                                          </div>
                                          
-                                   <div class="radio">                  
+                                   <div class="solitaires-radio">                  
                                        <input name="option[239]" class="thumb"  val="no_image" id="option[2355]" value="4" type="radio">
                                        <label for="option[2355]">G</label>
                                          </div>      
-                                  <div class="radio">                  
+                                  <div class="solitaires-radio">                  
                                        <input name="option[239]" class="thumb"  val="no_image" id="option[2355]" value="9" type="radio">
                                        <label for="option[2355]">MED</label>
                                     </div>
@@ -397,37 +394,37 @@
                 <div  class="col-sm-7 col-md-7 col-xs-12 shapes"  >
                      <h1>Fluore scence</h1>
                              <div id="input-option239" class="input-option">
-                                  <div class="radio">                  
+                                  <div class="solitaires-radio">                  
                                        <input name="option[239]" class="thumb" src="image/catalog/up.png" val="no_image" id="option[12]" value="4" type="radio">
                                        <label for="option[12]">V Strong</label>
                                    </div>
-                                    <div class="radio">                 
+                                    <div class="solitaires-radio">                 
                                        <input name="option[239]" class="thumb"  val="no_image" id="option[11]" value="4" type="radio">
                                        <label for="option[11]">Strong</label>
                                     </div>
-                                    <div class="radio">                  
+                                    <div class="solitaires-radio">                  
                                       <input name="option[239]" class="thumb"  val="no_image" id="option[22]" value="9" type="radio">
                                        <label for="option[231]">V.SLIGHT</label>
                                     </div>
-                                      <div class="radio">                  
+                                      <div class="solitaires-radio">                  
                                       <input name="option[239]" class="thumb"  val="no_image" id="option[22]" value="9" type="radio">
                                        <label for="option[231]">SLIGHT</label>
                                     </div>
                                 
-                                 <div class="radio">                  
+                                 <div class="solitaires-radio">                  
                                        <input name="option[239]" class="thumb"  val="no_image" id="option[33]" value="4" type="radio">
                                        <label for="option[33]">Med</label>
                                          </div>
-                                          <div class="radio">                  
+                                          <div class="solitaires-radio">                  
                                        <input name="option[239]" class="thumb"  val="no_image" id="option[33]" value="4" type="radio">
                                        <label for="option[33]">Med YEL</label>
                                          </div>
-                                  <div class="radio">                  
+                                  <div class="solitaires-radio">                  
                                        <input name="option[239]" class="thumb"  val="no_image" id="option[22]" value="9" type="radio">
                                        <label for="option[22]">Faint</label>
                                     </div>
                                     
-                                    <div class="radio">                  
+                                    <div class="solitaires-radio">                  
                                       <input name="option[239]" class="thumb"  val="no_image" id="option[22]" value="9" type="radio">
                                        <label for="option[231]">None/NIL</label>
                                     </div>
@@ -469,28 +466,32 @@
              </div>
        </section>
      </section>
-<!--tab end -->
-      
-      
-      <!--table start --> 
-        <div class="table-responsive" style="margin-top:50px;">
+  </div></div></div>
+
+
+ <div class="container"> 
+<div class="row">
+  <div  class="col-sm-12 col-md-12 col-xs-12"  > 
+   <section class="cd-gallery">
+       <!--table start --> 
+        <div class="table-responsive">
          <div class="fixed-table-container"><div class="header-background"></div><div class="fixed-table-container-inner">
-    <table class="table table-striped fix-table">
+<table class="table table-striped fix-table">
         <thead>
             <tr>
-    <th><div class="th-inner">Compare</div></th>
-    <th><div class="th-inner">Shape</div></th>
-    <th><div class="th-inner">Carat</div></th>
-     <th><div class="th-inner">Cut</div></th>
-      <th><div class="th-inner">Color</div></th>
-       <th><div class="th-inner">Clarity</div></th>
-        <th><div class="th-inner">Symmetry</div></th>
-         <th><div class="th-inner">Flurescence</div></th>
-          <th><div class="th-inner">Depth</div></th>
-           <th><div class="th-inner">Table</div></th>
-            <th><div class="th-inner">1/W Radio</div></th>
-             <th><div class="th-inner">Date</div></th>
-                 <th><div class="th-inner">Price</div></th>
+    <th width="71"><div class="th-inner">Compare</div></th>
+    <th width="73"><div class="th-inner">Shape</div></th>
+    <th width="53"><div class="th-inner">Carat</div></th>
+     <th width="53"><div class="th-inner">Cut</div></th>
+      <th width="58"><div class="th-inner">Color</div></th>
+       <th width="56"><div class="th-inner">Clarity</div></th>
+        <th width="75"><div class="th-inner">Symmetry</div></th>
+         <th width="89"><div class="th-inner">Flurescence</div></th>
+          <th width="41"><div class="th-inner">Depth</div></th>
+           <th width="40"><div class="th-inner">Table</div></th>
+            <th width="82"><div class="th-inner">1/W Radio</div></th>
+             <th width="41"><div class="th-inner">Date</div></th>
+              <th width="48"><div class="th-inner">Price</div></th>
             </tr>
         </thead>
         <tbody >
@@ -577,6 +578,8 @@
                <td>&nbsp;</td>
                <td>&nbsp;</td>
                <td>&nbsp;</td>
+
+
                <td>&nbsp;</td>
                <td>&nbsp;</td>
                <td>&nbsp;</td>
@@ -622,6 +625,232 @@
                <td>&nbsp;</td>
                <td>&nbsp;</td>
                <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+             </tr>
+             <tr>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+             </tr>
+             <tr>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+             </tr>
+             <tr>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+             </tr>
+             <tr>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+             </tr>
+             <tr>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+             </tr>
+             <tr>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+             </tr>
+             <tr>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+             </tr>
+             <tr>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+             </tr>
+             <tr>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+             </tr>
+             <tr>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+             </tr>
+             <tr>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+             </tr>
+             <tr>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+             </tr>
+             <tr>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+             </tr>
+             <tr>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+             </tr>
+             <tr>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+
                <td>&nbsp;</td>
                <td>&nbsp;</td>
                <td>&nbsp;</td>
@@ -661,6 +890,7 @@
              </tr>
         </tbody>
     </table>
+
 
 </div>
 
@@ -805,17 +1035,28 @@
 
 </div>
   <!-- End SlidesJS Required -->
- 
+ <script>
+$( "#slider-range" ).slider({
+            range: true,
+            min: 0,
+            max: 500,
+            values: [ 75, 300 ],
+            slide: function( event, ui ) {  $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+            }
+ });
+$( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) + " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+</script>
+
  
 <!--tab -->
- <script src="js/jquery.mixitup.min.js"></script>
-<script src="js/main.js"></script> 
+ <script src="catalog/view/js/jquery.mixitup.min.js"></script>
+<script src="catalog/view/js/main.js"></script> 
  
 
-<script src="js/bootstrap.min.js"></script>
-
+ 
 <!--tab -->
-<script type="text/javascript" src="js/jquery.accordion.js"></script> 
+<!--tab -->
+<script type="text/javascript" src="catalog/view/javascript/jquery/jquery.accordion.js"></script> 
 
 <script type="text/javascript">$(document).ready(function() {
         $('#only-one [data-accordion]').accordion();
@@ -833,10 +1074,10 @@
     
      <!--on off -->
  <!--gallery -->
-    <script type="text/javascript" src="js/jquery.tmpl.min.js"></script>
-    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-    <script type="text/javascript" src="js/jquery.elastislide.js"></script>
-    <script type="text/javascript" src="js/gallery.js"></script>
+ 		<script type="text/javascript" src="catalog/view/javascript/js/jquery.tmpl.min.js"></script>
+		<script type="text/javascript" src="catalog/view/javascript/js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="catalog/view/javascript/js/jquery.elastislide.js"></script>
+		<script type="text/javascript" src="catalog/view/javascript/js/gallery.js"></script>
       <!-- END-->
       <?php echo $content_bottom; ?></div>
     <?php echo $column_right; ?></div>

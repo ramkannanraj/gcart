@@ -22,7 +22,33 @@
     width:50% !important; margin-right:15px !important} 
 
 }
- 
+
+.accout-wishlist li{ 
+   display:block;
+width:210px !important;
+margin: 0px 0px 15px 15px;
+padding: 5px;
+float: left;
+cursor: pointer; padding:25px 15px; position:relative;
+text-align: left;
+ border: 1px solid #CCC;
+}
+.accout-wishlist img{ text-align:center; display:block; margin:0 auto}
+.wishlist-details h1{ color:#924466; font-size:20px;}	
+.wishlist-details p{ font-size:13px;}
+.wishlist-details h2{ font-size:14px !important; color:#000 !important; border-bottom:none !important;}
+.wishlist-details select {
+    width:160px; border: #ccc solid 1px;
+    height: 30px;
+    border-radius: 0px;}
+#wishlist-btn .buy-now{ background:#cbbc97; font-size:20px; text-align:center; color:#fff; border:none; padding:7px 15px; width:150px; font-weight:bold; margin-right:10px;}
+#wishlist-btn .buy-now:hover{ background:#b2a584 !important;}
+#wishlist-btn .try-home{ background:#999999; font-size:20px; text-align:center; color:#fff; border:none; padding:7px 15px; width:150px; font-weight:bold}
+#wishlist-btn .try-home:hover{ background:#838383 !important;}
+#wishlist-btn p{ text-align:center; display:block}	
+#wishlist-btn h3{ font-size:16px !important; color:#000 !important; border-bottom:none !important; font-weight:bold}
+	
+	
 #top-strip{ width:100%; display:block; margin:0 auto; background:#000; height:20px;}
 #top-strip1{width:100%; display:block; margin:0 auto; background:#65646b; padding:5px 0;   }
 #top-strip1 p{ color:#fff; font-size:12px; margin:3px 25px 0 0; padding:0; float:left;}
@@ -54,7 +80,7 @@ a.cart-items {
   background-color: #65646B;
 }
 ul.list-inline {
-  margin-bottom: 2px;
+  margin-bottom: 2px; text-align:right
 }
 #product .input-option {
   display: inline-block;
@@ -94,7 +120,7 @@ div#product {
   margin-right: 10px;
 }
 .header{ margin-top:20px; background:#f3f3f3; padding:30px 15px 5px; border-bottom:#ccc solid 1px} 
-.form-group{ font-size:15px; text-transform:uppercase} .form-control { border-radius:10px;}
+.form-group{ font-size:15px;/* text-transform:uppercase*/} .form-control { border-radius:10px;}
 .navbar-form{ float:right;  } .shopping{ float:left; margin-top:5px;font-size:17px; }   #cart-total { color:#000 !important; margin-top:10px;}
 .dots{ border-bottom:#000 dotted 1px; display:block; width:97%; }
 .selectpicker{ padding:3px 15px; width:65%; float:right}
@@ -102,10 +128,12 @@ div#product {
 
 .detail-input input[type="text"] { width:70px; margin-bottom:10px; border:#ccc solid 1px; padding:3px;}
 .detail-input1 input[type="text"] { width:100%; margin-bottom:10px; border:#ccc solid 1px; padding:3px; float:left;}
-.add-to-cart{ background:#acacac; font-size:25px; text-align:center; color:#fff; border:none; padding:7px 15px; font-weight:bold}
-.add-to-cart span:hover{ background:#999999 !important;}
-.buy-now{ background:#cbbc97; font-size:25px; text-align:center; color:#fff; border:none; padding:7px 15px; font-weight:bold}
+.add-to-cart{ background:#acacac; font-size:25px; text-align:center; color:#fff; border:none; padding:7px 15px; font-weight:bold; margin-right:10px;}
+.add-to-cart:hover{ background:#999999 !important;}
+.buy-now{ background:#cbbc97; font-size:25px; text-align:center; color:#fff; border:none; padding:7px 15px; font-weight:bold; margin-right:10px;}
+.buy-now:hover{ background:#b2a584 !important;}
 .try-home{ background:#999999; font-size:25px; text-align:center; color:#fff; border:none; padding:7px 15px; font-weight:bold}
+.try-home:hover{ background:#838383 !important;}
 .menu-container { margin-top: 5px; width: 93%; }
 #heading-strip h1 {
   position: relative;

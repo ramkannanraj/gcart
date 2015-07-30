@@ -16,12 +16,12 @@
     <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
       <!-- START -->
         <!--showing -->
-<div id="showing">
+<!--<div id="showing">
 <div class="container">
 <div class="row">
  <div  class="col-sm-12 col-md-12 col-xs-12 "><h1>SHOWING 505 DIAMONDS</h1></div>
  </div></div></div>
-<!--showing end -->
+ --><!--showing end -->
   
  
 
@@ -43,7 +43,7 @@
                 </button>
              </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse diomand-strip" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                      <li class="dropdown ">
                         <a href="#" data-toggle="dropdown" class="dropdown-toggle "><h1>Select your <br/><strong>Diomand</strong></h1><b><img src="image/catalog/menu-diomand.png" /></b></a>
@@ -135,7 +135,7 @@
        </div><!--row -->
 </div>
 
-<div  class="col-sm-6 col-md-6 col-xs-12 details"  >
+<div  class="col-sm-6 col-md-6 col-xs-12 solitaires-details"  >
  <h1>Review Your Ring</h1> 
   <p>Set in 18 kt yellow gold ( 2gms ) with Diamonds (0.13 Ct, I,J- SI ) Certified by SGL</p>
   <div class="dots"></div>
@@ -186,52 +186,52 @@
   <div class="row">
     <div  class="col-sm-12 col-md-12 col-xs-12"  >
     <p>Select your ring size</p>
-    <div class="radio">                  
+    <div class="details-radio">                  
            <input name="option[239]" class="thumb"  val="no_image" id="option[230]" value="9" type="radio">
            <label for="option[230]">3.4</label>
         </div>
-        <div class="radio">                  
+        <div class="details-radio">                  
            <input name="option[239]" class="thumb"  val="no_image" id="option[2040]" value="9" type="radio">
            <label for="option[2040]">4</label>
         </div>
-        <div class="radio">                  
+        <div class="details-radio">                  
            <input name="option[239]" class="thumb"  val="no_image" id="option[240]" value="9" type="radio">
            <label for="option[240]">4.5</label>
         </div>
-        <div class="radio">                  
+        <div class="details-radio">                  
            <input name="option[239]" class="thumb"  val="no_image" id="option[340]" value="9" type="radio">
            <label for="option[340]">5</label>
         </div>
-         <div class="radio">                  
+         <div class="details-radio">                  
            <input name="option[239]" class="thumb"  val="no_image" id="option[341]" value="9" type="radio">
            <label for="option[341]">5.5</label>
         </div>
         
-         <div class="radio">                  
+         <div class="details-radio">                  
            <input name="option[239]" class="thumb"  val="no_image" id="option[342]" value="9" type="radio">
            <label for="option[342]">6</label>
         </div>
         
-         <div class="radio">                  
+         <div class="details-radio">                  
            <input name="option[239]" class="thumb"  val="no_image" id="option[343]" value="9" type="radio">
            <label for="option[343]">6.5</label>
         </div>
         
-         <div class="radio">                  
+         <div class="details-radio">                  
            <input name="option[239]" class="thumb"  val="no_image" id="option[3404]" value="9" type="radio">
            <label for="option[3404]">7</label>
         </div>
-         <div class="radio">                  
+         <div class="details-radio">                  
            <input name="option[239]" class="thumb"  val="no_image" id="option[3405]" value="9" type="radio">
            <label for="option[3405]">7.5</label>
         </div>
         
-         <div class="radio">                  
+         <div class="details-radio">                  
            <input name="option[239]" class="thumb"  val="no_image" id="option[346]" value="9" type="radio">
            <label for="option[346]">8</label>
         </div>
         
-         <div class="radio">                  
+         <div class="details-radio">                  
            <input name="option[239]" class="thumb"  val="no_image" id="option[347]" value="9" type="radio">
            <label for="option[347]">8.5</label>
         </div>
@@ -295,36 +295,7 @@
   <!-- End SlidesJS Required -->
  
  
-<!--tab -->
- <script src="js/jquery.mixitup.min.js"></script>
-<script src="js/main.js"></script> 
  
-
-<script src="js/bootstrap.min.js"></script>
-
-<!--tab -->
-<script type="text/javascript" src="js/jquery.accordion.js"></script> 
-
-<script type="text/javascript">$(document).ready(function() {
-        $('#only-one [data-accordion]').accordion();
-
-        $('#multiple [data-accordion]').accordion({
-          singleOpen: false
-        });
-
-        $('#single[data-accordion]').accordion({
-          transitionEasing: 'cubic-bezier(0.455, 0.030, 0.515, 0.955)',
-          transitionSpeed: 200
-        });
-      });
-    </script>
-    
-     <!--on off -->
- <!--gallery -->
-    <script type="text/javascript" src="js/jquery.tmpl.min.js"></script>
-    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-    <script type="text/javascript" src="js/jquery.elastislide.js"></script>
-    <script type="text/javascript" src="js/gallery.js"></script>
       <!-- END -->
       <?php echo $content_bottom; ?></div>
     <?php echo $column_right; ?></div>

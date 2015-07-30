@@ -1,11 +1,11 @@
 @charset "utf-8";
 /* CSS Document */
-
-body{ background:#f1f0ef}
+/*
+body{ background:#f1f0ef}*/
 *{ margin:0; padding:0; text-decoration:none; font-family: 'PT Sans', sans-serif; outline:none; list-style:none; }
 .spacer{ clear:both;}
  
- #page{ background:#fff; margin:0 auto; max-width:1200px;}
+ #page{padding:0; background:#fff; margin:0 auto; max-width:1200px;}
  .bs-example{ width:100%;}   
 .active{ color:#924466 !important}
 .breadcrumb li a{ color:#222 !important; text-transform:uppercase}
@@ -16,7 +16,7 @@ body{ background:#f1f0ef}
  .slidesjs-pagination{ display:none}
  .table-bordered a{ position:relative}
  
-.tab-menu ul{ padding:0; margin:0;} .tab-menu { margin-top:45px; margin-bottom:25px;}
+.tab-menu ul{ padding:0; margin:0;} .tab-menu { margin-top:15px; }
 .tab-menu li{
 	float: left;
 	position: relative;
@@ -34,48 +34,57 @@ body{ background:#f1f0ef}
 	.tab-menu h1{ font-size:14px; text-align:left; font-weight:normal;  line-height:14px; padding:5px 0 0; margin:0; display:inline-block;}
 
 .changes{ background:#666666; border-radius:4px; text-align:center; font-size:15px; padding:3px 5px; color:#fffs; width:42%; margin:10px;} .changes a{padding:3px 5px !important;color:#fff; padding-left:0 !important}
+ 
+ .add-this{ color: #fff !important;
+    background-color: #337ab7 !important;
+    border-color: #2e6da4 !important; width:100%;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+}
+.table-striped > thead > tr > th{ border-bottom:none !important;}  
   
-  
- .checkbox input[type="checkbox"] {
+ .shape-checkbox input[type="checkbox"] {
     display:none; 
 }
-.checkbox p { display:inline-block; font-size:15px; font-weight: 700; margin-right:15px;}
-.checkbox label {
+.shape-checkboxp { display:inline-block; font-size:15px; font-weight: 700; margin-right:15px;}
+.shape-checkbox label {
     display:inline-block; float:left;
     background-color:#fff; border:#acacac solid 1px;
     padding:2px 11px; margin-right:15px;
      font-size:12px;
 }
-.checkbox label:hover{
+.shape-checkbox label:hover{
     display:inline-block;
     background-color:#ddd;border:#acacac solid 1px;
     padding:2px 11px; margin-right:15px;
      font-size:12px;
 }
 
-.checkbox input[type="checkbox"]:checked + label { 
+.shape-checkbox input[type="checkbox"]:checked + label { 
     background-color:#ccc !important;
 }
 
 /**/
- .radio input[type="radio"] {
+.solitaires-radio input[type="radio"] {
     display:none; 
 }
-.radio  p { display:inline-block; font-size:15px; font-weight: 700; margin-right:15px;}
-.radio label {
+.solitaires-radio  p { display:inline-block; font-size:15px; font-weight: 700; margin-right:15px;}
+.solitaires-radio label {
     display:inline-block; float:left;
     background-color:#7f7c7c; border:#fff solid 1px;
-    padding:10px 9px; color:#fff;
-     font-size:15px;
+    padding:7px 9px; color:#fff;
+     font-size:14px; font-weight:normal;
 }
-.radio label:hover{
+.solitaires-radio label:hover{
     display:inline-block;
     background-color:#222;border:#fff solid 1px;
-    padding:10px 9px; color:#fff;
-     font-size:15px;
+    padding:7px 9px; color:#fff;
+     font-size:14px;
 }
 
-.radio input[type="radio"]:checked + label { 
+.solitaires-radio input[type="radio"]:checked + label { 
     background-color:#222 !important;
 }
 
@@ -85,7 +94,7 @@ body{ background:#f1f0ef}
 
 .scrollbar{ 
     background-color:lightgray;height: auto;
-    max-height:700px;
+    max-height:570px;
     overflow-x:hidden;
     overflow-y:scroll; 
     min-width: 135px;
@@ -113,11 +122,39 @@ body{ background:#f1f0ef}
 .purchase-social1 li{ float:left; display:block; margin-right:10px;}
 
    
-.details h5{ border:#ccc solid 1px; padding:5px; text-align:center; margin:0 0 15px;}
-.details h2{ font-size:25px; font-weight:bold; padding:0; margin:15px 0 7px;}
-.details h3{ padding:4px; text-align:left; margin:15px 0 7px; font-size:14px; color: #996600;}
-.details h1{ padding:0; margin:0; font-size:25px; font-weight:bold}
+.solitaires-details h5{ border:#ccc solid 1px; padding:5px; text-align:center; margin:0 0 15px;}
+.solitaires-details h2{ font-size:25px; font-weight:bold; padding:0; margin:15px 0 7px;}
+.solitaires-details h3{ padding:4px; text-align:left; margin:15px 0 7px; font-size:14px; color: #996600;}
+.solitaires-details h1{ padding:0; margin:0; font-size:25px; font-weight:bold}
  
+ 
+ 
+.details-radio input[type="radio"] {
+    display:none; 
+}
+.details-radio  p { display:inline-block; font-size:15px; font-weight:normal; margin-right:15px;}
+.details-radio label {
+    display:inline-block; float:left;
+    background-color:#fff; border:#ddd solid 1px;
+    padding:5px 15px; color:#222;  font-weight:normal;
+     font-size:15px; margin-right:5px; margin-bottom:7px;
+}
+.details-radio label:hover{
+    display:inline-block;
+    background-color:#acacac;border:#fff solid 1px;
+    padding:5px 15px; color:#222;
+     font-size:15px;
+}
+
+.details-radio input[type="radio"]:checked + label { 
+    background-color:#acacac !important;
+}
+ 
+ 
+ .diomand-strip .navbar-default {
+    background-color:transparent !important;
+    border-color:none !important;}
+  .diomand-strip .navbar{border-radius: 0px !important;}
    
  @media only screen and (min-width :240px) and (max-width:767px) {
  

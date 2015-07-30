@@ -146,7 +146,8 @@
             <?php foreach ($options as $option) { ?>
             <?php if ($option['type'] == 'select') { ?>
 			<!------------------------------------------------------------ -->
-            <div class="hrz-dsiplay form-group<?php echo ($option['required'] ? ' required' : ''); ?>">
+            <?php if($option['option_id'] == 23){ $ringdata = $option['product_option_value']; } ?>
+            <div class="hrz-dsiplay form-group <?php echo strtolower(str_replace(' ', '', $option['name'])); echo ($option['required'] ? ' required' : ''); ?>">
               <label class="control-label" for="input-option<?php echo $option['product_option_id']; ?>"><?php echo $option['name']; ?></label>
               <select name="option[<?php echo $option['product_option_id']; ?>]" id="input-option<?php echo $option['product_option_id']; ?>" class="form-control">
                 <option value=""><?php echo $text_select; ?></option>
@@ -170,7 +171,7 @@
  <?php  if (!$option_value['imagel'] || strpos($option_value['imagel'], 'no_image')) $option_value['imagel'] = $thumb; ?>
  <?php if ($option_value['imagexl'] == '') $option_value['imagexl'] = 'no_image'; ?>
                 <div class="radio">                  
-                                       <input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" class="thumb" src="<?php echo $option_value['imagel']; ?>" val="<?php echo $option_value['imagexl']; ?>" id="option[<?php echo $option['product_option_id'].$i; ?>]" value="<?php echo $option_value['product_option_value_id']; ?>" <?php echo ($option_value['product_option_value_id'] == 38)? "checked=checked" : ''; ?> />
+                                       <input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" class="thumb" src="<?php echo $option_value['imagel']; ?>" val="<?php echo $option_value['imagexl']; ?>" id="option[<?php echo $option['product_option_id'].$i; ?>]" value="<?php echo $option_value['product_option_value_id']; ?>" <?php echo ($option_value['default'] == 1)? "checked=checked" : ''; ?> />
                     <?php //echo $option_value['name']; ?>
                     <?php if ($option_value['price']) { ?>
                     <!-- (<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>) -->
@@ -310,7 +311,7 @@
               <input type="hidden" name="quantity" value="<?php echo $minimum; ?>" size="2" id="input-quantity" class="form-control" />
               <input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
               <br />
-              <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary btn-lg btn-block "><span class="add-to-cart"><?php echo $button_cart; ?></span></button><br/>
+              <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="add-to-cart "> <?php echo $button_cart; ?> </button><br/>
             </div>
 			
  
@@ -319,12 +320,12 @@
 			<!-- -----------------------------Buy Now Button--------------------------- -->
 			<div class="form-group">
               <br />
-              <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary btn-lg btn-block"><span class="buy-now"><?php echo $buy_cart; ?></span><br/></button>
+              <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="buy-now"> <?php echo $buy_cart; ?><br/></button>
             </div>
             
             <div class="form-group">
               <br />
-              <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary btn-lg btn-block"><span class="try-home">Try @ Home</span><br/></button>
+              <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="try-home">Try @ Home<br/></button>
             </div>
 			</div>
 			
@@ -990,6 +991,38 @@ $(document).ready(function() {
 			enabled:true
 		}
 	});
+});
+
+$('input[name=\'option[324]\']').click(function(){
+    var purity = document.querySelector('input[name=\'option[324]\']:checked').value;
+  
+if (purity == 513) {
+   var RingSize = '<select name="option[325]" id="input-option325" class="form-control">';
+    RingSize += '<option value="">Chooose</option>';
+    <?php foreach($ringdata as $option_value){ ?>
+    var option_value_id = <?php echo $option_value['product_option_value_id']; ?>;
+     var option_name = <?php echo $option_value['name']; ?>;
+      RingSize += '<option value="' + option_value_id + '">' + option_name + '</option>';
+    <?php } ?>
+    RingSize += '</select>';
+
+        $('select[name=\'option[325]\']').remove();
+        $('.ringsize').append(RingSize);
+} else if (purity == 514) {
+   var RingSize = '<select name="option[325]" id="input-option325" class="form-control">';
+    RingSize += '<option value="">Chooose</option>';
+    <?php foreach($ringdata as $option_value){ ?>
+     var option_value_id = <?php echo $option_value['product_option_value_id']; ?>;
+     var option_name = <?php echo $option_value['name']; ?>;
+      RingSize += '<option value="' + option_value_id + '">' + option_name + '</option>';
+    <?php } ?>
+    RingSize += '</select>';
+
+        $('select[name=\'option[325]\']').remove();
+        $('.ringsize').append(RingSize);
+} else {
+   /* insert select with 'color' options */
+}
 });
 //--></script>
   <!--  similar product -->      

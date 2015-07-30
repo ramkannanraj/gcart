@@ -45,6 +45,13 @@
 <link href="catalog/view/theme/gemcart/stylesheet/style1.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/gemcart/stylesheet/solitaires.css" />
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/gemcart/stylesheet/solitaires1.css" />
+
+
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/gemcart/stylesheet/jquery.accordion.css" />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/gemcart/stylesheet/demo2.css" />
+
+
+
 <!--<link href="catalog/view/theme/gemcart/stylesheet/listing.css" rel="stylesheet">
 <link href="catalog/view/theme/gemcart/stylesheet/listing2.css" rel="stylesheet">
 <link href="catalog/view/theme/gemcart/stylesheet/listing3.css" rel="stylesheet"> -->
@@ -58,6 +65,25 @@
 <link href="catalog/view/theme/gemcart/stylesheet/menu1.css" rel="stylesheet">
 <!--You Might Also Like -->
 <link rel="stylesheet" href="catalog/view/theme/gemcart/stylesheet/jquery.bxslider.css" type="text/css" />
+
+<!--solitaires gallery -->
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/gemcart/css/elastislide.css" />
+  		<script id="img-wrapper-tmpl" type="text/x-jquery-tmpl">	
+			<div class="rg-image-wrapper">
+				{{if itemsCount > 1}}
+					<div class="rg-image-nav">
+ 					</div>
+				{{/if}}
+				<div class="rg-image"></div>
+				<div class="rg-loading"></div> 
+				<div class="rg-caption-wrapper">
+					<div class="rg-caption" style="display:none;">
+						<p></p>
+					</div>
+				</div>
+			</div></script>
+ 
+
 
   <script src="catalog/view/javascript/jquery/jquery.bxslider.js"></script> 
 <script src="catalog/view/javascript/jquery/rainbow.min.js"></script> 

@@ -16,11 +16,11 @@
     <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
       <!-- START -->
       <!--showing -->
-<div id="showing">
+<!--<div id="showing">
 <div class="container">
 <div class="row">
  <div  class="col-sm-12 col-md-12 col-xs-12 "><h1>SHOWING 505 DIAMONDS</h1></div>
- </div></div></div>
+ </div></div></div> -->
 <!--showing end -->
   
  
@@ -130,7 +130,7 @@
                 <ul>
                   <li><a href="#"><img src="image/catalog/thumbs/1.jpg" data-large="image/catalog/1-1.jpg" alt="image01"/></a></li>
                   <li><a href="#"><img src="image/catalog/thumbs/2.jpg" data-large="image/catalog/2-1.jpg" alt="image01"/></a></li>
-                                    <li><a href="#"><img src="image/catalog/thumbs/3.jpg" data-large="image/catalog/3-1.jpg" alt="image01"/></a></li>
+                  <li><a href="#"><img src="image/catalog/thumbs/3.jpg" data-large="image/catalog/3-1.jpg" alt="image01"/></a></li>
                   <li><a href="#"><img src="image/catalog/thumbs/4.jpg" data-large="image/catalog/4-1.jpg" alt="image01"/></a></li>
                 </ul>
               </div>
@@ -144,10 +144,10 @@
         <h2 style="font-size:20px; font-weight:bold;"> 2.01-Carat Blue Nile Signature Asscher Cut Diamond</h2>
        <hr/>
         <div class="row">
-        <div  class="col-sm-4 col-md-4 col-xs-12"  ><h3>$26,677</h3></div>
-        <div  class="col-sm-8 col-md-8 col-xs-12"  >
+        <div  class="col-sm-7 col-md-7 col-xs-12"  ><h3 style="margin:0 0 30px">$26,677</h3></div>
+        <div  class="col-sm-5 col-md-5 col-xs-12"  >
                     <div class="dropdown">
-                      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Add this Diamond
+                      <button class="btn btn-primary dropdown-toggle add-this" type="button" data-toggle="dropdown">Add this Diamond
                       <span class="caret"></span></button>
                       <ul class="dropdown-menu">
                         <li><a href="#">Add to your ring</a></li>
@@ -243,7 +243,7 @@
  
  <div class="row">
       <div  class="col-sm-8 col-md-8 col-xs-12"  > <h3 style="font-size:17px; font-weight:bold">NEED HELP?</h3>
-<p>Your questions or feedback are always welcome at Blue Nile. Join in a conversation with one of our Diamond and Jewelry Consultants to help you make the right decision.</div> 
+<p>Your questions or feedback are always welcome at Gemcart. Join in a conversation with one of our Diamond and Jewelry Consultants to help you make the right decision.</div> 
 </p>      
 
 <div  class="col-sm-4 col-md-4 col-xs-12" style="padding-top:15px"  >
@@ -263,38 +263,12 @@
 
 </div>
   <!-- End SlidesJS Required -->
- 
- 
-<!--tab -->
- <script src="js/jquery.mixitup.min.js"></script>
-<script src="js/main.js"></script> 
- 
-
-<script src="js/bootstrap.min.js"></script>
-
-<!--tab -->
-<script type="text/javascript" src="js/jquery.accordion.js"></script> 
-
-<script type="text/javascript">$(document).ready(function() {
-        $('#only-one [data-accordion]').accordion();
-
-        $('#multiple [data-accordion]').accordion({
-          singleOpen: false
-        });
-
-        $('#single[data-accordion]').accordion({
-          transitionEasing: 'cubic-bezier(0.455, 0.030, 0.515, 0.955)',
-          transitionSpeed: 200
-        });
-      });
-    </script>
-    
-     <!--on off -->
+      <!--on off -->
  <!--gallery -->
-    <script type="text/javascript" src="js/jquery.tmpl.min.js"></script>
-    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-    <script type="text/javascript" src="js/jquery.elastislide.js"></script>
-    <script type="text/javascript" src="js/gallery.js"></script>
+ 		<script type="text/javascript" src="catalog/view/javascript/js/jquery.tmpl.min.js"></script>
+		<script type="text/javascript" src="catalog/view/javascript/js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="catalog/view/javascript/js/jquery.elastislide.js"></script>
+		<script type="text/javascript" src="catalog/view/javascript/js/gallery.js"></script>
       <!-- END -->
       <?php echo $content_bottom; ?></div>
     <?php echo $column_right; ?></div>

@@ -411,7 +411,7 @@ $this->document->addScript('catalog/view/javascript/jquery/jquery.elevateZoom-3.
 					);
 				}	
 			}
-			
+			//echo "<pre>"; print_r($data['options']); exit;
 			if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
 				$data['price'] = $this->currency->format($this->tax->calculate($default_option_price, $product_info['tax_class_id'], $this->config->get('config_tax')));
 				$raw_price = $default_option_price;

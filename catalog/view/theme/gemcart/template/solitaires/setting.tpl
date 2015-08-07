@@ -29,8 +29,7 @@
  <div id="page">
 <div class="container">
 <div class="row">
-  <div  class="col-sm-12 col-md-12 col-xs-12 ">
-<div class="bs-example tab-menu">
+ <div class="bs-example tab-menu">
     <nav id="myNavbar" class="navbar navbar-default" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="container">
@@ -108,8 +107,7 @@
             </div><!-- /.navbar-collapse -->
         </div>
     </nav>
-</div>
-
+ 
     </div></div></div> 
 <!--showing end -->
 <br class="spacer"/>
@@ -217,14 +215,15 @@
  
  
 <!--tab -->
+	<!--<script src="catalog/view/js/jquery-1.js"></script> -->
+
  <script src="catalog/view/javascript/jquery/jquery.mixitup.min.js"></script>
 <script src="catalog/view/javascript/jquery/main.js"></script> 
  <link rel="stylesheet" type="text/css" href="catalog/view/theme/gemcart/stylesheet/jquery.accordion1.css" />
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/gemcart/stylesheet/demo1.css" />
 
 
- 
-<!--tab -->
+ <!--tab -->
 <script type="text/javascript" src="catalog/view/javascript/jquery/jquery.accordion.js"></script> 
 
 <script type="text/javascript">$(document).ready(function() {

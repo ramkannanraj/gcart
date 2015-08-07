@@ -97,12 +97,12 @@
                         <span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
                       <?php } ?>
                     </p>
-      							<ul class="listing-menu">
-                      <li><a href="#">Similar Products</a>|</li>
-                      <li><a href="#"><img src="catalog/view/theme/gemcart/images/wishlist.png" />Add to Wishlist</a>|</li>
+      							<ul class="listing-menu silimar-list">
+                      <li><a href="javascript:void(0);" id="similar-edit">Similar Products</a>|</li>
+                        <li><a href="#"><img src="catalog/view/theme/gemcart/images/wishlist.png" />Add to Wishlist</a>|</li>
                       <li><a href="#"><img src="catalog/view/theme/gemcart/images/quick-view.png" /></a></li>
                     </ul>
-      						</figcaption>
+       						</figcaption>
 					      </figure>
             
   
@@ -135,7 +135,71 @@
         <?php } ?>
       </div>
       </div>
-</div>      
+</div>
+
+
+<!--similar products -->
+<div class="flexslider carousel slimiar-pro similar-edit" >
+<button type="button" class="close close-button"><img src="catalog/view/theme/gemcart/images/close.jpg" /></button>
+          <ul class="slides">
+          		<li>
+                      <a href="#"><img src="catalog/view/theme/gemcart/images/wishlist.jpg" /></a>
+                    <h1>Ballerina Jhumkas</h1>
+                    <p> $189.60 </p>
+  	    		</li>
+  	    		<li>
+                      <a href="#"><img src="catalog/view/theme/gemcart/images/wishlist.jpg" /></a>
+                    <h1>Ballerina Jhumkas</h1>
+                    <p> $189.60 </p>
+  	    		</li>
+                
+                 <li>
+                      <a href="#"><img src="catalog/view/theme/gemcart/images/wishlist.jpg" /></a>
+                    <h1>Ballerina Jhumkas</h1>
+                    <p> $189.60 </p>
+  	    		</li>
+                
+                 <li>
+                      <a href="#"><img src="catalog/view/theme/gemcart/images/wishlist.jpg" /></a>
+                    <h1>Ballerina Jhumkas</h1>
+                    <p> $189.60 </p>
+  	    		</li>    
+                 <li>
+                      <a href="#"><img src="catalog/view/theme/gemcart/images/wishlist.jpg" /></a>
+                    <h1>Ballerina Jhumkas</h1>
+                    <p> $189.60 </p>
+  	    		</li>
+                
+                <li>
+                     <a href="#"><img src="catalog/view/theme/gemcart/images/wishlist.jpg" /></a>
+                    <h1>Ballerina Jhumkas</h1>
+                    <p> $189.60 </p>
+  	    		</li>
+                
+                <li>
+                      <a href="#"><img src="catalog/view/theme/gemcart/images/wishlist.jpg" /></a>
+                    <h1>Ballerina Jhumkas</h1>
+                    <p> $189.60 </p>
+  	    		</li>
+                
+                <li>
+                      <a href="#"><img src="catalog/view/theme/gemcart/images/wishlist.jpg" /></a>
+                    <h1>Ballerina Jhumkas</h1>
+                    <p> $189.60 </p>
+  	    		</li>
+                
+                <li>
+                     <a href="#"><img src="catalog/view/theme/gemcart/images/wishlist.jpg" /></a>
+                    <h1>Ballerina Jhumkas</h1>
+                    <p> $189.60 </p>
+  	    		</li>
+ 
+          </ul>
+        </div>
+                 
+ <!--products -->      
+      
+      
       <div class="row">
         <div class="col-sm-6 text-left"><?php echo $pagination; ?></div>
         <div class="col-sm-6 text-right"></div>
@@ -150,4 +214,24 @@
       </div><?php echo $content_bottom; ?></div>
     <?php echo $column_right; ?></div>
   </div>
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        $('.similar-list').show();
+        $('.similar-edit').hide();
+ 
+      $('#similar-edit').on('click', function() {
+          $('.similar-list').hide();
+          $('.similar-edit').show();
+      });
+ 	  
+	    $('.close-button').on('click', function() {
+          $('.similar-edit').hide();
+          $('.similar-list').show();
+       });
+     });    
+    </script>
+  
+  
+  
 <?php echo $footer; ?>

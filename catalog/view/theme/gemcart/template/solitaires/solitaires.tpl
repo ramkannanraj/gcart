@@ -30,7 +30,7 @@
  <div id="page">
 <div class="container">
 <div class="row">
-  <div  class="col-sm-12 col-md-12 col-xs-12 ">
+ <!-- <div  class="col-sm-12 col-md-12 col-xs-12 ">  -->
 <div class="bs-example tab-menu">
     <nav id="myNavbar" class="navbar navbar-default" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -109,7 +109,7 @@
             </div><!-- /.navbar-collapse -->
         </div>
     </nav>
-</div>
+<!--</div> -->
 
     </div></div></div> 
 <!--showing end -->
@@ -201,7 +201,7 @@
                    <hr/>
                    
                    <div class="row">
-                    <div  class="col-sm-3 col-md-3 col-xs-12 shapes"  >
+                    <div  class="col-sm-4 col-md-4 col-xs-12 shapes"  >
                        <h1>Cut</h1>
                                <div id="input-option239" class="input-option">
                                   <div class="solitaires-radio">                  
@@ -279,7 +279,7 @@
                                     
                                </div> 
                           </div>     
-                <div  class="col-sm-5 col-md-5 col-xs-12 shapes"  >
+                <div  class="col-sm-4 col-md-4 col-xs-12 shapes"  >
                      <h1>cLARITY</h1>
                              <div id="input-option239" class="input-option">
                                   <div class="solitaires-radio">                  
@@ -344,7 +344,7 @@
             <div data-content>
               <article>
              <div class="row">
-                    <div  class="col-sm-2 col-md-2 col-xs-12 shapes"  >
+                    <div  class="col-sm-4 col-md-4 col-xs-12 shapes"  >
                        <h1>Polish</h1>
                                <div id="input-option239" class="input-option">
                                   <div class="solitaires-radio">                 
@@ -364,7 +364,7 @@
                        
                     </div>
                     
-                     <div  class="col-sm-3 col-md-3 col-xs-12 shapes"  >
+                     <div  class="col-sm-4 col-md-4 col-xs-12 shapes"  >
                          <h1>symmetry</h1>
                              <div id="input-option239" class="input-option">
                                   <div class="solitaires-radio">                  
@@ -391,7 +391,7 @@
                                </div> 
                             
                            </div>     
-                <div  class="col-sm-7 col-md-7 col-xs-12 shapes"  >
+                <div  class="col-sm-4 col-md-4 col-xs-12 shapes"  >
                      <h1>Fluore scence</h1>
                              <div id="input-option239" class="input-option">
                                   <div class="solitaires-radio">                  
@@ -471,11 +471,13 @@
 
  <div class="container"> 
 <div class="row">
-  <div  class="col-sm-12 col-md-12 col-xs-12"  > 
-   <section class="cd-gallery">
+    <section class="cd-gallery">
        <!--table start --> 
         <div class="table-responsive">
-         <div class="fixed-table-container"><div class="header-background"></div><div class="fixed-table-container-inner">
+         <div class="fixed-table-container custom_scrollbar">
+         <div class="header-background"></div>
+       
+         <div class="fixed-table-container-inner">
 <table class="table table-striped fix-table">
         <thead>
             <tr>
@@ -508,7 +510,7 @@
                 <td>71.0</td>
                 <td>1.02&nbsp; &nbsp; &nbsp;</td>
                 <td>july 22</td>
-                 <td><a href="#0" class="cd-filter-trigger">$9,727 </a></td>
+                 <td><a href="javascript:void(0)" class="cd-filter-trigger">$9,727 </a></td>
             </tr>
              <tr>
                 <td><input id=" " value="39" type="checkbox"> &nbsp; &nbsp;</td>
@@ -895,26 +897,29 @@
 </div>
 
 <!--tab end -->       
-    </section>
+   </div></div>  
         
+        </section>
         
-        
-        </section> <!-- cd-gallery -->
-    <div class="cd-filter scrollbar" >
-        
+         <!-- cd-gallery -->
+    <div class="cd-filter custom_scrollbar" style="height:600px; position:relative">
+        <a href="javascript:void(0)" class="cd-close" style="left:0px"><img src="image/catalog/close-arrow.png" />Close Details</a>
+<a href="javascript:void(0)" class="cd-close">More Details &nbsp; &nbsp; &nbsp;<img src="image/catalog/more-details.png" /></a>
+
        <h2> 2.01-Carat Blue Nile Signature Asscher Cut Diamond</h2>
        <hr/>
         <div class="row">
         <div  class="col-sm-4 col-md-4 col-xs-12"  ><h3>$26,677</h3></div>
         <div  class="col-sm-8 col-md-8 col-xs-12"  >
                     <div class="dropdown">
-                      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Add this Diamond
+                      <button class="btn btn-primary dropdown-toggle add-this" type="button" data-toggle="dropdown">Add this Diamond
                       <span class="caret"></span></button>
                       <ul class="dropdown-menu">
                         <li><a href="#">Add to your ring</a></li>
                         <li><a href="#">Add to your pendant</a></li>
                         <li><a href="#">Add to shopping basket</a></li>
                         <li><a href="#">Add to diamond comparison</a></li>
+                        <li><a href="#">Add to Wishlist</a></li>
                       </ul>
                     </div></div>
         </div>
@@ -1006,7 +1011,7 @@
     </tbody>
   </table>
 
-<div id="rg-gallery" class="rg-gallery">
+<div id="rg-gallery" class="rg-gallery" style="position:">
           <div class="rg-thumbs">
             <!-- Elastislide Carousel Thumbnail Viewer -->
             <div class="es-carousel-wrapper">
@@ -1023,12 +1028,10 @@
             <!-- End Elastislide Carousel Thumbnail Viewer -->
           </div><!-- rg-thumbs -->
         </div>
-<a href="#1" class="cd-close" style="left:0px"><img src="image/catalog/close-arrow.png" />Close Details</a>
-<a href="#0" class="cd-close">More Details &nbsp; &nbsp; &nbsp;<img src="image/catalog/more-details.png" /></a>
     </div> <!-- cd-filter -->
 
     
-</div></div> </div>
+</div></div> 
 <!--showing end -->
 
  

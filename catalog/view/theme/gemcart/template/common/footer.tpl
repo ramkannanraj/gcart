@@ -117,11 +117,11 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-12 col-md-12 col-xs-12 footer">
-                <div class="col-sm-4"><a href="#" target="_self">Terms of use </a> | 
+                <div class="col-sm-4" style="margin-top:10px;"><a href="#" target="_self">Terms of use </a> | 
                     <a href="#" target="_self">Privacy Policy </a>
                 </div>
-                <div class="col-sm-4 reserved"><p>©2015 Gemcart. All Rights Reserved</p></div>
-                <div class="col-sm-4 paysecure"><img alt="payment" src="image/payment_logo.jpg" class="img-responsive"></div> 
+                <div class="col-sm-4 reserved" style="margin-top:10px;"><p>©2015 Gemcart. All Rights Reserved</p></div>
+                <div class="col-sm-4 paysecure" style="margin-top:5px"><img alt="payment" src="image/payment_logo.jpg" class="img-responsive"></div> 
             </div>
           
         </div>

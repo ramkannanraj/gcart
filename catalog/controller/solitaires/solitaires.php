@@ -11,7 +11,7 @@ class ControllerSolitairesSolitaires extends Controller {
 			'text' => $this->language->get('text_home'),
 			'href' => $this->url->link('common/home')
 		);
-
+$this->request->get['product_id'] = 52;
 		$this->load->model('catalog/category');
 
 		if (isset($this->request->get['path'])) {
@@ -192,7 +192,7 @@ class ControllerSolitairesSolitaires extends Controller {
 
 		$product_info = $this->model_catalog_product->getProduct($product_id);
 
-		if ($product_info) {
+		if ($product_info || !$product_info) {
 			$url = '';
 
 			if (isset($this->request->get['path'])) {

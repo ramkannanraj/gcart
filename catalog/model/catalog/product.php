@@ -366,11 +366,96 @@ class ModelCatalogProduct extends Model {
 			foreach ($product_option_value_query->rows as $product_option_value) {
 				if($product_option['option_id'] == 23){
 					$product_gold = $this->getProductGold($product_id);
-					$gold_price = 0;
+					$ring_price = 0;
 
-					if($product_option_value['option_value_id'] == 51){
-
+					if($product_option_value['option_value_id'] == 83 || $product_option_value['option_value_id'] == 84){
+						foreach($product_gold as $gold){
+							if($gold['quality'] == 1){
+								$ring_price += (($data['gold_selling_price']/24) * 18) * (0.03 * $gold['weight']);
+							}
+						}
+						$product_option_value['price'] = round($ring_price);
+					}
+					if($product_option_value['option_value_id'] == 85 || $product_option_value['option_value_id'] == 86){
+						foreach($product_gold as $gold){
+							if($gold['quality'] == 1){
+								$ring_price += (($data['gold_selling_price']/24) * 18) * (0.06 * $gold['weight']);
+							}
+						}
+						$product_option_value['price'] = round($ring_price);
+					}
+					if($product_option_value['option_value_id'] == 87 || $product_option_value['option_value_id'] == 88){
+						foreach($product_gold as $gold){
+							if($gold['quality'] == 1){
+								$ring_price += (($data['gold_selling_price']/24) * 18) * (0.09 * $gold['weight']);
+							}
+						}
+						$product_option_value['price'] = round($ring_price);
+					}
+					if($product_option_value['option_value_id'] == 89 || $product_option_value['option_value_id'] == 90){
+						foreach($product_gold as $gold){
+							if($gold['quality'] == 1){
+								$ring_price += (($data['gold_selling_price']/24) * 18) * (0.12 * $gold['weight']);
+							}
+						}
+						$product_option_value['price'] = round($ring_price);
+					}
+					if($product_option_value['option_value_id'] == 91 || $product_option_value['option_value_id'] == 92){
+						foreach($product_gold as $gold){
+							if($gold['quality'] == 1){
+								$ring_price += (($data['gold_selling_price']/24) * 18) * (0.15 * $gold['weight']);
+							}
+						}
+						$product_option_value['price'] = round($ring_price);
+					}
+					if($product_option_value['option_value_id'] == 93 || $product_option_value['option_value_id'] == 94){
+						foreach($product_gold as $gold){
+							if($gold['quality'] == 1){
+								$ring_price += (($data['gold_selling_price']/24) * 18) * (0.18 * $gold['weight']);
+							}
+						}
+						$product_option_value['price'] = round($ring_price);
+					}
+					if($product_option_value['option_value_id'] == 95 || $product_option_value['option_value_id'] == 96){
+						foreach($product_gold as $gold){
+							if($gold['quality'] == 1){
+								$ring_price += (($data['gold_selling_price']/24) * 18) * (0.21 * $gold['weight']);
+							}
+						}
+						$product_option_value['price'] = round($ring_price);
 					}	
+					if($product_option_value['option_value_id'] == 97 || $product_option_value['option_value_id'] == 98){
+						foreach($product_gold as $gold){
+							if($gold['quality'] == 1){
+								$ring_price += (($data['gold_selling_price']/24) * 18) * (0.24 * $gold['weight']);
+							}
+						}
+						$product_option_value['price'] = round($ring_price);
+					}	
+					if($product_option_value['option_value_id'] == 99 || $product_option_value['option_value_id'] == 100){
+						foreach($product_gold as $gold){
+							if($gold['quality'] == 1){
+								$ring_price += (($data['gold_selling_price']/24) * 18) * (0.27 * $gold['weight']);
+							}
+						}
+						$product_option_value['price'] = round($ring_price);
+					}	
+					if($product_option_value['option_value_id'] == 101 || $product_option_value['option_value_id'] == 102){
+						foreach($product_gold as $gold){
+							if($gold['quality'] == 1){
+								$ring_price += (($data['gold_selling_price']/24) * 18) * (0.30 * $gold['weight']);
+							}
+						}
+						$product_option_value['price'] = round($ring_price);
+					}	
+					if($product_option_value['option_value_id'] == 103){
+						foreach($product_gold as $gold){
+							if($gold['quality'] == 1){
+								$ring_price += (($data['gold_selling_price']/24) * 18) * (0.33 * $gold['weight']);
+							}
+						}
+						$product_option_value['price'] = round($ring_price);
+					}		
 				}	
 				if($product_option['option_id'] == 14){
 					$product_gold = $this->getProductGold($product_id);

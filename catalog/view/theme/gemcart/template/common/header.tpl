@@ -117,7 +117,7 @@
 
 	<!-- Modernizr -->
   <script src="catalog/view/javascript/jquery/modernizr.js"></script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.17/angular.min.js"></script>
   
   
 
@@ -143,7 +143,12 @@
             <div  class="col-sm-2 col-md-2 col-xs-12">
             <div id="top-links" class="nav ">
               <ul class="list-inline">
-                  <li class="dropdown"><a href="<?php echo $account; ?>" title="<?php echo $text_account; ?>" class="dropdown-toggle" data-toggle="dropdown"><!--<i class="fa fa-user"></i> -->  <?php echo $text_account; ?>  </a>
+                  <?php if ($logged) { ?>
+                    <li><a href="<?php echo $login; ?>"><?php echo $text_account; ?></a></li>
+                  <?php } else { ?>
+                    <li><a href="<?php echo $login; ?>"><?php echo $text_account; ?></a></li>
+                  <?php } ?>  
+                  <!--<li class="dropdown"><a href="<?php echo $account; ?>" title="<?php echo $text_account; ?>" class="dropdown-toggle" data-toggle="dropdown"><!--<i class="fa fa-user"></i>  <?php echo $text_account; ?>  </a>
                   <ul class="dropdown-menu dropdown-menu-right">
                     <?php if ($logged) { ?>
                     <li><a href="<?php echo $account; ?>"><?php echo $text_account; ?></a></li>
@@ -152,7 +157,7 @@
                     <li><a href="<?php echo $login; ?>"><?php echo $text_login; ?></a></li>
                     <?php } ?>
                   </ul>
-                </li>
+                </li> --> 
                        </ul>  <!--edit end --> 
     </div>
              
@@ -246,59 +251,9 @@
           </div> 
              
        
-       <!--try home -->     
-             <li> 
-                    <a href = "javascript:void(0)" onclick = "document.getElementById('try').style.display='block';document.getElementById('fade').style.display='block'">Try @ Home (0)</a></li>
-                    <div id="try" class="white_content1 tryhome" >
-                    <a href = "javascript:void(0)" onclick = "document.getElementById('try').style.display='none';document.getElementById('fade').style.display='none'"><span style="float:right"><img src="catalog/view/theme/gemcart/images/close.jpg" style="border:none"></span></a>
-                    
-                                          <div  class="col-sm-4 col-md-4 col-xs-12"><img src="catalog/view/theme/gemcart/images/hometryon_home.png" class="img-responsive img"  /></div>
-                                <div  class="col-sm-8 col-md-8 col-xs-12" style="float:right">
-                                <h2>Try @ Home</h2>
-                                <p>Choose up to 5 products and we will send samples to you to try @ home. Just so that you can be sure. Learn More</p>
-                                </div>
-
-                                 <div  class="col-sm-12 col-md-12 col-xs-12">
-                                 <hr/>
-                                <h1>Your Selection</h1></div>
-
-                                <div class="selection">
-                                <li><img src="catalog/view/theme/gemcart/images/hometryon_home.png"  class="img-responsive"/>
-                                 Please choose another product</li>
-                                 <li><img src="catalog/view/theme/gemcart/images/hometryon_home.png"  class="img-responsive"/>
-                                 Please choose another product</li>
-                                
-                                <li><img src="catalog/view/theme/gemcart/images/hometryon_home.png"  class="img-responsive"/>
-                                 Please choose another product</li>
-                                 </div>
- 
-                                    <div  class="col-sm-12 col-md-12 col-xs-12">
-                                    <hr/>
-                                    <h1>your details</h1>
-                                    <p>Our representative will contact you within 24 hours to schedule an appointment at your convenience. </p>
-                                    <br>
-                                     </div>
-
- 
-                                 <div  class="col-sm-5 col-md-5 col-xs-12"><strong>City :</strong></div>
-                                <div  class="col-sm-7 col-md-7 col-xs-12"><select><option value="volvo">India</option></select></div>
-                                
-                                 <div  class="col-sm-5 col-md-5 col-xs-12"><strong>Name :</strong></div>
-                                <div  class="col-sm-7 col-md-7 col-xs-12"><input type="text" /></div>
-                                
-                                 <div  class="col-sm-5 col-md-5 col-xs-12"><strong>Mobile No. :</strong></div>
-                                <div  class="col-sm-7 col-md-7 col-xs-12"><input type="text" /></div>
-                                
-                                
-                                 <div  class="col-sm-5 col-md-5 col-xs-12"><strong>Email :</strong></div>
-                                <div  class="col-sm-7 col-md-7 col-xs-12"><input type="text" /></div>
-                                
-                                 <div  class="col-sm-7 col-md-7 col-xs-12"><button class="drop-btn">Try More Products</button></div>
-                                 <div  class="col-sm-5 col-md-5 col-xs-12"><button class="drop-btn">Submit</button></div>          
-   
- 
-          </div> 
-             <!--try home end -->  
+            <!--try home -->     
+              <?php echo $try; ?>
+            <!--try home end -->  
             </ul>
             </div>
             

@@ -46,6 +46,10 @@ class ControllerProductLivepriceupdate extends Controller {
 		$this->language->load('product/product');
 		$this->load->model('catalog/product');
 		
+		$data['gold_price'] = 2558;
+		$data['gold_selling_price'] = ($data['gold_price'] * 0.03) + $data['gold_price'];
+
+
 		// Cache name
 		if (isset($this->request->post['option']) && is_array($this->request->post['option'])) {
 			$options_hash = serialize($this->request->post['option']);
@@ -78,6 +82,14 @@ class ControllerProductLivepriceupdate extends Controller {
 					$data['special'] = false;
 				}
 
+				$product_gold = $this->model_catalog_product->getProductGold($product_id);
+
+				foreach($product_gold as $gold){
+					$gold_weight = $gold['weight'];
+				}
+
+				$purity = 0;
+
 				// If some options are selected
 				if (isset($this->request->post['option']) && $this->request->post['option']) {
                     foreach ($this->model_catalog_product->getProductOptions($product_id) as $option) {
@@ -87,10 +99,18 @@ class ControllerProductLivepriceupdate extends Controller {
                                 array_filter($this->request->post['option'][$option['product_option_id']]);
                                 foreach($this->request->post['option'][$option['product_option_id']] as $checked_option) {
                                     if ($checked_option == $option_value['product_option_value_id']) {
+                                    	/*if($this->request->post['option'][$option['option_id']] == 23){
+		                        			if($option_value['option_value_id'] == 51){ 
+		                        				$option_value['price'] = 10 *100;
+		                            		}elseif($option_value['option_value_id'] == 52){
+		                            			$option_value['price'] = 10 *300;
+		                            		}
+		                            		//$option_value['price'] = 10 *300;
+		                        		}*/
                                         if (!$option_value['subtract'] || ($option_value['quantity'] > 0)) {
                                             if ((($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) && (float)$option_value['price']) {
-                                                $price = $this->tax->calculate($option_value['price'], $product_info['tax_class_id'], $this->config->get('config_tax'));
-                                                //$price = $option_value['price'];
+                                                //$price = $this->tax->calculate($option_value['price'], $product_info['tax_class_id'], $this->config->get('config_tax'));
+                                                $price = $option_value['price'];
                                             } else {
                                                 $price = false;
                                             }
@@ -108,10 +128,50 @@ class ControllerProductLivepriceupdate extends Controller {
 
                             //If options not checkbox
                             if (isset($this->request->post['option'][$option['product_option_id']]) && $this->request->post['option'][$option['product_option_id']] == $option_value['product_option_value_id']) {
+                            	
+                        			if($option_value['option_value_id'] == 51){ 
+                        				$purity = 51;
+                            		}
+                            		if($purity){
+                            			if($option_value['option_value_id'] == 83 || $option_value['option_value_id'] == 84){
+                            				$option_value['price'] = round((($data['gold_selling_price']/24) * 14) * (0.03 * $gold_weight));
+                            			}
+                            			if($option_value['option_value_id'] == 85 || $option_value['option_value_id'] == 86){
+                            				$option_value['price'] = round((($data['gold_selling_price']/24) * 14) * (0.06 * $gold_weight));
+                            			}
+                            			if($option_value['option_value_id'] == 87 || $option_value['option_value_id'] == 88){
+                            				$option_value['price'] = round((($data['gold_selling_price']/24) * 14) * (0.09 * $gold_weight));
+                            			}
+                            			if($option_value['option_value_id'] == 89 || $option_value['option_value_id'] == 90){
+                            				$option_value['price'] = round((($data['gold_selling_price']/24) * 14) * (0.12 * $gold_weight));
+                            			}
+                            			if($option_value['option_value_id'] == 91 || $option_value['option_value_id'] == 92){
+                            				$option_value['price'] = round((($data['gold_selling_price']/24) * 14) * (0.15 * $gold_weight));
+                            			}
+                            			if($option_value['option_value_id'] == 93 || $option_value['option_value_id'] == 94){
+                            				$option_value['price'] = round((($data['gold_selling_price']/24) * 14) * (0.18 * $gold_weight));
+                            			}
+                            			if($option_value['option_value_id'] == 95 || $option_value['option_value_id'] == 96){
+                            				$option_value['price'] = round((($data['gold_selling_price']/24) * 14) * (0.21 * $gold_weight));
+                            			}
+                            			if($option_value['option_value_id'] == 97 || $option_value['option_value_id'] == 98){
+                            				$option_value['price'] = round((($data['gold_selling_price']/24) * 14) * (0.24 * $gold_weight));
+                            			}
+                            			if($option_value['option_value_id'] == 99 || $option_value['option_value_id'] == 100){
+                            				$option_value['price'] = round((($data['gold_selling_price']/24) * 14) * (0.27 * $gold_weight));
+                            			}
+                            			if($option_value['option_value_id'] == 101 || $option_value['option_value_id'] == 102){
+                            				$option_value['price'] = round((($data['gold_selling_price']/24) * 14) * (0.30 * $gold_weight));
+                            			}
+                            			if($option_value['option_value_id'] == 103){
+                            				$option_value['price'] = round((($data['gold_selling_price']/24) * 14) * (0.33 * $gold_weight));
+                            			}
+                            		}
+                                //$json['new_price']['values'] = $purity;
                                 if (!$option_value['subtract'] || ($option_value['quantity'] > 0)) {
                                     if ((($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) && (float)$option_value['price']) {
-                                        $price = $this->tax->calculate($option_value['price'], $product_info['tax_class_id'], $this->config->get('config_tax'));
-                                        //$price = $option_value['price'];
+                                        //$price = $this->tax->calculate($option_value['price'], $product_info['tax_class_id'], $this->config->get('config_tax'));
+                                        $price = $option_value['price'];
                                     } else {
                                         $price = false;
                                     }
@@ -128,7 +188,6 @@ class ControllerProductLivepriceupdate extends Controller {
                         unset($price);
                     }
 				}
-				
 				if ($data['price']) {
 					$json['new_price']['price'] = $this->currency->format($this->tax->calculate(($data['price'] + $options_makeup), $product_info['tax_class_id'], $this->config->get('config_tax')) * $quantity);
 				} else {

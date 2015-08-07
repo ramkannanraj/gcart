@@ -154,6 +154,7 @@
                         <li><a href="#">Add to your pendant</a></li>
                         <li><a href="#">Add to shopping basket</a></li>
                         <li><a href="#">Add to diamond comparison</a></li>
+                        <li><a href="#">Add to Wishlist</a></li>
                       </ul>
                     </div></div>
         </div>
